@@ -9,9 +9,10 @@ with open("responses.json", encoding="utf-8") as f:
 THRESHOLD = 0.4   # 27 intents kaya natural na mababa ang probability; i-tune ito
 
 FALLBACK = (
-    "Pasensya na po, hindi ko po masyadong naintindihan. "
-    "Pwede po bang linawin ang tanong, o makipag-ugnayan sa Barangay Hall "
-    "(Lunes-Biyernes, 8AM-5PM)."
+    "Hindi ko pa matiyak ang sagot. Maaari bang linawin ang tanong? "
+    "Makakatulong ako sa paggamit ng SMART MASIPIT. "
+    "Para sa fees, requirements, at schedules, "
+    "makipag-ugnayan sa barangay office."
 )
 
 def get_response(message):

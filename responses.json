@@ -1,74 +1,101 @@
 {
   "greeting": [
-    "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Matutulungan ko kayo sa Document Request, Health Record, at Resident Census. Ano po ang kailangan ninyo?"
+    "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration, verification, document requests, walk-in services, resident registry, health records, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko; hindi ko nakikita ang personal records o actual request status."
   ],
   "goodbye": [
-    "Walang problema! Makakaasa kayong laging handang maglingkod ang Barangay Masipit. Mag-ingat po kayo!"
+    "Salamat po! Kung may iba pa kayong tanong tungkol sa SMART MASIPIT, maaari kayong magtanong muli."
   ],
   "document_list": [
-    "Sa SMART MASIPIT, maaari kayong mag-request ng Barangay Clearance at Certificate of Indigency. Maaari ring i-encode ng staff ang walk-in na request sa Barangay Hall."
+    "Ang mga document type na naidagdag sa SMART MASIPIT ay Barangay Clearance, Certificate of Indigency, Certificate of Residency, Oath of Undertaking, First-Time Jobseeker Barangay Certification, Certificate of Closure, Certificate of Good Moral, at Barangay Occupancy Permit. Piliin ang naaangkop na dokumento sa request form. Ang bawat request ay sasailalim sa verification at barangay review."
   ],
   "document_clearance": [
-    "Para sa Barangay Clearance, mag-request sa SMART MASIPIT Portal o pumunta sa Barangay Hall dala ang Valid ID at ₱50.00 fee. Ang request ay ire-review at aaprubahan ng authorized na opisyal bago i-release ang printable na dokumento."
+    "Para sa Barangay Clearance, mag-sign in gamit ang approved resident account, buksan ang document requests, piliin ang Barangay Clearance, at kumpletuhin ang required fields. Maaari ring magpa-encode ng walk-in request sa barangay hall. Kumpirmahin sa barangay ang requirements at anumang bayad."
   ],
   "document_indigency": [
-    "Libre ang Certificate of Indigency para sa mga kwalipikadong residente ng Masipit. Magdala ng Valid ID at patunay ng pangangailangan (tulad ng Medical Abstract o School Assessment). Ire-review ito ng barangay bago i-release."
+    "Piliin ang Certificate of Indigency sa document request form at ilagay ang layunin ng request. Susuriin ng authorized barangay personnel ang eligibility at supporting information bago aprubahan. Para sa confirmed requirements at anumang bayad, makipag-ugnayan sa barangay office."
   ],
   "document_request_process": [
-    "Ang proseso: (1) Mag-request sa SMART MASIPIT Portal o magpa-encode ng walk-in request sa Barangay Hall, (2) ili-link ng sistema ang request sa inyong resident profile, (3) ire-review at aaprubahan o ire-reject ito ng authorized na opisyal, (4) i-print at i-release ang dokumento ayon sa verification at pirma ng barangay."
+    "Maaaring magsumite online gamit ang approved resident account o magpa-encode ng walk-in request sa barangay hall. Dadaan ang request sa review at approval o rejection. Kapag approved, ihahanda muna ng staff ang dokumento. Hintayin ang Ready for release at basahin ang pickup instructions bago pumunta. Sa barangay office ginagawa ang printing at release."
   ],
   "document_status": [
-    "Makikita ang status ng inyong request (pending, approved, o rejected) sa SMART MASIPIT Portal sa ilalim ng inyong mga document request. Kung na-reject o matagal na itong pending, makipag-ugnayan sa Barangay Hall."
+    "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Hindi kayang tingnan ng chatbot ang personal request status."
   ],
   "payment_info": [
-    "Hindi pa available ang online payment sa SMART MASIPIT. Ang bayad (kung mayroon) ay ginagawa sa Barangay Hall kapag kukunin na ang dokumento."
+    "Walang online payment feature sa kasalukuyang SMART MASIPIT. Hindi rin ako makapagkukumpirma ng eksaktong fee o exemption para sa bawat certificate. Makipag-ugnayan sa barangay office para sa applicable fees at paraan ng pagbabayad."
   ],
   "health_patient_record": [
-    "Ang patient profile at health record ay ine-encode at ina-update ng authorized na health center staff sa Barangay Health Center, kasama ang basic na detalye, consultation, at immunization. Pumunta sa Health Center dala ang Valid ID para ma-register o ma-update ang inyong record."
+    "Maaaring mag-register ng patient ang authorized health staff kahit walang online resident account ang pasyente. Hahanapin muna ang existing resident record. Kung wala, maaaring magdagdag ng resident at patient record sa health registration flow matapos ma-verify ang impormasyon. Hindi ito awtomatikong gumagawa ng online account."
   ],
   "health_consultation_history": [
-    "Ang consultation entries at relevant health history ay itinatala ng authorized na health center staff at nakatago sa health record module. Para sa kopya o impormasyon tungkol sa inyong sariling record, magtanong sa Barangay Health Center staff."
+    "Authorized health staff ang nagtatala ng consultations at nagre-review ng consultation history. Ang corrections o clarifications ay itinatala bilang addendum upang mapanatili ang original entry. Para sa sariling record, makipag-ugnayan sa health staff. Hindi ito mababasa ng chatbot."
   ],
   "health_immunization_record": [
-    "Ang immunization entries ay itinatala ng authorized na health center staff sa health record module. Para sa record ng bakuna ng inyong anak, magtanong sa Barangay Health Center at dalhin ang ECEB Card / Baby's Booklet."
+    "Authorized health staff ang nagtatala at nagre-review ng immunization records at correction history. Makipag-ugnayan sa Barangay Health Center para sa sariling record o record ng inyong anak. Kumpirmahin sa health staff ang schedule at mga kailangang dalhin."
   ],
   "health_center_schedule": [
-    "Libre ang pangkalahatang konsultasyon sa Barangay Health Center mula Lunes hanggang Biyernes, 8:00 AM - 3:00 PM. Ang immunization para sa baby at sanggol ay tuwing Martes at Huwebes, 8:00 AM - 12:00 NN."
+    "Wala akong verified real-time schedule ng Barangay Health Center. Makipag-ugnayan sa health staff para sa consultation, immunization, at maternal service schedules."
   ],
   "health_privacy_access": [
-    "Ang health records ay mapupuntahan lamang ng authorized na health center staff. Ang ordinaryong barangay staff at resident accounts ay walang access sa clinical records ng ibang tao."
+    "Ang clinical records ay para lamang sa authorized health personnel. Ang resident account at ordinaryong barangay account ay hindi nagbibigay ng access sa clinical records. Hindi rin nakakabasa ang chatbot ng patient records."
   ],
   "health_no_advice": [
-    "Pasensya na po, hindi po nagbibigay ng diagnosis o payo sa gamot ang sistemang ito. Magpakonsulta po sa health worker sa Barangay Health Center. Kung emergency, pumunta agad sa pinakamalapit na ospital."
+    "Ang chatbot na ito ay gabay sa paggamit ng SMART MASIPIT. Hindi ito nagbibigay ng diagnosis, interpretasyon ng clinical readings, reseta, o dosage ng gamot. Makipag-ugnayan sa qualified health professional para sa inyong health concern."
   ],
   "census_registration": [
-    "Maaaring mag-register online sa SMART MASIPIT Portal sa ilalim ng Resident Census o pumunta sa Barangay Office dala ang 2 valid IDs at Kasunduan sa Pag-upa / Proof of Residency. Ive-verify ng staff ang inyong impormasyon."
+    "Magkaiba ang resident registry record at online account. Maaaring magdagdag ang authorized staff ng resident record kahit walang online account ang tao. Para magkaroon ng online access, gumawa ng resident account at kumpletuhin ang barangay verification."
   ],
   "census_requirements": [
-    "Ang resident registry ay nagtatala ng pagkakakilanlan at contact details, address o sitio, household membership, at demographic information na kailangan para sa mga aprubadong report. Ive-verify ng staff ang mga impormasyong ito."
+    "Nagtatala ang resident registry ng pangalan, birth date, sex, sitio, address, at contact number kung mayroon. Authorized staff ang nagve-verify ng impormasyon. Para sa eksaktong supporting documents na kailangan, makipag-ugnayan sa barangay office."
   ],
   "census_household_update": [
-    "I-update ang Household Profile sa SMART MASIPIT Portal o magsumite ng katibayan (kapanganakan, kamatayan, o paglipat) sa Barangay Census Officer. Ive-verify ng staff ang mga update bago ito itala."
+    "Authorized barangay staff ang namamahala sa household records, membership, at head assignment. Makipag-ugnayan sa staff para sa paglipat o pagwawasto. Walang self-service household editing ang resident account."
   ],
   "census_duplicate_check": [
-    "May duplicate checking ang resident registry. Kapag may posibleng duplicate na profile, ive-verify ito ng barangay staff. Kung may dalawang record kayo o maling impormasyon, magpunta sa Barangay Hall para maiayos."
+    "May duplicate checking sa resident registration. Kapag may posibleng kaparehong pangalan at birth date, kailangang i-review ng staff ang existing record. Huwag gumawa ng panibagong record para lamang malampasan ang duplicate warning."
   ],
   "census_summary": [
-    "Ang demographic summaries (ayon sa age group, kasarian, at sitio) ay ginagawa ng authorized na staff mula sa mga rekord na naitala sa sistema. Para sa kopya ng report, makipag-ugnayan sa Barangay Census Officer."
+    "Authorized barangay personnel ang nakakakita ng demographic summaries mula sa saved resident records. Para sa report inquiries, makipag-ugnayan sa barangay office. Hindi nakakakuha ng live census figures ang chatbot."
   ],
   "census_not_official": [
-    "Ang census sa SMART MASIPIT ay local resident registry ng Barangay Masipit. Ang mga summary nito ay batay lamang sa mga rekord na naitala sa sistema at hindi kapalit ng opisyal na pambansang census."
+    "Ang census module ng SMART MASIPIT ay batay sa local resident registry ng Barangay Masipit. Hindi ito kapalit ng opisyal na pambansang census."
   ],
   "data_privacy": [
-    "Sinusunod ng SMART MASIPIT ang layunin ng Data Privacy Act of 2012. Gumagamit ito ng password-protected accounts, role-based access, validation, activity logs, at database backup. Ang inyong impormasyon ay ginagamit lamang para sa mga serbisyo ng barangay."
+    "May permissions ang SMART MASIPIT ayon sa tungkulin ng account. Hindi nakakabasa ang chatbot ng resident, identity-verification, o health records. Huwag magpadala ng password, reset link, ID photo, PhilHealth number, o medical details sa chat."
   ],
   "account_access": [
-    "Gumawa o mag-login ng account sa SMART MASIPIT Portal. Kung nakalimutan ang password o hindi makapag-login, makipag-ugnayan sa Barangay Hall para ma-reset o ma-verify ang inyong account."
+    "Piliin ang Create resident account sa landing page o Create an account sa login page. Ilagay ang required information at kumpletuhin ang identity verification submission. Pending muna ang account hanggang ma-review ng Barangay Secretary o Captain. Kung nakalimutan ang password, gamitin ang Forgot your password."
   ],
   "barangay_operating_hours": [
-    "Bukas ang Barangay Hall ng Masipit mula Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM (walang pasok tuwing Sabado, Linggo, at Opisyal na Holidays)."
+    "Makipag-ugnayan sa barangay office para sa confirmed office hours, holiday schedule, at service availability. Hindi ako nakakakita ng real-time opening hours."
   ],
   "out_of_scope": [
-    "Pasensya na po, ang kaya ko lang sagutin ay tungkol sa Document Request (Barangay Clearance at Certificate of Indigency), Health Record, at Resident Census ng SMART MASIPIT. Para sa ibang tanong, makipag-ugnayan sa Barangay Hall (Lunes-Biyernes, 8AM-5PM)."
+    "Hindi ko matiyak ang sagot sa tanong na iyan. Makakatulong ako sa paggamit ng SMART MASIPIT: accounts, document requests, walk-in services, resident registry, health modules, at barangay location. Maaari bang linawin ang inyong tanong?"
+  ],
+  "account_identity_verification": [
+    "Sa identity verification form, kunan ang harap at likod ng valid ID at ang inyong selfie. Payagan ang camera permission ng browser. Kung na-block, tingnan ang site permissions at payagan ang camera, pagkatapos buksan muli ang capture step. Kung malabo ang larawan, gamitin ang Retake o pagkuha muli bago isumite. Secretary o Captain ang magre-review ng submission. Sa verification form lamang isumite ang mga larawan, hindi sa chatbot."
+  ],
+  "account_pending": [
+    "Secretary o Captain ang nagre-review ng resident account. Mag-sign in para makita ang Account Status at kumpletuhin ang hinihinging verification evidence kung kulang. Para sa follow-up, makipag-ugnayan sa barangay office. Hindi kayang mag-approve o tingnan ng chatbot ang inyong application."
+  ],
+  "account_password_reset": [
+    "Sa login page, piliin ang Forgot your password at ilagay ang registered email. Buksan ang reset email at sundin ang instructions. Tingnan din ang Spam folder. Kung nagamit na o hindi na valid ang link, humingi ng bago. Huwag ibahagi ang reset link o password sa chatbot."
+  ],
+  "document_walk_in": [
+    "Puwedeng mag-walk-in document request kahit may online account o wala. Authorized staff ang magve-verify ng identity at maghahanap ng resident record. Kung wala pang record, kailangang mairehistro muna ang resident bago i-encode ang document request. Dadaan pa rin ito sa review at approval."
+  ],
+  "document_pickup": [
+    "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness."
+  ],
+  "document_additional_types": [
+    "Piliin ang kaukulang certificate o permit sa document request form at kumpletuhin ang additional fields na ipinapakita. Para sa First-Time Jobseeker Certification, sinusuri rin ng staff ang signed oath at reference nito. Ang draft na hindi pa napipirmahan ay hindi signed oath. Kumpirmahin sa barangay ang eligibility at supporting requirements."
+  ],
+  "health_maternal": [
+    "May maternal records module para sa authorized health staff. Mula sa patient profile, maaaring gumawa ng hiwalay na record bawat pregnancy, magtala ng antepartum visits, at magdagdag ng correction notes. Draft pa ang printable maternal form habang hinihintay ang official template confirmation. Makipag-ugnayan sa health staff para sa registration; hindi nakikita ng chatbot ang clinical details."
+  ],
+  "health_blood_pressure": [
+    "Authorized health staff ang nag-eencode ng blood pressure sa consultation form gamit ang magkahiwalay na systolic at diastolic fields, sa mmHg. Kung magtatala ng BP, ilagay ang parehong values. Kung hindi nasukat, iwanang blanko ang parehong fields; huwag mag-imbento ng reading. Para sa interpretasyon ng resulta, makipag-ugnayan sa health professional. Hindi nagbibigay ng clinical interpretation ang chatbot."
+  ],
+  "barangay_location": [
+    "Sa landing page ng SMART MASIPIT, piliin ang Lokasyon. Nandoon ang Google Maps ng Masipit Barangay Hall sa Barangay Masipit, Calapan City, Oriental Mindoro. Pindutin ang Get Directions para buksan ang Google Maps at ilagay ang inyong pinanggagalingan."
   ]
 }

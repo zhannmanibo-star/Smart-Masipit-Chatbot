@@ -27,10 +27,11 @@
         "Uy",
         "Hello, may itatanong ako",
         "Pasensya na po, pwedeng magtanong?",
-        "Good morning po"
+        "Good morning po",
+        "How are you?"
       ],
       "responses": [
-        "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Matutulungan ko kayo sa Document Request, Health Record, at Resident Census. Ano po ang kailangan ninyo?"
+        "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration, verification, document requests, walk-in services, resident registry, health records, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko; hindi ko nakikita ang personal records o actual request status."
       ]
     },
     {
@@ -64,7 +65,7 @@
         "Wala na po, salamat"
       ],
       "responses": [
-        "Walang problema! Makakaasa kayong laging handang maglingkod ang Barangay Masipit. Mag-ingat po kayo!"
+        "Salamat po! Kung may iba pa kayong tanong tungkol sa SMART MASIPIT, maaari kayong magtanong muli."
       ]
     },
     {
@@ -94,10 +95,26 @@
         "anu-anong certificate ang meron",
         "saan ko makikita ang listahan ng dokumento",
         "dokumento sa portal",
-        "anong request ang pwede"
+        "anong request ang pwede",
+        "Bukod sa clearance ano pa ang dokumentong available?",
+        "May ibang certificates pa maliban sa indigency?",
+        "Pakilista lahat ng document types sa request form",
+        "What other certificates can I request besides clearance?",
+        "List all available barangay document types",
+        "Are clearance and indigency the only available documents?",
+        "Ano lahat ang pagpipilian sa document type dropdown?",
+        "May listahan ba ng supported barangay documents?",
+        "Anong certificates at permits ang kasama sa system?",
+        "Ilan ang klase ng dokumentong puwedeng piliin?",
+        "Pakisabi ang mga pangalan ng available certificates",
+        "Ano ang sakop ng document services ninyo?",
+        "Which document categories are supported by SMART MASIPIT?",
+        "Show me the available certificate and permit types",
+        "What choices appear in the document type menu?",
+        "Can you name the documents offered in the request module?"
       ],
       "responses": [
-        "Sa SMART MASIPIT, maaari kayong mag-request ng Barangay Clearance at Certificate of Indigency. Maaari ring i-encode ng staff ang walk-in na request sa Barangay Hall."
+        "Ang mga document type na naidagdag sa SMART MASIPIT ay Barangay Clearance, Certificate of Indigency, Certificate of Residency, Oath of Undertaking, First-Time Jobseeker Barangay Certification, Certificate of Closure, Certificate of Good Moral, at Barangay Occupancy Permit. Piliin ang naaangkop na dokumento sa request form. Ang bawat request ay sasailalim sa verification at barangay review."
       ]
     },
     {
@@ -105,34 +122,28 @@
       "patterns": [
         "Paano kumuha ng barangay clearance?",
         "Saan humingi ng barangay clearance?",
-        "Magkano ang clearance?",
         "Ano ang kailangan sa barangay clearance?",
         "Gusto ko mag-request ng clearance online",
         "Requirement sa barangay clearance",
-        "May bayad ba ang barangay clearance?",
         "Ilang araw bago makuha ang clearance?",
         "pano kumuha ng clearance",
         "how to get a barangay clearance",
-        "how much is the barangay clearance",
-        "magkano po ang clearance",
         "kailangan ko ng clearance para sa trabaho",
         "clearance para sa job application",
         "pwede ba online ang clearance",
         "paano mag apply ng clearance sa portal",
-        "mgkano clearance",
         "pano mag request ng clearance",
         "gaano katagal ang clearance",
         "clearance po para sa NBI",
         "need ko ng barangay clearance",
         "can I request a clearance online",
         "ano po ang dadalhin para sa clearance",
-        "brgy clearance magkano",
         "how long does it take to get a clearance",
-        "may fee ba ang clearance",
-        "kukuha ako ng brgy clearance"
+        "kukuha ako ng brgy clearance",
+        "process ng clearance request"
       ],
       "responses": [
-        "Para sa Barangay Clearance, mag-request sa SMART MASIPIT Portal o pumunta sa Barangay Hall dala ang Valid ID at ₱50.00 fee. Ang request ay ire-review at aaprubahan ng authorized na opisyal bago i-release ang printable na dokumento."
+        "Para sa Barangay Clearance, mag-sign in gamit ang approved resident account, buksan ang document requests, piliin ang Barangay Clearance, at kumpletuhin ang required fields. Maaari ring magpa-encode ng walk-in request sa barangay hall. Kumpirmahin sa barangay ang requirements at anumang bayad."
       ]
     },
     {
@@ -140,33 +151,28 @@
       "patterns": [
         "Paano kumuha ng certificate of indigency?",
         "Kailangan ko ng indigency para sa scholarship",
-        "Magkano ang bayad sa indigency certificate?",
         "Sino ang pwedeng humingi ng indigency?",
-        "Libre ba ang indigency certificate?",
         "Requirements para sa indigency",
         "Indigency para sa 4Ps",
         "Indigency para sa medical assistance",
         "Kailangan ba ng certificate of indigency sa ospital?",
         "pano kumuha ng indigency",
         "how to get a certificate of indigency",
-        "is the indigency certificate free",
         "indigency po para sa ayuda",
         "indigency para sa PhilHealth",
         "indigency para sa pagpapagamot",
         "indigency para sa school",
         "ano ang requirements sa indigency",
-        "libre po ba ang indigency",
         "need indigency for hospital bill",
         "saan kukuha ng indigency",
         "indigency cert requirements",
         "mahirap lang kami, pwede ba humingi ng indigency",
         "indigency para sa burial assistance",
         "paano makakuha ng indigency online",
-        "indigency magkano",
         "kuha indigency"
       ],
       "responses": [
-        "Libre ang Certificate of Indigency para sa mga kwalipikadong residente ng Masipit. Magdala ng Valid ID at patunay ng pangangailangan (tulad ng Medical Abstract o School Assessment). Ire-review ito ng barangay bago i-release."
+        "Piliin ang Certificate of Indigency sa document request form at ilagay ang layunin ng request. Susuriin ng authorized barangay personnel ang eligibility at supporting information bago aprubahan. Para sa confirmed requirements at anumang bayad, makipag-ugnayan sa barangay office."
       ]
     },
     {
@@ -175,36 +181,46 @@
         "Paano mag-request ng dokumento online?",
         "Ano ang proseso ng document request?",
         "Paano gumagana ang online request?",
-        "Pwede ba mag-walk-in na lang?",
         "Sino ang nag-aapprove ng request?",
         "Ano ang mangyayari pagkatapos kong mag-request?",
         "step by step paano mag-request",
         "how does the document request work",
         "how to submit a document request",
         "paano mag-submit ng request sa portal",
-        "kailangan ba ng account para mag-request",
-        "pwede ba i-encode ng staff ang request ko",
-        "walk-in request paano",
         "may printable na dokumento ba",
-        "paano makuha ang dokumento pagkatapos maaprubahan",
-        "kailangan ba pumunta pa sa barangay hall",
         "sino ang pipirma sa dokumento",
-        "paano malalaman kung aprubado na",
         "anong mga hakbang sa pag-request",
         "mag-aapply po ako ng dokumento, ano ang gagawin",
         "pano gamitin ang document request module",
-        "online request o walk-in",
-        "pwede ba ako humiling kahit walang internet",
         "ano ang verification sa request",
         "paano ma-link ang request ko sa resident profile",
         "saan ako mag-sa-submit ng request",
-        "process ng clearance request",
         "need ba ng approval",
         "how long before my request is approved",
-        "tinatanggap ba ang request sa portal"
+        "tinatanggap ba ang request sa portal",
+        "Ano ang unang hakbang sa pagsusumite ng document request?",
+        "Paano magsimula ng bagong application para sa dokumento?",
+        "Ano ang dapat gawin pagkatapos piliin ang document type?",
+        "Paano isumite ang purpose ng document request?",
+        "Ano ang sunod matapos maipasa ang document application?",
+        "Paano dumadaan sa review ang bagong document request?",
+        "Ano ang buong proseso mula submission hanggang release?",
+        "Kailangan bang hintayin ang review bago maihanda ang dokumento?",
+        "Sino ang susuri sa dokumentong nirequest sa portal?",
+        "Ano ang ginagawa ng staff pagkatapos makatanggap ng request?",
+        "Paano gamitin ang form para humiling ng barangay document?",
+        "Saan magsisimula sa online document application?",
+        "What steps should I follow to submit a document application?",
+        "What happens after I send my document request?",
+        "How does a submitted application reach document preparation?",
+        "Explain the workflow from document submission to release",
+        "Does staff review my application before preparing the document?",
+        "What should I enter before submitting the document request form?",
+        "How do I start a new document application in the portal?",
+        "What is the review process for a submitted document application?"
       ],
       "responses": [
-        "Ang proseso: (1) Mag-request sa SMART MASIPIT Portal o magpa-encode ng walk-in request sa Barangay Hall, (2) ili-link ng sistema ang request sa inyong resident profile, (3) ire-review at aaprubahan o ire-reject ito ng authorized na opisyal, (4) i-print at i-release ang dokumento ayon sa verification at pirma ng barangay."
+        "Maaaring magsumite online gamit ang approved resident account o magpa-encode ng walk-in request sa barangay hall. Dadaan ang request sa review at approval o rejection. Kapag approved, ihahanda muna ng staff ang dokumento. Hintayin ang Ready for release at basahin ang pickup instructions bago pumunta. Sa barangay office ginagawa ang printing at release."
       ]
     },
     {
@@ -224,7 +240,6 @@
         "status tracking ng request",
         "saan makikita ang status",
         "pwede ko bang malaman ang update ng request ko",
-        "kailan ko makukuha ang dokumento ko",
         "tracking ng document request",
         "ilang araw na pending ang request ko",
         "na-approve na ba",
@@ -234,10 +249,29 @@
         "ano ang ibig sabihin ng pending",
         "hindi ko makita ang request ko",
         "nag-request ako kahapon, ano na ang status",
-        "kailan ma-a-approve ang request ko"
+        "kailan ma-a-approve ang request ko",
+        "paano malalaman kung aprubado na",
+        "Naaprubahan na ba ang certificate of indigency request ko?",
+        "Paano tingnan ang progress ng clearance application ko?",
+        "Pending pa rin ang residency certificate request ko",
+        "Saan makikita kung rejected ang clearance request?",
+        "May update na ba sa application ko para sa indigency?",
+        "How can I track my barangay clearance application?",
+        "Is my certificate of indigency request already approved?",
+        "Where can I check the status of my residency request?",
+        "Naisubmit ko na ang application saan titingnan ang progress?",
+        "Paano ko malalaman kung under review pa ang request?",
+        "Ano ang ibig sabihin ng submitted sa request list?",
+        "Paano makita kung nireject ng staff ang document application?",
+        "Nagbago ba ang status ng certificate request ko?",
+        "Saan nakalagay ang current stage ng nirequest kong dokumento?",
+        "I already submitted a request where can I follow its progress?",
+        "Where does the portal show whether my request was rejected?",
+        "How do I know if my document application is under review?",
+        "Can you check the current stage of my document request?"
       ],
       "responses": [
-        "Makikita ang status ng inyong request (pending, approved, o rejected) sa SMART MASIPIT Portal sa ilalim ng inyong mga document request. Kung na-reject o matagal na itong pending, makipag-ugnayan sa Barangay Hall."
+        "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Hindi kayang tingnan ng chatbot ang personal request status."
       ]
     },
     {
@@ -267,10 +301,31 @@
         "may bayad ba online",
         "paano magbayad ng request",
         "bayad sa documents",
-        "pay online barangay"
+        "pay online barangay",
+        "Magkano ang clearance?",
+        "May bayad ba ang barangay clearance?",
+        "how much is the barangay clearance",
+        "magkano po ang clearance",
+        "mgkano clearance",
+        "brgy clearance magkano",
+        "may fee ba ang clearance",
+        "Magkano ang bayad sa indigency certificate?",
+        "Libre ba ang indigency certificate?",
+        "is the indigency certificate free",
+        "libre po ba ang indigency",
+        "indigency magkano",
+        "Magkano ang residency certificate?",
+        "Magkano ang singil para sa barangay documents?",
+        "Saan ko babayaran ang certificate of indigency?",
+        "Puwede bang GCash ang bayad sa residency certificate?",
+        "May online checkout ba para sa clearance fee?",
+        "Kailangan bang magbayad sa portal para sa dokumento?",
+        "How much is the fee for a residency certificate?",
+        "Can I pay the barangay clearance fee through the website?",
+        "Where should I pay for my requested certificate?"
       ],
       "responses": [
-        "Hindi pa available ang online payment sa SMART MASIPIT. Ang bayad (kung mayroon) ay ginagawa sa Barangay Hall kapag kukunin na ang dokumento."
+        "Walang online payment feature sa kasalukuyang SMART MASIPIT. Hindi rin ako makapagkukumpirma ng eksaktong fee o exemption para sa bawat certificate. Makipag-ugnayan sa barangay office para sa applicable fees at paraan ng pagbabayad."
       ]
     },
     {
@@ -300,10 +355,32 @@
         "health records module",
         "ano ang nasa electronic health record",
         "pano magkaroon ng record sa health center",
-        "kailangan ba ng ID para sa health record"
+        "kailangan ba ng ID para sa health record",
+        "Saan ipapawasto ang pangalan sa patient profile?",
+        "May mali sa patient details ko sino ang lalapitan?",
+        "Paano humingi ng sariling patient record sa health staff?",
+        "Who handles corrections to patient registration details?",
+        "Where can I request a copy of my own patient record?",
+        "My patient profile contains an incorrect contact number",
+        "Paano magbukas ng bagong patient profile sa health module?",
+        "Hindi pa ako registered patient paano magsisimula?",
+        "Sino ang gagawa ng patient record kapag unang punta?",
+        "May existing resident record na ako paano maging registered patient?",
+        "Walang online account ang pasyente pwede bang mairegister?",
+        "Saan ipapaayos ang maling pangalan sa patient registration?",
+        "May duplicate bang patient profile kapag registered na?",
+        "Paano hahanapin ng health staff ang existing patient record?",
+        "Paano magparegister ng patient na wala pang resident record?",
+        "Kailangan bang may portal login bago gumawa ng patient profile?",
+        "How can health staff register a first-time patient?",
+        "Can a patient be registered without an online account?",
+        "How is an existing resident linked to a patient profile?",
+        "Where should I report incorrect patient registration details?",
+        "How do staff find a patient's existing registration?",
+        "Who creates patient profiles in the health module?"
       ],
       "responses": [
-        "Ang patient profile at health record ay ine-encode at ina-update ng authorized na health center staff sa Barangay Health Center, kasama ang basic na detalye, consultation, at immunization. Pumunta sa Health Center dala ang Valid ID para ma-register o ma-update ang inyong record."
+        "Maaaring mag-register ng patient ang authorized health staff kahit walang online resident account ang pasyente. Hahanapin muna ang existing resident record. Kung wala, maaaring magdagdag ng resident at patient record sa health registration flow matapos ma-verify ang impormasyon. Hindi ito awtomatikong gumagawa ng online account."
       ]
     },
     {
@@ -317,7 +394,6 @@
         "consultation history",
         "my previous checkups",
         "saan makikita ang history ng konsulta ko",
-        "sino ang nakakakita ng consultation record ko",
         "naka-save ba ang mga konsulta",
         "medical history sa health center",
         "past visits sa health center",
@@ -336,7 +412,7 @@
         "nakaraang konsulta ko"
       ],
       "responses": [
-        "Ang consultation entries at relevant health history ay itinatala ng authorized na health center staff at nakatago sa health record module. Para sa kopya o impormasyon tungkol sa inyong sariling record, magtanong sa Barangay Health Center staff."
+        "Authorized health staff ang nagtatala ng consultations at nagre-review ng consultation history. Ang corrections o clarifications ay itinatala bilang addendum upang mapanatili ang original entry. Para sa sariling record, makipag-ugnayan sa health staff. Hindi ito mababasa ng chatbot."
       ]
     },
     {
@@ -366,10 +442,20 @@
         "immunization logs",
         "pwede ko bang makita ang bakuna record",
         "record ng bakuna ng bata",
-        "nabakunahan na ba ang anak ko"
+        "nabakunahan na ba ang anak ko",
+        "Saan ipaparecord ang bakunang naibigay na sa bata?",
+        "May mali sa date ng vaccination entry paano ipapawasto?",
+        "Sino ang nagtatala ng vaccine history sa system?",
+        "Paano mareview ng health staff ang recorded immunizations?",
+        "May entry na ba ang huling bakuna sa patient record?",
+        "Paano humingi ng sariling vaccination history sa health center?",
+        "Where are previously administered vaccinations recorded?",
+        "Who maintains the patient's immunization history?",
+        "How do I report an incorrect vaccination record entry?",
+        "Can health staff review the vaccines already recorded?"
       ],
       "responses": [
-        "Ang immunization entries ay itinatala ng authorized na health center staff sa health record module. Para sa record ng bakuna ng inyong anak, magtanong sa Barangay Health Center at dalhin ang ECEB Card / Baby's Booklet."
+        "Authorized health staff ang nagtatala at nagre-review ng immunization records at correction history. Makipag-ugnayan sa Barangay Health Center para sa sariling record o record ng inyong anak. Kumpirmahin sa health staff ang schedule at mga kailangang dalhin."
       ]
     },
     {
@@ -399,10 +485,25 @@
         "may nurse ba sa health center",
         "libreng konsulta",
         "bukas ba ang health center ng Sabado",
-        "anong oras ang bakunahan"
+        "anong oras ang bakunahan",
+        "Anong araw ang prenatal checkup?",
+        "Kailan available ang health staff para sa konsultasyon?",
+        "Sino ang dapat tanungin tungkol sa schedule ng health center?",
+        "Anong araw puwedeng pumunta para sa prenatal consultation?",
+        "May schedule ba ngayong linggo para sa pagpapabakuna?",
+        "Paano malalaman ang oras ng serbisyo sa health center?",
+        "Kanino iko-confirm ang appointment schedule ng health center?",
+        "May consultation service ba sa susunod na araw?",
+        "Saan kukumpirmahin ang maternal clinic schedule?",
+        "Who can confirm the health center's consultation schedule?",
+        "What day is the next immunization session?",
+        "How can I confirm prenatal clinic availability?",
+        "Where should I ask about health center service hours?",
+        "Is the health center offering consultations this week?",
+        "Who should I contact for the vaccination schedule?"
       ],
       "responses": [
-        "Libre ang pangkalahatang konsultasyon sa Barangay Health Center mula Lunes hanggang Biyernes, 8:00 AM - 3:00 PM. Ang immunization para sa baby at sanggol ay tuwing Martes at Huwebes, 8:00 AM - 12:00 NN."
+        "Wala akong verified real-time schedule ng Barangay Health Center. Makipag-ugnayan sa health staff para sa consultation, immunization, at maternal service schedules."
       ]
     },
     {
@@ -432,10 +533,31 @@
         "confidentiality ng health records",
         "bakit hindi ko makita ang health record ng iba",
         "limitado ba ang access sa health record",
-        "sino ang authorized sa health module"
+        "sino ang authorized sa health module",
+        "sino ang nakakakita ng consultation record ko",
+        "Makikita ba ng ibang residente ang BP record ko?",
+        "May access ba ang secretary sa maternal records?",
+        "Sino lang ang puwedeng bumasa ng consultation details?",
+        "Can other users read my confidential health information?",
+        "Are patient records restricted to authorized health staff?",
+        "Can a regular barangay employee view clinical records?",
+        "Pwede bang makita ng kapitbahay ang consultation notes ko?",
+        "Makakabasa ba ang resident account ng clinical records?",
+        "May permission ba ang barangay staff sa patient consultations?",
+        "Sino ang authorized bumasa ng maternal health information?",
+        "Nakikita ba ng chatbot ang private patient details?",
+        "Pwede bang makita ng ibang account ang bakuna record ng anak ko?",
+        "Restricted ba ang medical history sa health personnel?",
+        "Makikita ba ng ordinaryong user ang patient profile ng iba?",
+        "Can the chatbot access confidential patient information?",
+        "Can ordinary residents read another patient's consultation notes?",
+        "Are clinical records limited to authorized health personnel?",
+        "Who has permission to view maternal health information?",
+        "Can non-health staff access consultation records?",
+        "Are vaccination records visible to other resident accounts?"
       ],
       "responses": [
-        "Ang health records ay mapupuntahan lamang ng authorized na health center staff. Ang ordinaryong barangay staff at resident accounts ay walang access sa clinical records ng ibang tao."
+        "Ang clinical records ay para lamang sa authorized health personnel. Ang resident account at ordinaryong barangay account ay hindi nagbibigay ng access sa clinical records. Hindi rin nakakabasa ang chatbot ng patient records."
       ]
     },
     {
@@ -466,10 +588,40 @@
         "symptoms checker",
         "dengue ba ito",
         "ilang tablet ang iinumin ko",
-        "masama ang pakiramdam ko, ano ang sakit ko"
+        "masama ang pakiramdam ko, ano ang sakit ko",
+        "Normal ba ang blood pressure ko?",
+        "Please interpret my BP reading",
+        "Mataas ba ang 160 over 100?",
+        "Anong gamot sa mataas na blood pressure?",
+        "Masakit ang tiyan ko habang buntis ano ito?",
+        "What medicine can I take during pregnancy?",
+        "Ano ang ibig sabihin ng prenatal result ko?",
+        "Can you diagnose my pregnancy symptoms?",
+        "Pwede mo bang sabihin kung may sakit ako base sa nararamdaman ko?",
+        "Anong gamot ang dapat kong bilhin para sa sintomas?",
+        "Pakibasa kung normal ang blood pressure reading ko",
+        "Ilang beses sa isang araw ko iinumin ang gamot?",
+        "Ano ang diagnosis kapag ganito ang sintomas?",
+        "Ligtas bang inumin ang gamot na ito habang buntis?",
+        "Anong treatment ang kailangan sa nararamdaman ko?",
+        "Pakisuri ang resulta ng laboratory test ko",
+        "Can you recommend a medicine for my symptoms?",
+        "Can you tell whether my blood pressure result is normal?",
+        "What dose of medication should I take?",
+        "Please diagnose me from these symptoms",
+        "Can you interpret my laboratory results?",
+        "Which treatment should I use during pregnancy?",
+        "Pakisabi kung delikado ang BP result ko",
+        "Mababa ba ang systolic reading ko?",
+        "Ano ang ibig sabihin ng mataas na diastolic pressure?",
+        "Anong gamot ang dapat inumin para bumaba ang BP?",
+        "Can you tell me whether my systolic result is dangerous?",
+        "What does my diastolic blood pressure result mean?",
+        "Should I change my medicine because of this BP reading?",
+        "Please interpret these blood pressure numbers for me"
       ],
       "responses": [
-        "Pasensya na po, hindi po nagbibigay ng diagnosis o payo sa gamot ang sistemang ito. Magpakonsulta po sa health worker sa Barangay Health Center. Kung emergency, pumunta agad sa pinakamalapit na ospital."
+        "Ang chatbot na ito ay gabay sa paggamit ng SMART MASIPIT. Hindi ito nagbibigay ng diagnosis, interpretasyon ng clinical readings, reseta, o dosage ng gamot. Makipag-ugnayan sa qualified health professional para sa inyong health concern."
       ]
     },
     {
@@ -488,22 +640,33 @@
         "census registration online",
         "saan ang census form",
         "kailangan ba magparehistro sa census",
-        "paano mag-register sa SMART MASIPIT",
         "bagong lipat lang kami, ano ang gagawin",
         "register as a new resident",
         "need to register in the barangay census",
         "ano ang requirements sa census registration",
         "census para sa bagong tirahan",
         "paano ma-list sa masterlist ng barangay",
-        "kailan ang census",
         "pano sumagot sa census",
         "how do i answer the census form",
         "magparehistro bilang resident",
         "kasama ba ang mga bata sa census",
-        "resident registry"
+        "resident registry",
+        "Wala pa akong resident record sa barangay",
+        "Hindi pa ako nakalista bilang residente saan magpaparehistro?",
+        "Bagong lipat sa barangay paano magkaroon ng resident record?",
+        "Paano maidagdag ang pangalan ko sa barangay registry?",
+        "Wala pa akong entry sa resident masterlist",
+        "Sino ang puwedeng magencode ng bagong resident record?",
+        "Pwede bang resident record lang at walang online login?",
+        "Kailangan kong magpalista bilang residente ng Masipit",
+        "Paano magparehistro sa barangay nang hindi gumagawa ng account?",
+        "How do I get listed in the barangay resident registry?",
+        "I recently moved to Masipit how can I register as a resident?",
+        "Who can create a resident registry entry for me?",
+        "Can staff register a resident without creating an online account?"
       ],
       "responses": [
-        "Maaaring mag-register online sa SMART MASIPIT Portal sa ilalim ng Resident Census o pumunta sa Barangay Office dala ang 2 valid IDs at Kasunduan sa Pag-upa / Proof of Residency. Ive-verify ng staff ang inyong impormasyon."
+        "Magkaiba ang resident registry record at online account. Maaaring magdagdag ang authorized staff ng resident record kahit walang online account ang tao. Para magkaroon ng online access, gumawa ng resident account at kumpletuhin ang barangay verification."
       ]
     },
     {
@@ -533,10 +696,26 @@
         "ano ang kailangan sa pagre-register ng household",
         "detalye ng resident",
         "ano ang laman ng census record",
-        "mga tanong sa census"
+        "mga tanong sa census",
+        "Anong personal details ang kailangan sa resident registry?",
+        "Required ba ang birth date sa resident information?",
+        "Anong address details ang itinatala sa resident record?",
+        "Anong fields ang pinupunan kapag nagrerehistro ng residente?",
+        "Kasama ba ang first name at last name sa resident profile?",
+        "Anong contact information ang puwedeng ilagay sa registry?",
+        "Bakit hinihingi ang sitio sa resident registration?",
+        "Ano ang nilalaman ng basic resident information form?",
+        "Anong demographic details ang ginagamit sa resident registry?",
+        "Ano ang kailangang impormasyon bago maencode ang residente?",
+        "Which fields are collected when registering a resident?",
+        "Does the resident form ask for a date of birth?",
+        "What address information belongs in the resident profile?",
+        "What basic details should I prepare for resident registration?",
+        "Is contact information included in the resident registry?",
+        "What information is stored in a basic resident record?"
       ],
       "responses": [
-        "Ang resident registry ay nagtatala ng pagkakakilanlan at contact details, address o sitio, household membership, at demographic information na kailangan para sa mga aprubadong report. Ive-verify ng staff ang mga impormasyong ito."
+        "Nagtatala ang resident registry ng pangalan, birth date, sex, sitio, address, at contact number kung mayroon. Authorized staff ang nagve-verify ng impormasyon. Para sa eksaktong supporting documents na kailangan, makipag-ugnayan sa barangay office."
       ]
     },
     {
@@ -566,10 +745,26 @@
         "correction sa census record",
         "household profile update online",
         "paano mag-update ng census",
-        "paano i-update ang resident record"
+        "paano i-update ang resident record",
+        "Lilipat ang isang miyembro sa ibang household paano ito itatala?",
+        "Paano ipapalipat sa ibang household ang resident record?",
+        "May bagong household head sino ang maguupdate?",
+        "Kailangan naming baguhin ang listahan ng kasama sa bahay",
+        "Paano ipapaayos ang maling household assignment?",
+        "Nasa ibang household ang pangalan ko paano ililipat?",
+        "Paano magrequest ng correction sa address ng existing resident?",
+        "May bagong miyembro ang bahay namin paano idagdag?",
+        "Hindi na dito nakatira ang dating household member",
+        "Sino ang magtatala ng pagbabago sa household membership?",
+        "How do I request a transfer to another household?",
+        "Who updates the household head in the registry?",
+        "My resident record is linked to the wrong household",
+        "A family member moved out how should the household be updated?",
+        "Can staff correct the address on an existing resident record?",
+        "How do I report a change in household membership?"
       ],
       "responses": [
-        "I-update ang Household Profile sa SMART MASIPIT Portal o magsumite ng katibayan (kapanganakan, kamatayan, o paglipat) sa Barangay Census Officer. Ive-verify ng staff ang mga update bago ito itala."
+        "Authorized barangay staff ang namamahala sa household records, membership, at head assignment. Makipag-ugnayan sa staff para sa paglipat o pagwawasto. Walang self-service household editing ang resident account."
       ]
     },
     {
@@ -602,7 +797,7 @@
         "double record"
       ],
       "responses": [
-        "May duplicate checking ang resident registry. Kapag may posibleng duplicate na profile, ive-verify ito ng barangay staff. Kung may dalawang record kayo o maling impormasyon, magpunta sa Barangay Hall para maiayos."
+        "May duplicate checking sa resident registration. Kapag may posibleng kaparehong pangalan at birth date, kailangang i-review ng staff ang existing record. Huwag gumawa ng panibagong record para lamang malampasan ang duplicate warning."
       ]
     },
     {
@@ -632,10 +827,22 @@
         "sex distribution ng barangay",
         "demographic summaries by sitio",
         "ilang tao ang nakatira sa Purok",
-        "generate demographic report"
+        "generate demographic report",
+        "May report ba ng bilang ng residente kada sitio?",
+        "Saan makikita ng staff ang population summary?",
+        "Paano tingnan ang breakdown ng edad sa barangay?",
+        "May summary ba ng bilang ng babae at lalaki?",
+        "Paano makikita ang kabuuang bilang ng households?",
+        "Sino ang may permission sa demographic reports?",
+        "May aggregated report ba ng registered residents?",
+        "Makikita ba ang age distribution ng resident registry?",
+        "Can authorized staff view resident counts by sitio?",
+        "Where are the demographic summaries in the system?",
+        "Does the census report show age group totals?",
+        "Who is allowed to access population summary reports?"
       ],
       "responses": [
-        "Ang demographic summaries (ayon sa age group, kasarian, at sitio) ay ginagawa ng authorized na staff mula sa mga rekord na naitala sa sistema. Para sa kopya ng report, makipag-ugnayan sa Barangay Census Officer."
+        "Authorized barangay personnel ang nakakakita ng demographic summaries mula sa saved resident records. Para sa report inquiries, makipag-ugnayan sa barangay office. Hindi nakakakuha ng live census figures ang chatbot."
       ]
     },
     {
@@ -665,7 +872,7 @@
         "hindi ba ito ang pambansang census"
       ],
       "responses": [
-        "Ang census sa SMART MASIPIT ay local resident registry ng Barangay Masipit. Ang mga summary nito ay batay lamang sa mga rekord na naitala sa sistema at hindi kapalit ng opisyal na pambansang census."
+        "Ang census module ng SMART MASIPIT ay batay sa local resident registry ng Barangay Masipit. Hindi ito kapalit ng opisyal na pambansang census."
       ]
     },
     {
@@ -695,31 +902,33 @@
         "may encryption ba",
         "paano mag-request na burahin ang data ko",
         "paano ginagarantiyahan ang privacy",
-        "pangalagaan ba ang impormasyon ng residente"
+        "pangalagaan ba ang impormasyon ng residente",
+        "Paano pinoprotektahan ang login password?",
+        "Nakikita ba ng staff ang mismong password ko?",
+        "Ligtas bang ibigay ang password sa chatbot?",
+        "Is my account password confidential?",
+        "Should I share my login credentials in this chat?",
+        "How is personal account information protected?"
       ],
       "responses": [
-        "Sinusunod ng SMART MASIPIT ang layunin ng Data Privacy Act of 2012. Gumagamit ito ng password-protected accounts, role-based access, validation, activity logs, at database backup. Ang inyong impormasyon ay ginagamit lamang para sa mga serbisyo ng barangay."
+        "May permissions ang SMART MASIPIT ayon sa tungkulin ng account. Hindi nakakabasa ang chatbot ng resident, identity-verification, o health records. Huwag magpadala ng password, reset link, ID photo, PhilHealth number, o medical details sa chat."
       ]
     },
     {
       "tag": "account_access",
       "patterns": [
         "Paano gumawa ng account?",
-        "Nakalimutan ko ang password ko",
         "Hindi ako makapag-login",
         "Paano mag-sign up sa portal?",
         "Paano palitan ang password?",
         "how to create an account",
-        "i forgot my password",
         "cant log in to the portal",
         "paano mag-login sa SMART MASIPIT",
         "bakit hindi ako makapasok sa account ko",
         "kailangan ba ng account para gumamit ng system",
         "saan magre-register ng account",
-        "paano mag-reset ng password",
         "na-lock ang account ko",
         "may account ba ang bawat resident",
-        "paano ma-activate ang account",
         "sino ang gagawa ng account ko",
         "ano ang username ko",
         "hindi gumagana ang login",
@@ -728,10 +937,31 @@
         "paano baguhin ang email ko",
         "registration ng account",
         "account po",
-        "portal login"
+        "portal login",
+        "paano mag-register sa SMART MASIPIT",
+        "Saan ang form para gumawa ng bagong resident account?",
+        "Gusto kong magsign up bilang resident user",
+        "Paano simulan ang online account registration?",
+        "How can a new resident create a login account?",
+        "Where is the sign up page for SMART MASIPIT?",
+        "I want to register a new portal account",
+        "First time kong gagamit ng portal paano gumawa ng login?",
+        "Anong button ang pipindutin para magsign up?",
+        "Saan ang Create resident account sa website?",
+        "Gusto kong gumawa ng account para sa online services",
+        "Paano pumasok sa portal gamit ang registered email?",
+        "May login page ba para sa resident users?",
+        "Paano maglogout pagkatapos gamitin ang account?",
+        "Kailangan ko ng sariling account para sa resident portal",
+        "Where do I create my first SMART MASIPIT account?",
+        "Which button opens the resident sign-up form?",
+        "How do I sign in with my registered email address?",
+        "Where can residents log in to use online services?",
+        "How can I sign out of the resident portal?",
+        "I am a new portal user how do I create an account?"
       ],
       "responses": [
-        "Gumawa o mag-login ng account sa SMART MASIPIT Portal. Kung nakalimutan ang password o hindi makapag-login, makipag-ugnayan sa Barangay Hall para ma-reset o ma-verify ang inyong account."
+        "Piliin ang Create resident account sa landing page o Create an account sa login page. Ilagay ang required information at kumpletuhin ang identity verification submission. Pending muna ang account hanggang ma-review ng Barangay Secretary o Captain. Kung nakalimutan ang password, gamitin ang Forgot your password."
       ]
     },
     {
@@ -764,7 +994,7 @@
         "bukas po ba kayo bukas"
       ],
       "responses": [
-        "Bukas ang Barangay Hall ng Masipit mula Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM (walang pasok tuwing Sabado, Linggo, at Opisyal na Holidays)."
+        "Makipag-ugnayan sa barangay office para sa confirmed office hours, holiday schedule, at service availability. Hindi ako nakakakita ng real-time opening hours."
       ]
     },
     {
@@ -775,7 +1005,6 @@
         "Sino ang presidente?",
         "Tell me a joke",
         "Magkano ang bigas ngayon?",
-        "How are you?",
         "ano ang ulam mo",
         "anong oras na",
         "sino ka ba",
@@ -806,8 +1035,6 @@
         "Paano kumuha ng Barangay Business Clearance?",
         "Requirements para sa business permit",
         "Permit para sa sari-sari store",
-        "Paano kumuha ng Certificate of Residency?",
-        "Magkano ang residency certificate?",
         "Paano magpablotter?",
         "Saan ireport ang kapitbahay na maingay?",
         "May reklamo ako sa barangay",
@@ -823,7 +1050,6 @@
         "Paano mag-reserve ng covered court?",
         "Sino ang kapitan ng Masipit?",
         "Sino-sino ang mga kagawad?",
-        "Anong araw ang prenatal checkup?",
         "May dentista ba sa health center?",
         "Kailan ang libreng bunot ng ngipin?",
         "May libreng gamot ba sa health center?",
@@ -840,10 +1066,395 @@
         "Saan ang pinakamalapit na mall?",
         "paano mag-apply ng trabaho",
         "may ayuda ba ngayon",
-        "relief goods paano makakuha"
+        "relief goods paano makakuha",
+        "Paano magapply ng business clearance para sa tindahan?",
+        "Barangay business clearance requirements para sa negosyo",
+        "Kailangan ko ng permit para magbukas ng sari sari store",
+        "How do I obtain a business clearance for my shop?",
+        "Can I apply for a business operating permit here?",
+        "Where do I pay my electricity bill?",
+        "Pwede bang magbayad ng water bill dito?",
+        "Paano bayaran ang internet bill sa website na ito?",
+        "Does this portal accept payments for utility bills?",
+        "Magkano ang bayad sa passport application?",
+        "Dito ba nagbabayad ng tuition fee?",
+        "Paano magbayad ng internet subscription?",
+        "Pwede ba akong magrenew ng passport sa portal?",
+        "Saan kukuha ng driving license renewal?",
+        "Magkano ang business permit para sa bagong tindahan?",
+        "Paano magapply ng mayor's permit para sa negosyo?",
+        "Paano magbook ng dental extraction sa chatbot?",
+        "May available bang laboratory package sa clinic?",
+        "Paano magreserve ng basketball court?",
+        "Pwede magorder ng gamot sa website?",
+        "Can I pay school tuition through this portal?",
+        "How do I renew my passport here?",
+        "Can you process my driver's license application?",
+        "How do I apply for a mayor's business permit?",
+        "Can this chatbot book a dental procedure?",
+        "Can I order prescription medicine from this website?"
       ],
       "responses": [
-        "Pasensya na po, ang kaya ko lang sagutin ay tungkol sa Document Request (Barangay Clearance at Certificate of Indigency), Health Record, at Resident Census ng SMART MASIPIT. Para sa ibang tanong, makipag-ugnayan sa Barangay Hall (Lunes-Biyernes, 8AM-5PM)."
+        "Hindi ko matiyak ang sagot sa tanong na iyan. Makakatulong ako sa paggamit ng SMART MASIPIT: accounts, document requests, walk-in services, resident registry, health modules, at barangay location. Maaari bang linawin ang inyong tanong?"
+      ]
+    },
+    {
+      "tag": "account_identity_verification",
+      "patterns": [
+        "Paano mag submit ng valid ID",
+        "Kailangan ba ng selfie sa registration",
+        "Bakit may front at back ng ID",
+        "Ano ang identity verification",
+        "Paano gamitin ang camera para sa account",
+        "Need ba ng realtime photo",
+        "What photos are required for registration",
+        "Saan magpapasa ng ID at selfie",
+        "Bakit kailangan ang dalawang side ng valid ID?",
+        "Anong gagawin kapag denied ang camera permission?",
+        "Malabo ang kuha ng ID ko paano uulitin?",
+        "Kailangan bang mukha ko mismo ang nasa selfie?",
+        "Saan ko makikita ang submit identity evidence?",
+        "Can I retake my verification photo?",
+        "The registration camera will not open",
+        "Do I send my identification pictures in this chat?",
+        "Required ba ang selfie bago mareview ang application?",
+        "Paano palitan ang blurry na ID back photo?",
+        "Hindi bumubukas ang camera sa resident registration form",
+        "Paano payagan ang camera access para sa ID capture?",
+        "Ayaw gumana ng camera habang kumukuha ng selfie",
+        "How do I enable the camera for identity verification?",
+        "Where do I photograph the front of my identification card?",
+        "The ID capture camera is blocked by my browser",
+        "Paano buksan ang camera para magpasa ng verification pictures?",
+        "Anong button ang gagamitin para kumuha ng ID photo?",
+        "Paano paganahin ang camera habang gumagawa ng resident account?",
+        "Ayaw magstart ng camera sa identity submission page",
+        "Na-block ko ang camera permission paano ko ito papayagan?",
+        "Kailangan bang payagan ang browser camera para sa selfie?",
+        "Paano kumuha ulit kapag malabo ang verification picture?",
+        "Pwede bang i-retake ang litrato ng harap ng ID?",
+        "Hindi mabasa ang likod ng ID sa picture paano uulitin?",
+        "Anong mga larawan ang kasama sa identity evidence?",
+        "Kailangan ba parehong harap at likod ng identification card?",
+        "Para saan ang selfie sa resident registration?",
+        "Saan dapat isumite ang litrato ng valid identification?",
+        "Paano kumpletuhin ang ID at selfie submission?",
+        "How do I activate the camera on the identity submission form?",
+        "Which control takes a photo of my identification card?",
+        "My browser blocked the camera for resident verification",
+        "How can I allow camera access for the registration page?",
+        "Can I take another photo if my ID image is blurry?",
+        "How do I retake the back photo of my identification card?",
+        "Which identity photographs must I submit?",
+        "Do I need both sides of the ID and a selfie?",
+        "Where should I submit my resident verification pictures?",
+        "What is the selfie capture step used for?"
+      ],
+      "responses": [
+        "Sa identity verification form, kunan ang harap at likod ng valid ID at ang inyong selfie. Payagan ang camera permission ng browser. Kung na-block, tingnan ang site permissions at payagan ang camera, pagkatapos buksan muli ang capture step. Kung malabo ang larawan, gamitin ang Retake o pagkuha muli bago isumite. Secretary o Captain ang magre-review ng submission. Sa verification form lamang isumite ang mga larawan, hindi sa chatbot."
+      ]
+    },
+    {
+      "tag": "account_pending",
+      "patterns": [
+        "Pending pa ang account ko",
+        "Bakit hindi pa approved ang registration",
+        "Sino ang nag aapprove ng account",
+        "Paano malalaman kung verified na ako",
+        "Matagal nang pending ang account",
+        "Can the chatbot approve my account",
+        "Pwede mo bang i approve ang account ko",
+        "Account verification status",
+        "paano ma-activate ang account",
+        "Nakapagregister na ako pero awaiting verification pa",
+        "Bakit account status lang ang lumalabas pagkatapos maglogin?",
+        "Kumpleto na ID ko pero pending pa rin",
+        "May paraan bang mapabilis ang review ng account?",
+        "Captain lang ba ang puwedeng magverify ng resident account?",
+        "Can the secretary activate my resident account?",
+        "Who reviews a resident registration application?",
+        "My application is still waiting for approval",
+        "Paano magfollow up ng resident application?",
+        "Automatic bang activated kapag nakapagselfie na?",
+        "Nagsubmit na ako ng registration kailan ito irereview?",
+        "Bakit pending pa rin kahit nakapagsubmit na ng ID?",
+        "Account verification pending ang nakalagay sa screen",
+        "Sino ang magdedesisyon sa resident account application?",
+        "Kailangan ba ng approval bago magamit ang resident services?",
+        "Hindi pa activated ang account pagkatapos magregister",
+        "Paano magfollow up sa barangay tungkol sa pending account?",
+        "Secretary o Captain ba ang reviewer ng registration?",
+        "My registration was submitted but my account is not active",
+        "Why does my account still say verification pending?",
+        "Who decides whether my resident application is approved?",
+        "Can I use resident services while account approval is pending?",
+        "Naisumite ko na ang verification pictures naghihintay na lang ba?",
+        "Kumpleto na ang selfie at ID pero hindi pa activated ang account",
+        "Sino ang magrereview pagkatapos maipasa ang identity evidence?",
+        "I submitted all identity photos but my account is still pending",
+        "Who approves the account after the verification pictures are submitted?",
+        "Does submitting the selfie automatically approve my account?"
+      ],
+      "responses": [
+        "Secretary o Captain ang nagre-review ng resident account. Mag-sign in para makita ang Account Status at kumpletuhin ang hinihinging verification evidence kung kulang. Para sa follow-up, makipag-ugnayan sa barangay office. Hindi kayang mag-approve o tingnan ng chatbot ang inyong application."
+      ]
+    },
+    {
+      "tag": "account_password_reset",
+      "patterns": [
+        "Nakalimutan ko password ko",
+        "Paano mag reset ng password",
+        "Forgot password",
+        "Hindi gumagana ang reset link",
+        "Pwede bang gamitin ulit ang reset link",
+        "Saan makikita password reset email",
+        "How do I change a forgotten password",
+        "Expired ang link sa email",
+        "Nakalimutan ko ang password ko",
+        "i forgot my password",
+        "paano mag-reset ng password",
+        "Walang dumating na email matapos mag forgot password",
+        "Saan ako hihingi ng bagong reset link?",
+        "Nagamit ko na ang password link pwede pa ba ulitin?",
+        "Ayaw tanggapin ang token para magreset",
+        "How do I request another password recovery email?",
+        "My password reset token has expired",
+        "I cannot remember my login password",
+        "Can I send you my password reset link?",
+        "Nakalimutan ang password ng resident login",
+        "Nasa spam ba ang password recovery message?"
+      ],
+      "responses": [
+        "Sa login page, piliin ang Forgot your password at ilagay ang registered email. Buksan ang reset email at sundin ang instructions. Tingnan din ang Spam folder. Kung nagamit na o hindi na valid ang link, humingi ng bago. Huwag ibahagi ang reset link o password sa chatbot."
+      ]
+    },
+    {
+      "tag": "document_walk_in",
+      "patterns": [
+        "Pwede mag request kahit walang account",
+        "Paano mag walk in request",
+        "Wala akong online account kailangan ko clearance",
+        "Pwede staff ang mag encode ng request",
+        "May account ako pwede pa rin ba walk in",
+        "Walk in document request",
+        "Can I request a document without registering online",
+        "Pwede ba mag-walk-in na lang?",
+        "kailangan ba ng account para mag-request",
+        "pwede ba i-encode ng staff ang request ko",
+        "walk-in request paano",
+        "online request o walk-in",
+        "pwede ba ako humiling kahit walang internet",
+        "Walang email ang nanay ko makakahingi ba ng dokumento?",
+        "Pwede sa opisina na lang magfile ng certificate?",
+        "Ayokong online saan puwedeng magpasa ng request?",
+        "May resident record pero walang login pwede clearance?",
+        "Can staff submit a document application on my behalf?",
+        "Do walk-in applicants need an online resident account?",
+        "Can registered online users also request at the barangay counter?",
+        "How do I request papers in person?",
+        "Secretary ba ang magtatype ng request kapag walkin?",
+        "Wala akong cellphone paano magrequest ng dokumento?",
+        "paano kung walang email ang walk in",
+        "Walang email address ang aplikante pwede bang humingi ng clearance?",
+        "Hindi gumagamit ng internet ang tatay ko paano siya magrequest?",
+        "Kailangan ng nanay ko ng indigency pero wala siyang login",
+        "May certificate bang makukuha kahit hindi registered online?",
+        "Walang smartphone ang aplikante paano magsubmit ng document request?",
+        "Pwede bang staff na ang magencode dahil walang account ang residente?",
+        "Senior citizen na walang email paano magrequest ng dokumento?",
+        "Kailangan ba munang gumawa ng email bago magwalkin request?",
+        "Pupunta na lang kami sa barangay dahil walang online account",
+        "Hindi marunong magregister online paano makakahingi ng certificate?",
+        "Can someone without an email address request a certificate?",
+        "My father has no portal account can he request clearance in person?",
+        "How can an applicant without internet submit a document request?",
+        "Can barangay staff encode a request for a resident without a login?",
+        "Does an elderly applicant need an email for a walk-in certificate request?",
+        "Can my mother request indigency at the office without signing up?"
+      ],
+      "responses": [
+        "Puwedeng mag-walk-in document request kahit may online account o wala. Authorized staff ang magve-verify ng identity at maghahanap ng resident record. Kung wala pang record, kailangang mairehistro muna ang resident bago i-encode ang document request. Dadaan pa rin ito sa review at approval."
+      ]
+    },
+    {
+      "tag": "document_pickup",
+      "patterns": [
+        "Ready for pickup na document ko",
+        "Kailan kukunin ang certificate",
+        "Approved na pwede na kunin",
+        "Wala akong natanggap na pickup email",
+        "Saan kukunin ang barangay clearance",
+        "Ready for release meaning",
+        "How do I collect my document",
+        "paano makuha ang dokumento pagkatapos maaprubahan",
+        "kailan ko makukuha ang dokumento ko",
+        "May ready for release email saan ako pupunta?",
+        "Pwede ko na bang kunin pag approved for preparation?",
+        "Ano ang ibig sabihin ng pickup instructions?",
+        "Saan makikita ang instructions sa pagclaim?",
+        "Will I get an email when my document can be collected?",
+        "Where do I collect the printed certificate?",
+        "Does approval mean my document is ready for collection?",
+        "I did not receive a ready for pickup notification",
+        "Sa barangay ba irerelease ang printed document?",
+        "Ano ang kaibahan ng approved at ready for release?",
+        "Saan ko kukunin ang clearance na ready for release na?",
+        "May pickup instructions na ang indigency ko paano magclaim?",
+        "Handa na ang residency certificate saan ito irerelease?",
+        "Naemail na ready for pickup ang clearance saan pupunta?",
+        "Where do I collect my approved and prepared clearance?",
+        "How do I claim my certificate of indigency at the office?",
+        "My residency certificate is ready for release where do I go?",
+        "Where are the collection instructions for my document?"
+      ],
+      "responses": [
+        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness."
+      ]
+    },
+    {
+      "tag": "document_additional_types",
+      "patterns": [
+        "Paano humingi ng certificate of residency",
+        "Paano kumuha ng good moral",
+        "May certificate of closure ba",
+        "Barangay occupancy permit request",
+        "Paano mag request ng oath of undertaking",
+        "First time jobseeker certification",
+        "Ano ang signed oath reference",
+        "Kailangan ba ng oath sa first time jobseeker",
+        "Requirements para sa jobseeker certificate",
+        "Paano kumuha ng Certificate of Residency?",
+        "Certificate of residency application",
+        "Proof of residency certificate paano humingi?",
+        "Paano magrequest ng certificate of good moral?",
+        "Good moral certificate application",
+        "Kailangan ko ng certificate of closure ng negosyo",
+        "How to request a certificate of closure?",
+        "Saan magapply ng barangay occupancy permit?",
+        "Occupancy permit sa document form",
+        "Oath of undertaking request process",
+        "How to request first time jobseeker certification?"
+      ],
+      "responses": [
+        "Piliin ang kaukulang certificate o permit sa document request form at kumpletuhin ang additional fields na ipinapakita. Para sa First-Time Jobseeker Certification, sinusuri rin ng staff ang signed oath at reference nito. Ang draft na hindi pa napipirmahan ay hindi signed oath. Kumpirmahin sa barangay ang eligibility at supporting requirements."
+      ]
+    },
+    {
+      "tag": "health_maternal",
+      "patterns": [
+        "May maternal records ba",
+        "Paano mag register ng pregnancy record",
+        "Saan makikita prenatal record",
+        "Ano ang antepartum visits",
+        "Pwede iprint maternal health record",
+        "Paano magdagdag ng prenatal visit",
+        "Maternal health record",
+        "Pregnancy record registration",
+        "Hiwalay ba ang record sa bawat pagbubuntis?",
+        "Paano idagdag ang follow up ng buntis?",
+        "May pregnancy history ba sa patient profile?",
+        "Sino ang magtatala ng maternal visits?",
+        "Draft pa ba ang maternal form na ipiprint?",
+        "Where can health staff record antenatal visits?",
+        "Can the maternal health form be printed?",
+        "Does each pregnancy have a separate record?",
+        "Paano ilalagay ang correction sa maternal record?",
+        "Saan ieencode ang LMP sa maternal module?"
+      ],
+      "responses": [
+        "May maternal records module para sa authorized health staff. Mula sa patient profile, maaaring gumawa ng hiwalay na record bawat pregnancy, magtala ng antepartum visits, at magdagdag ng correction notes. Draft pa ang printable maternal form habang hinihintay ang official template confirmation. Makipag-ugnayan sa health staff para sa registration; hindi nakikita ng chatbot ang clinical details."
+      ]
+    },
+    {
+      "tag": "health_blood_pressure",
+      "patterns": [
+        "May blood pressure field ba sa system",
+        "Saan ini encode ang BP",
+        "Paano mag record ng blood pressure",
+        "Systolic at diastolic fields",
+        "Pwede ba mag save ng BP sa consultation",
+        "Blood pressure recording feature",
+        "Sino ang maglalagay ng BP reading",
+        "May BP ba sa consultation records",
+        "Dalawang input ba ang blood pressure sa consultation?",
+        "Pwede bang walang BP kapag hindi nasukat?",
+        "Saan ilalagay ang systolic reading sa form?",
+        "May diastolic field ba ang consultation?",
+        "Does the consultation form store blood pressure values?",
+        "Where do health workers enter systolic and diastolic values?",
+        "Can staff record BP with the consultation notes?",
+        "Is blood pressure part of the patient consultation record?",
+        "May field para sa taas at baba na numero ng BP?",
+        "Paano isave ang nasukat na BP sa patient consultation?",
+        "Saang input ilalagay ang blood pressure sa consultation form?",
+        "Paano itatala ng health staff ang dalawang BP values?",
+        "May hiwalay bang systolic at diastolic input?",
+        "Ano ang field para sa unang numero ng blood pressure?",
+        "Ano ang field para sa pangalawang numero ng blood pressure?",
+        "Saan isusulat ang nasukat na pressure sa consultation entry?",
+        "Paano idagdag ang BP measurement sa bagong consultation?",
+        "Health staff ba ang mag-eencode ng blood pressure values?",
+        "Maaaring bang isama ang BP sa consultation notes at record?",
+        "Kung hindi nakuhanan ng BP kailangan bang maglagay ng numero?",
+        "Pwede bang blanko ang blood pressure fields kapag walang measurement?",
+        "Kailangan bang parehong systolic at diastolic ang ilagay?",
+        "Where are the blood pressure inputs in the consultation form?",
+        "How can a health worker save a patient's measured BP?",
+        "Does the form have separate systolic and diastolic inputs?",
+        "Which field stores the first blood pressure number?",
+        "Which field stores the second blood pressure number?",
+        "Can a consultation entry include measured blood pressure?",
+        "Who enters blood pressure measurements in the health module?",
+        "Should unmeasured BP values be left empty?",
+        "Do staff need to enter both blood pressure numbers together?",
+        "How do I add systolic and diastolic values to a consultation?",
+        "Is there a place to encode blood pressure during a checkup?",
+        "Can the health worker leave both BP inputs blank?"
+      ],
+      "responses": [
+        "Authorized health staff ang nag-eencode ng blood pressure sa consultation form gamit ang magkahiwalay na systolic at diastolic fields, sa mmHg. Kung magtatala ng BP, ilagay ang parehong values. Kung hindi nasukat, iwanang blanko ang parehong fields; huwag mag-imbento ng reading. Para sa interpretasyon ng resulta, makipag-ugnayan sa health professional. Hindi nagbibigay ng clinical interpretation ang chatbot."
+      ]
+    },
+    {
+      "tag": "barangay_location",
+      "patterns": [
+        "Saan ang barangay hall",
+        "Paano pumunta sa Masipit barangay hall",
+        "May Google Maps ba",
+        "Saan makikita ang lokasyon",
+        "Directions papunta barangay",
+        "Address ng barangay hall",
+        "Where is Masipit Barangay Hall",
+        "Paano gamitin ang Get Directions",
+        "Paano gamitin ang mapa sa landing page?",
+        "Anong pipindutin para makita ang ruta sa barangay hall?",
+        "May directions button ba sa home page?",
+        "Hindi ko alam saan ang Masipit hall",
+        "How can I find the barangay office on the map?",
+        "Where is the location section on the website?",
+        "Can Google Maps show the route to Masipit Hall?",
+        "How do I enter my starting point for directions?",
+        "Pwede bang buksan ang barangay map sa cellphone?",
+        "Saan makikita ang pin ng Masipit Barangay Hall?",
+        "Paano makarating sa barangay office?",
+        "Hindi ako pamilyar sa lugar saan ang barangay hall?",
+        "Anong ruta ang papunta sa opisina ng barangay?",
+        "Paturo naman ng daan papuntang Masipit hall",
+        "Naliligaw ako saan banda ang barangay office?",
+        "Saan banda nakatayo ang barangay hall ng Masipit?",
+        "May mapang puwedeng sundan papunta sa opisina?",
+        "Paano hanapin ang barangay hall sa Google Maps?",
+        "Pupunta ako sa barangay office paano makita ang directions?",
+        "Hindi ko mahanap ang lokasyon ng barangay hall",
+        "Can you help me find the way to the barangay office?",
+        "I am unfamiliar with Masipit where is the barangay hall?",
+        "How can I get directions to the barangay office?",
+        "I need a map showing where the barangay hall is",
+        "Where should I go to visit the Masipit barangay office?",
+        "Which website button opens the route to the barangay hall?"
+      ],
+      "responses": [
+        "Sa landing page ng SMART MASIPIT, piliin ang Lokasyon. Nandoon ang Google Maps ng Masipit Barangay Hall sa Barangay Masipit, Calapan City, Oriental Mindoro. Pindutin ang Get Directions para buksan ang Google Maps at ilagay ang inyong pinanggagalingan."
       ]
     }
   ]
