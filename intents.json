@@ -1456,6 +1456,70 @@
       "responses": [
         "Sa landing page ng SMART MASIPIT, piliin ang Lokasyon. Nandoon ang Google Maps ng Masipit Barangay Hall sa Barangay Masipit, Calapan City, Oriental Mindoro. Pindutin ang Get Directions para buksan ang Google Maps at ilagay ang inyong pinanggagalingan."
       ]
+    },
+    {
+      "tag": "system_overview",
+      "patterns": [
+        "Ano ang SMART MASIPIT?",
+        "What is SMART MASIPIT?",
+        "Para saan ang system na ito?",
+        "Tell me about SMART MASIPIT.",
+        "Ano ang purpose ng SMART MASIPIT?",
+        "Anong klaseng sistema ang SMART MASIPIT?",
+        "Paliwanag naman kung para saan ang portal.",
+        "What services are available in SMART MASIPIT?",
+        "Ano ang mga serbisyo sa portal?",
+        "May ibang services ba bukod sa document requests?",
+        "What else can the system do besides certificates?",
+        "Hindi lang ba pang clearance ang website na ito?",
+        "Ano ang mga module ng system?",
+        "What are the main features of the portal?",
+        "May health records din ba ang SMART MASIPIT?",
+        "Kasama ba ang resident registry sa system?",
+        "Ano ang pinagkaiba ng mga module dito?",
+        "Sino ang gumagamit ng SMART MASIPIT?",
+        "Para lang ba sa residents ang website?",
+        "May bahagi rin ba dito para sa barangay staff?",
+        "Can you give me an overview of the system?",
+        "Baguhan ako dito ano ang gamit ng website?",
+        "What barangay is this portal for?",
+        "Para sa Barangay Masipit ba itong system?"
+      ],
+      "responses": [
+        "Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit. Sakop nito ang resident registry at household records, resident account registration at verification, document requests, at health record management. Kasama sa health module ang consultations, blood pressure records, immunization, health history, at maternal records. Maaaring mag-request ng dokumento online gamit ang approved resident account o magpa-encode ng walk-in request sa barangay hall. Magkakaiba ang access ng residents at authorized staff ayon sa kanilang role; hindi lahat ng module ay direktang magagamit ng resident account."
+      ]
+    },
+    {
+      "tag": "chatbot_capabilities",
+      "patterns": [
+        "Ano ang kaya mong gawin?",
+        "What can this chatbot do?",
+        "Ano ang limitations ng chatbot?",
+        "Can you access my personal records?",
+        "Nakikita mo ba ang account ko?",
+        "Kaya mo bang tingnan ang personal information ko?",
+        "May access ka ba sa database ng barangay?",
+        "Can you check my actual request status?",
+        "Ikaw na ba ang magsusubmit ng request ko?",
+        "Can you submit a document request for me?",
+        "Pwede mo bang iapprove ang request ko?",
+        "Can this chatbot approve my application?",
+        "Pwede mo bang baguhin ang address ko sa system?",
+        "Can you update my resident profile?",
+        "Pwede kitang padalhan ng picture ng valid ID?",
+        "Can I send my verification selfie here?",
+        "Pwede bang dito ko ilagay ang password ko?",
+        "Can you retrieve my medical records?",
+        "Nakikita mo ba ang consultation results ko?",
+        "Pwede bang dito na lang ako magrequest ng certificate?",
+        "Ikaw ba ang nagveverify ng resident accounts?",
+        "Can this chat create an account for me?",
+        "Do you process transactions or only provide guidance?",
+        "Gabay lang ba ito o kaya nitong magprocess ng request?"
+      ],
+      "responses": [
+        "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko. Maaari kong ipaliwanag ang account verification, document requests, walk-in services, resident registry, at health modules. Hindi ako nakakakita ng personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang portal form o makipag-ugnayan sa authorized staff para sa mga transaksiyon. Huwag ipadala dito ang password, valid ID, selfie, o clinical records; gamitin ang nakalaang verification o health workflow."
+      ]
     }
   ]
 }

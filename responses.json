@@ -97,5 +97,11 @@
   ],
   "barangay_location": [
     "Sa landing page ng SMART MASIPIT, piliin ang Lokasyon. Nandoon ang Google Maps ng Masipit Barangay Hall sa Barangay Masipit, Calapan City, Oriental Mindoro. Pindutin ang Get Directions para buksan ang Google Maps at ilagay ang inyong pinanggagalingan."
+  ],
+  "system_overview": [
+    "Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit. Sakop nito ang resident registry at household records, resident account registration at verification, document requests, at health record management. Kasama sa health module ang consultations, blood pressure records, immunization, health history, at maternal records. Maaaring mag-request ng dokumento online gamit ang approved resident account o magpa-encode ng walk-in request sa barangay hall. Magkakaiba ang access ng residents at authorized staff ayon sa kanilang role; hindi lahat ng module ay direktang magagamit ng resident account."
+  ],
+  "chatbot_capabilities": [
+    "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko. Maaari kong ipaliwanag ang account verification, document requests, walk-in services, resident registry, at health modules. Hindi ako nakakakita ng personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang portal form o makipag-ugnayan sa authorized staff para sa mga transaksiyon. Huwag ipadala dito ang password, valid ID, selfie, o clinical records; gamitin ang nakalaang verification o health workflow."
   ]
 }

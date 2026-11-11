@@ -1,0 +1,515 @@
+import json
+import re
+from dataclasses import dataclass
+from pathlib import Path
+
+import joblib
+
+
+BASE_DIR = Path(__file__).resolve().parent
+THRESHOLD = 0.40
+MAX_MESSAGE_LENGTH = 500
+
+FALLBACK = (
+    "Hindi ko pa matiyak ang sagot. Maaari bang linawin ang tanong? "
+    "Makakatulong ako sa paggamit ng SMART MASIPIT. "
+    "Para sa fees, requirements, at schedules, "
+    "makipag-ugnayan sa barangay office."
+)
+
+SYSTEM_OVERVIEW = " ".join("""
+Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit.
+Mayroon itong resident registry at household records, resident account registration
+at verification, document requests, at health record management.
+Kasama sa health module ang consultations, blood pressure records, immunization,
+health history, at maternal records.
+Maaaring mag-request ng dokumento online gamit ang approved resident account
+o sa walk-in.
+Ang pag-encode at pag-access sa registry at health records ay para sa authorized
+staff ayon sa kanilang role.
+Hindi lahat ng module ay direktang magagamit ng resident account.
+""".split())
+
+BP_FEATURE_SCOPE = (
+    "Ang maipapaliwanag ko ay ang gamit ng Blood Pressure section "
+    "sa SMART MASIPIT: dito nagtatala ang authorized health staff "
+    "ng systolic at diastolic readings sa consultation record. "
+    "Para sa pangkalahatang paliwanag tungkol sa blood pressure "
+    "o kahulugan ng inyong reading, magtanong sa health professional."
+)
+
+MEDICAL_FALLBACK = (
+    "Hindi nagbibigay ang chatbot ng interpretasyon ng blood pressure, "
+    "diagnosis, o payo sa gamot. Para sa kahulugan ng inyong reading, "
+    "makipag-ugnayan sa isang health professional. "
+    "Ang BP feature ng SMART MASIPIT ay para sa pagtatala ng readings "
+    "ng authorized health staff."
+)
+
+UNSUPPORTED_PAYMENT = (
+    "Ang chatbot ay nagbibigay ng impormasyon tungkol sa "
+    "SMART MASIPIT barangay services. Hindi nito pinoproseso o "
+    "kinukumpirma ang pagbabayad ng tuition, utility bills, "
+    "o community tax certificate / cedula. "
+    "Makipag-ugnayan sa kaukulang paaralan, service provider, "
+    "o tanggapang nangangasiwa sa bayarin."
+)
+
+DENTAL_FALLBACK = (
+    "Wala akong kumpirmadong impormasyon tungkol sa availability "
+    "o schedule ng dental services. Makipag-ugnayan sa Barangay "
+    "Health Center o City Health Office para makumpirma."
+)
+
+GARBAGE_FALLBACK = (
+    "Hindi kasama sa kasalukuyang impormasyon ng chatbot ang "
+    "schedule ng koleksiyon ng basura. Makipag-ugnayan sa "
+    "barangay office para sa tamang schedule sa inyong lugar."
+)
+
+RESIDENCY_FALLBACK = (
+    "Wala pa akong kumpirmadong patakaran ng Barangay Masipit "
+    "tungkol sa minimum na tagal ng paninirahan para sa resident "
+    "verification o bawat serbisyo. Makipag-ugnayan sa Barangay "
+    "Secretary o Captain at sabihin kung resident registration "
+    "o anong certificate ang kailangan ninyo. Hindi ako "
+    "makapagkukumpirma ng bilang ng buwan hangga't hindi ito "
+    "verified ng barangay."
+)
+
+
+@dataclass(frozen=True)
+class ChatResult:
+    reply: str
+    intent: str
+    confidence: float | None
+    source: str
+
+
+def contains(pattern: str, text: str) -> bool:
+    return re.search(pattern, text) is not None
+
+
+def informational_response(message: str) -> ChatResult | None:
+    text = " ".join(message.casefold().split())
+    text = text.strip(" \t\r\n?!.,")
+    text = re.sub(r"smart[\s-]+masipit", "smart masipit", text)
+
+    overview_question = contains(
+        r"\b(?:"
+        r"what\s+is|what\s+does|tell\s+me\s+about|"
+        r"ano\s+(?:po\s+)?(?:ang|yung)|"
+        r"para\s+saan|tungkol\s+saan|"
+        r"anong\s+(?:klaseng\s+)?(?:system|sistema)"
+        r")\b",
+        text,
+    )
+
+    specific_topic = contains(
+        r"\b(?:"
+        r"payment|bayad|fee|fees|"
+        r"status|pending|rejected|"
+        r"password|camera|selfie|"
+        r"schedule|oras|"
+        r"blood|bp|maternal|"
+        r"requirements|requirement|"
+        r"clearance|indigency|"
+        r"registration|verification|"
+        r"privacy|security"
+        r")\b",
+        text,
+    )
+
+    other_services_question = (
+        contains(
+            r"\b(?:"
+            r"bukod|maliban|besides|apart\s+from|"
+            r"other|else|iba|ibang"
+            r")\b",
+            text,
+        )
+        and contains(
+            r"\b(?:"
+            r"services?|serbisyo|"
+            r"features?|modules?|"
+            r"gawin|magagawa|pwedeng|puwedeng"
+            r")\b",
+            text,
+        )
+        and contains(
+            r"\b(?:"
+            r"smart masipit|documents?|request|system|sistema"
+            r")\b",
+            text,
+        )
+    )
+
+    if (
+        "smart masipit" in text
+        and overview_question
+        and not specific_topic
+    ) or other_services_question:
+        return ChatResult(
+            reply=SYSTEM_OVERVIEW,
+            intent="system_overview",
+            confidence=None,
+            source="rule:system_overview",
+        )
+
+    # Standalone definition questions only.
+    # Personal reading questions continue to the medical rule.
+    general_bp_question = re.fullmatch(
+        r"(?:"
+        r"what\s+is\s+(?:the\s+)?(?:meaning|definition)\s+of\s+"
+        r"(?:blood\s+pressure|bp)"
+        r"|what\s+is\s+(?:blood\s+pressure|bp)"
+        r"|what\s+does\s+(?:bp|blood\s+pressure)\s+mean"
+        r"|ano\s+(?:po\s+)?ang\s+"
+        r"(?:(?:ibig\s+sabihin|kahulugan)\s+ng\s+)?"
+        r"(?:blood\s+pressure|bp)"
+        r")(?:\s+po)?",
+        text,
+    )
+
+    if general_bp_question:
+        return ChatResult(
+            reply=BP_FEATURE_SCOPE,
+            intent="health_blood_pressure",
+            confidence=None,
+            source="rule:bp_feature_scope",
+        )
+
+    residency_topic = contains(
+        r"\b(?:"
+        r"resident|residente|residency|paninirahan|naninirahan"
+        r")\b",
+        text,
+    )
+
+    duration_question = contains(
+        r"\b(?:"
+        r"ilang|gaano\s+katagal|"
+        r"how\s+long|how\s+many|"
+        r"months?|buwan|years?|taon|"
+        r"minimum\s+(?:stay|duration|residency)"
+        r")\b",
+        text,
+    )
+
+    if residency_topic and duration_question:
+        return ChatResult(
+            reply=RESIDENCY_FALLBACK,
+            intent="residency_policy_referral",
+            confidence=None,
+            source="rule:unconfirmed_residency_duration",
+        )
+
+    return None
+
+
+def targeted_response(message: str) -> ChatResult | None:
+    information = informational_response(message)
+
+    if information is not None:
+        return information
+
+    text = " ".join(message.casefold().split())
+
+    bp_topic = contains(
+        r"\b(?:bp|blood\s+pressure|systolic|diastolic|presyon)\b",
+        text,
+    )
+
+    clinical_question = contains(
+        r"\b(?:"
+        r"ibig\s+sabihin|kahulugan|interpret(?:ation)?|"
+        r"mean(?:s|ing)?|normal|abnormal|"
+        r"mataas|mababa|high|low|"
+        r"delikado|dangerous|"
+        r"gamot|gamutin|medicine|medication|"
+        r"pababain|pataasin|"
+        r"should\s+i\s+worry"
+        r")\b",
+        text,
+    )
+
+    if bp_topic and clinical_question:
+        return ChatResult(
+            reply=MEDICAL_FALLBACK,
+            intent="health_no_advice",
+            confidence=None,
+            source="rule:bp_interpretation",
+        )
+
+    payment_question = contains(
+        r"\b(?:"
+        r"\w*bayad\w*|payment|pay|paying|"
+        r"fee|fees|bill|bills|magkano|"
+        r"cost|price|singil"
+        r")\b",
+        text,
+    )
+
+    unsupported_payment_topic = contains(
+        r"\b(?:"
+        r"tuition|kuryente|electricity|electric|"
+        r"water|tubig|internet|"
+        r"cedula|community\s+tax\s+certificate"
+        r")\b",
+        text,
+    )
+
+    if payment_question and unsupported_payment_topic:
+        return ChatResult(
+            reply=UNSUPPORTED_PAYMENT,
+            intent="out_of_scope",
+            confidence=None,
+            source="rule:unsupported_payment",
+        )
+
+    if contains(
+        r"\b(?:dentista|dentist|dental|dentistry)\b",
+        text,
+    ):
+        return ChatResult(
+            reply=DENTAL_FALLBACK,
+            intent="out_of_scope",
+            confidence=None,
+            source="rule:unconfirmed_dental_service",
+        )
+
+    garbage_topic = contains(
+        r"\b(?:basura|basurero|garbage|trash|waste)\b",
+        text,
+    )
+
+    collection_question = contains(
+        r"\b(?:"
+        r"schedule|iskedyul|kailan|when|"
+        r"collection|collect|pickup|pick\s*up|"
+        r"hakot|hahakot|kinokolekta|koleksiyon|koleksyon"
+        r")\b",
+        text,
+    )
+
+    if garbage_topic and collection_question:
+        return ChatResult(
+            reply=GARBAGE_FALLBACK,
+            intent="out_of_scope",
+            confidence=None,
+            source="rule:garbage_schedule",
+        )
+
+    return None
+
+
+class BaseChatbotEngine:
+    def __init__(self, base_dir: Path = BASE_DIR):
+        self.model = joblib.load(
+            base_dir / "intent_model.joblib"
+        )
+
+        with (base_dir / "responses.json").open(
+            encoding="utf-8-sig"
+        ) as file:
+            self.responses = json.load(file)
+
+        if not isinstance(self.responses, dict):
+            raise RuntimeError(
+                "responses.json must contain an object."
+            )
+
+        for label in self.model.classes_:
+            answers = self.responses.get(str(label))
+
+            if (
+                not isinstance(answers, list)
+                or not answers
+                or any(
+                    not isinstance(answer, str)
+                    or not answer.strip()
+                    for answer in answers
+                )
+            ):
+                raise RuntimeError(
+                    f"Missing or invalid responses for intent: {label}"
+                )
+
+    def get_response(self, message: str) -> ChatResult:
+        if not isinstance(message, str):
+            raise ValueError("Enter a text message.")
+
+        if len(message) > MAX_MESSAGE_LENGTH:
+            raise ValueError(
+                f"Use at most {MAX_MESSAGE_LENGTH} characters."
+            )
+
+        message = message.strip()
+
+        if not message:
+            raise ValueError("Enter a message.")
+
+        rule_result = targeted_response(message)
+
+        if rule_result is not None:
+            return rule_result
+
+        probabilities = self.model.predict_proba(
+            [message.lower().strip()]
+        )[0]
+
+        best = int(probabilities.argmax())
+        intent = str(self.model.classes_[best])
+        confidence = float(probabilities[best])
+
+        if confidence < THRESHOLD:
+            return ChatResult(
+                reply=FALLBACK,
+                intent="unknown",
+                confidence=confidence,
+                source="model:fallback",
+            )
+
+        if intent == "out_of_scope":
+            return ChatResult(
+                reply=FALLBACK,
+                intent=intent,
+                confidence=confidence,
+                source="model:out_of_scope",
+            )
+
+        return ChatResult(
+            reply=self.responses[intent][0],
+            intent=intent,
+            confidence=confidence,
+            source="model:answer",
+        )
+
+from dataclasses import replace
+
+from english_responses import ENGLISH_RESPONSES, ENGLISH_SPECIAL
+
+
+FILIPINO_MARKERS = {
+    "ako", "akin", "aking", "ang", "ano", "anong",
+    "ba", "bakit", "bago", "bukod", "din", "dito",
+    "doon", "gaano", "gawin", "gusto", "hindi",
+    "ilang", "inyong", "ito", "iyan", "iyon",
+    "kailan", "kailangan", "kami", "kapag", "kayo",
+    "ko", "kung", "lang", "mga", "mo", "na",
+    "naman", "namin", "natin", "ng", "ninyo",
+    "nyo", "nung", "opo", "pa", "paano", "pano",
+    "pakisabi", "po", "puwede", "pwede", "rin",
+    "sa", "saan", "sakin", "salamat", "sila",
+    "sino", "tayo", "wala", "walang", "yung",
+    "magkano", "kumuha", "makakuha", "magrequest",
+    "magregister", "magbayad", "magpa", "mag",
+    "pag", "pagkuha", "pagrequest", "pagregister",
+    "pagbayad", "ni", "si",
+}
+
+ENGLISH_MARKERS = {
+    "a", "an", "the", "what", "when", "where", "why",
+    "how", "who", "which", "can", "could", "would",
+    "should", "do", "does", "did", "is", "are",
+    "am", "was", "were", "i", "my", "me", "you",
+    "your", "we", "our", "they", "their", "it",
+    "its", "this", "that", "these", "those",
+    "please", "tell", "explain", "about", "for",
+    "with", "without", "have", "has", "need",
+    "want", "get", "find", "check", "show",
+    "hello", "hi", "hey", "thanks", "thank",
+    "goodbye", "bye", "help",
+}
+
+
+def detect_reply_language(message: str) -> str:
+    """
+    A lightweight heuristic, not a trained language detector.
+
+    Filipino markers take priority for Taglish.
+    Ambiguous short messages default to Filipino.
+    """
+    tokens = set(
+        re.findall(r"[a-z]+", message.casefold())
+    )
+
+    if tokens & FILIPINO_MARKERS:
+        return "fil"
+
+    if tokens & ENGLISH_MARKERS:
+        return "en"
+
+    return "fil"
+
+
+class ChatbotEngine(BaseChatbotEngine):
+    def __init__(self, base_dir: Path = BASE_DIR):
+        super().__init__(base_dir)
+
+        missing = [
+            str(label)
+            for label in self.model.classes_
+            if (
+                not isinstance(
+                    ENGLISH_RESPONSES.get(str(label)),
+                    str,
+                )
+                or not ENGLISH_RESPONSES[str(label)].strip()
+            )
+        ]
+
+        if missing:
+            raise RuntimeError(
+                "Missing English responses for intents: "
+                + ", ".join(missing)
+                + ". Add their translations to english_responses.py."
+            )
+
+        required_special = {
+            "fallback",
+            "rule:system_overview",
+            "rule:bp_feature_scope",
+            "rule:bp_interpretation",
+            "rule:unsupported_payment",
+            "rule:unconfirmed_dental_service",
+            "rule:garbage_schedule",
+            "rule:unconfirmed_residency_duration",
+        }
+
+        for key in required_special:
+            value = ENGLISH_SPECIAL.get(key)
+
+            if not isinstance(value, str) or not value.strip():
+                raise RuntimeError(
+                    f"Missing English special response: {key}"
+                )
+
+    def get_response(self, message: str) -> ChatResult:
+        # Run existing validation, rules, and model selection first.
+        result = super().get_response(message)
+        language = detect_reply_language(message)
+
+        if language == "fil":
+            return result
+
+        if result.source.startswith("rule:"):
+            reply = ENGLISH_SPECIAL.get(result.source)
+
+            if reply is None:
+                raise RuntimeError(
+                    "Missing English translation for rule: "
+                    + result.source
+                )
+
+        elif result.source in {
+            "model:fallback",
+            "model:out_of_scope",
+        }:
+            reply = ENGLISH_SPECIAL["fallback"]
+
+        else:
+            reply = ENGLISH_RESPONSES[result.intent]
+
+        # Preserve intent, score, and source for existing tests.
+        return replace(result, reply=reply)        
