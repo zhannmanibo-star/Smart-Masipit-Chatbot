@@ -268,7 +268,17 @@
         "I already submitted a request where can I follow its progress?",
         "Where does the portal show whether my request was rejected?",
         "How do I know if my document application is under review?",
-        "Can you check the current stage of my document request?"
+        "Can you check the current stage of my document request?",
+        "ano na ang status ng clearance ko",
+        "approved na ba ang certificate ko",
+        "bakit under review pa rin ang request ko",
+        "gaano katagal ang review ng request",
+        "ano ibig sabihin ng closed not released",
+        "rejected ang request ko ano gagawin ko",
+        "naproseso na ba ang indigency ko",
+        "has my request been approved",
+        "what does under review mean",
+        "why was my request rejected"
       ],
       "responses": [
         "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Hindi kayang tingnan ng chatbot ang personal request status."
@@ -908,7 +918,16 @@
         "Ligtas bang ibigay ang password sa chatbot?",
         "Is my account password confidential?",
         "Should I share my login credentials in this chat?",
-        "How is personal account information protected?"
+        "How is personal account information protected?",
+        "sino ang nakakakita ng personal information ko",
+        "ligtas ba ang id na inupload ko",
+        "ano ang ginagawa ninyo sa id at selfie ko",
+        "ibinibigay ba ninyo ang data ko sa iba",
+        "nakikita ba ng ibang resident ang info ko",
+        "data privacy act ba ang sinusunod",
+        "who can see my uploaded id",
+        "do you share my personal data",
+        "is my id photo kept private"
       ],
       "responses": [
         "May permissions ang SMART MASIPIT ayon sa tungkulin ng account. Hindi nakakabasa ang chatbot ng resident, identity-verification, o health records. Huwag magpadala ng password, reset link, ID photo, PhilHealth number, o medical details sa chat."
@@ -1148,10 +1167,19 @@
         "Which identity photographs must I submit?",
         "Do I need both sides of the ID and a selfie?",
         "Where should I submit my resident verification pictures?",
-        "What is the selfie capture step used for?"
+        "What is the selfie capture step used for?",
+        "bakit kailangan magtaas ng daliri sa selfie",
+        "ano ang instruction sa selfie hawak ang id",
+        "kailangan bang hawak ko ang id sa selfie",
+        "bakit iba-iba ang bilang ng daliri sa selfie",
+        "paano kung mali ang bilang ng daliri ko sa selfie",
+        "selfie na hawak ang valid id",
+        "why do i need to raise fingers in the selfie",
+        "do i need to hold my id in the selfie",
+        "what is the random selfie instruction"
       ],
       "responses": [
-        "Sa identity verification form, kunan ang harap at likod ng valid ID at ang inyong selfie. Payagan ang camera permission ng browser. Kung na-block, tingnan ang site permissions at payagan ang camera, pagkatapos buksan muli ang capture step. Kung malabo ang larawan, gamitin ang Retake o pagkuha muli bago isumite. Secretary o Captain ang magre-review ng submission. Sa verification form lamang isumite ang mga larawan, hindi sa chatbot."
+        "Sa identity verification form, kunan ang harap at likod ng valid ID at ang inyong selfie. Payagan ang camera permission ng browser. Kung na-block, tingnan ang site permissions at payagan ang camera, pagkatapos buksan muli ang capture step. Kung malabo ang larawan, gamitin ang Retake o pagkuha muli bago isumite. Secretary o Captain ang magre-review ng submission. Sa verification form lamang isumite ang mga larawan, hindi sa chatbot. Sa selfie, hawakan ang valid ID at sundin ang random na instruction sa screen, halimbawa ilang daliri ang itataas. Patunay ito na kayo mismo ang nasa larawan at hindi lumang litrato."
       ]
     },
     {
@@ -1308,7 +1336,7 @@
         "Where are the collection instructions for my document?"
       ],
       "responses": [
-        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness."
+        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness. Pagpunta sa barangay, ipakita ang QR ng request (Show QR sa My Document Requests) para mabilis itong mahanap ng staff, at dalhin ang valid ID."
       ]
     },
     {
@@ -1515,10 +1543,170 @@
         "Ikaw ba ang nagveverify ng resident accounts?",
         "Can this chat create an account for me?",
         "Do you process transactions or only provide guidance?",
-        "Gabay lang ba ito o kaya nitong magprocess ng request?"
+        "Gabay lang ba ito o kaya nitong magprocess ng request?",
+        "ano ang pwede kong itanong sa iyo",
+        "anong tulong ang maibibigay mo",
+        "kaya mo bang tingnan ang request ko",
+        "pwede ka bang mag file ng request para sa akin",
+        "what questions can i ask you",
+        "can you check my request for me",
+        "can you file a request for me"
       ],
       "responses": [
         "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko. Maaari kong ipaliwanag ang account verification, document requests, walk-in services, resident registry, at health modules. Hindi ako nakakakita ng personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang portal form o makipag-ugnayan sa authorized staff para sa mga transaksiyon. Huwag ipadala dito ang password, valid ID, selfie, o clinical records; gamitin ang nakalaang verification o health workflow."
+      ]
+    },
+    {
+      "tag": "document_qr_code",
+      "patterns": [
+        "saan ko makikita ang QR ko",
+        "saan makikita yung qr code ng request ko",
+        "para saan ang QR code",
+        "ano ang gamit ng QR sa request",
+        "paano ipakita ang QR sa barangay",
+        "may QR code ba ang document request",
+        "kailangan ko ba ng QR pagkuha ng dokumento",
+        "paano i-save ang QR ko",
+        "nawala ang QR ko paano ulit makuha",
+        "pwede ko bang i-screenshot ang QR",
+        "i-scan ba ng secretary ang QR ko",
+        "ano ang show qr button",
+        "ano yung barangay QR sa profile ko",
+        "personal QR code sa profile",
+        "pwede bang ipakita ang qr sa cellphone",
+        "kailangan pa ba ng id kung may qr na",
+        "ok lang ba i-post ang qr code ko",
+        "qr code para sa pickup ng clearance",
+        "where is my qr code",
+        "what is the qr code for",
+        "how do i show my qr at the barangay",
+        "can i save my qr code",
+        "do i still need an id if i have the qr",
+        "how does the qr scanning work",
+        "where can i find the claim qr"
+      ],
+      "responses": [
+        "Bawat bukas na document request ay may sariling QR code. Buksan ang My Document Requests at pindutin ang Show QR; maaari rin itong i-save bilang larawan gamit ang Save image. Ipakita ang QR sa barangay office at i-scan ito ng staff para mabuksan agad ang inyong request. May personal na barangay QR din sa My profile. Dalhin pa rin ang valid ID sa pagkuha ng dokumento, at huwag i-post online ang inyong QR."
+      ]
+    },
+    {
+      "tag": "document_for_dependent",
+      "patterns": [
+        "pwede ko bang i-request ang clearance ng anak ko",
+        "paano mag request ng dokumento para sa anak ko",
+        "pwede bang ako ang mag request para sa anak kong bata pa",
+        "mag request para sa menor de edad",
+        "ako ang guardian ng pamangkin ko pwede ba ako mag request para sa kanya",
+        "paano ma-link ang anak ko sa account ko",
+        "bakit hindi ko makita ang pangalan ng anak ko sa request form",
+        "sino ang nag-li-link ng magulang sa record ng bata",
+        "pwede bang mag request ang lola para sa apo",
+        "may account ba ang batang 5 taong gulang",
+        "request ng indigency para sa anak ko",
+        "paano kung wala pang account ang anak ko",
+        "lalabas ba sa requests ko yung para sa anak ko",
+        "ang anak ko ay 10 years old paano siya makakakuha ng certificate",
+        "can i request a document for my child",
+        "how do i request a certificate for my kid",
+        "can a parent request for a minor",
+        "i am the guardian of a child how do i request for them",
+        "how do i link my child to my account",
+        "why is my child's name not in the request form",
+        "request on behalf of my son",
+        "request on behalf of my daughter",
+        "can the guardian file the request for a minor",
+        "who links a parent to a child's record"
+      ],
+      "responses": [
+        "Ang naka-link na magulang o guardian ay maaaring mag-request ng dokumento para sa batang wala pang 18 taong gulang na walang sariling account. Ang barangay staff ang nag-uugnay ng magulang o guardian sa record ng bata. Kapag naka-link na, piliin ang pangalan ng bata sa Request a document. Lalabas ito sa inyong My Document Requests na may tatak na para sa bata. Kapag 13 taong gulang na ang bata, maaari na siyang gumawa ng sariling account."
+      ]
+    },
+    {
+      "tag": "account_minimum_age",
+      "patterns": [
+        "ilang taon pwede gumawa ng account",
+        "ilang taon bago makapag register",
+        "pwede bang mag register ang 12 years old",
+        "pwede ba gumawa ng account ang 15 years old",
+        "may age limit ba ang registration",
+        "minimum age sa smart masipit",
+        "bata pa ako pwede ba ako mag register",
+        "estudyante ako 14 years old pwede ba ako gumawa ng account",
+        "bakit ayaw tanggapin ang birthday ko sa registration",
+        "naka-register na ako sa barangay noong bata pa ako paano gumawa ng account ngayon",
+        "dati record lang ako ngayon gusto ko ng sariling account",
+        "kailangan bang 18 para mag register",
+        "what is the minimum age to register",
+        "can a 13 year old create an account",
+        "how old do i need to be to sign up",
+        "is there an age requirement for registration",
+        "my child is 12 can they register",
+        "i was registered as a kid how do i get my own account now",
+        "why does registration reject my birth date",
+        "do i need to be 18 to create an account"
+      ],
+      "responses": [
+        "Kailangang 13 taong gulang pataas para gumawa ng sariling SMART MASIPIT account. Kung mas bata, ang naka-link na magulang o guardian ang maaaring mag-request ng dokumento para sa kanya. Kung naka-record na ang bata sa barangay at nag-register siya pagdating ng 13, iuugnay ng Secretary o Captain ang bagong account sa existing record habang nagve-verify."
+      ]
+    },
+    {
+      "tag": "account_profile_settings",
+      "patterns": [
+        "paano magpalit ng profile picture",
+        "paano mag upload ng profile photo",
+        "saan ang my profile",
+        "paano makita ang profile ko",
+        "paano palitan ang password ko",
+        "gusto kong baguhin ang password ko alam ko pa ang luma",
+        "ilang characters ang password",
+        "bakit ayaw tanggapin ang bagong password ko",
+        "paano tanggalin ang profile picture",
+        "anong file ang pwede sa profile photo",
+        "masyadong malaki daw ang larawan ko",
+        "paano i-edit ang pangalan ko sa account",
+        "paano mag sign out",
+        "saan ang logout",
+        "how do i change my profile picture",
+        "how do i upload a profile photo",
+        "where is my profile page",
+        "how do i change my password while signed in",
+        "how long should my password be",
+        "how do i remove my profile photo",
+        "what file types are allowed for the photo",
+        "how do i log out",
+        "where is the sign out button",
+        "can i edit my own details"
+      ],
+      "responses": [
+        "Buksan ang My profile sa pamamagitan ng pag-click sa inyong avatar sa kanang itaas. Makikita rito ang inyong resident information, household, at account details. Maaaring mag-upload ng profile photo (JPG, PNG, o WebP, hanggang 4 MB) at magpalit ng password gamit ang Change password; hindi bababa sa 12 characters ang bagong password. Ang ibang resident details ay ina-update ng barangay staff."
+      ]
+    },
+    {
+      "tag": "census_sitio",
+      "patterns": [
+        "anong sitio ang pipiliin ko",
+        "ano ang mga sitio sa masipit",
+        "ilang sitio ang meron sa barangay masipit",
+        "wala sa listahan ang sitio namin",
+        "saang sitio ang centro",
+        "nasaan ang sitio pulapog",
+        "sitio balaasan ba ako o masitao",
+        "lumipat kami ng sitio paano i-update",
+        "ano ang road i at road ii",
+        "mataas na kahoy ba ay road i",
+        "irrigation site ba ay sitio",
+        "paano kung mali ang sitio sa record ko",
+        "listahan ng sitio",
+        "which sitio should i choose",
+        "what are the sitios in masipit",
+        "how many sitios are there",
+        "my sitio is not in the list",
+        "we moved to another sitio how do i update it",
+        "list of sitios in barangay masipit",
+        "i picked the wrong sitio"
+      ],
+      "responses": [
+        "May pitong sitio ang Barangay Masipit: Balaasan, Mataas na Kahoy (Road I), Centro, Irrigation Site, Masitao, Pulapog, at Road II. Piliin ang sitio kung saan kayo kasalukuyang nakatira. Kung lumipat kayo sa ibang sitio, makipag-ugnayan sa barangay staff para ma-update ang inyong record."
       ]
     }
   ]

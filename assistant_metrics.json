@@ -1,0 +1,13 @@
+{
+  "evaluation": "three-fold cross-validation, repeated on five splits",
+  "threshold": 0.4,
+  "max_suggestions": 2,
+  "min_suggestion_probability": 0.1,
+  "model_only_answered_right": 0.5195987654320987,
+  "answered_right_directly": 0.5283950617283951,
+  "answered_right_or_suggested": 0.8282407407407406,
+  "wrong_direct_answers": 76.6,
+  "out_of_scope_answered": 0.07526881720430108,
+  "python_version": "3.15.1",
+  "sklearn_version": "1.9.1"
+}

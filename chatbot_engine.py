@@ -1,6 +1,6 @@
 import json
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 import joblib
@@ -78,12 +78,54 @@ RESIDENCY_FALLBACK = (
 )
 
 
+# When the model is unsure, offer up to this many topics as buttons,
+# but only topics with at least this probability.
+MAX_SUGGESTIONS = 2
+MIN_SUGGESTION_PROBABILITY = 0.10
+
+# Short greetings and thanks are too short for the model to classify
+# reliably, so a whole-message rule handles them. Measured on the
+# training set: 34 matches, 0 wrong.
+GREETING_RULE = re.compile(
+    r"^(?:hi+|hello|helo|hey|good\s+(?:morning|afternoon|evening|day)|"
+    r"magandang\s+(?:umaga|hapon|gabi|araw)|kumusta|kamusta|musta)"
+    r"(?:\s+po)?(?:\s+(?:sa\s+inyo|smart\s+masipit|bot|assistant))?$"
+)
+GOODBYE_RULE = re.compile(
+    r"^(?:bye|goodbye|paalam|salamat|maraming\s+salamat|thank\s+you|"
+    r"thanks|ty|sige(?:\s+po)?|ok(?:ay)?(?:\s+po)?(?:\s+salamat)?|see\s+you)"
+    r"(?:\s+po)?(?:\s+sa\s+tulong)?$"
+)
+
+
 @dataclass(frozen=True)
 class ChatResult:
     reply: str
     intent: str
     confidence: float | None
     source: str
+    # Intent tags to offer as "Ito ba ang ibig mong sabihin?" buttons.
+    suggestions: tuple[str, ...] = ()
+
+
+def smalltalk_response(message: str) -> ChatResult | None:
+    text = message.casefold()
+    text = re.sub(r"smart[\s-]+masipit", "smart masipit", text)
+    text = " ".join(re.sub(r"[^\w\s]", " ", text).split())
+
+    for pattern, intent in (
+        (GREETING_RULE, "greeting"),
+        (GOODBYE_RULE, "goodbye"),
+    ):
+        if pattern.match(text):
+            return ChatResult(
+                reply="",
+                intent=intent,
+                confidence=None,
+                source="rule:smalltalk",
+            )
+
+    return None
 
 
 def contains(pattern: str, text: str) -> bool:
@@ -335,6 +377,43 @@ class BaseChatbotEngine:
                     f"Missing or invalid responses for intent: {label}"
                 )
 
+    def suggest(self, probabilities) -> tuple[str, ...]:
+        """The closest in-scope topics, offered when the model is unsure."""
+        order = probabilities.argsort()[::-1]
+        picks = []
+
+        for index in order:
+            label = str(self.model.classes_[index])
+
+            if label == "out_of_scope":
+                continue
+
+            if probabilities[index] < MIN_SUGGESTION_PROBABILITY:
+                break
+
+            picks.append(label)
+
+            if len(picks) == MAX_SUGGESTIONS:
+                break
+
+        return tuple(picks)
+
+    def answer_intent(self, intent: str, message: str = "") -> ChatResult:
+        """Answers a topic the user picked from the suggestion buttons."""
+        if (
+            intent == "out_of_scope"
+            or intent not in self.responses
+            or intent not in set(map(str, self.model.classes_))
+        ):
+            raise ValueError("Unknown topic.")
+
+        return ChatResult(
+            reply=self.responses[intent][0],
+            intent=intent,
+            confidence=None,
+            source="suggestion",
+        )
+
     def get_response(self, message: str) -> ChatResult:
         if not isinstance(message, str):
             raise ValueError("Enter a text message.")
@@ -348,6 +427,14 @@ class BaseChatbotEngine:
 
         if not message:
             raise ValueError("Enter a message.")
+
+        smalltalk = smalltalk_response(message)
+
+        if smalltalk is not None:
+            return replace(
+                smalltalk,
+                reply=self.responses[smalltalk.intent][0],
+            )
 
         rule_result = targeted_response(message)
 
@@ -368,6 +455,7 @@ class BaseChatbotEngine:
                 intent="unknown",
                 confidence=confidence,
                 source="model:fallback",
+                suggestions=self.suggest(probabilities),
             )
 
         if intent == "out_of_scope":
@@ -376,6 +464,7 @@ class BaseChatbotEngine:
                 intent=intent,
                 confidence=confidence,
                 source="model:out_of_scope",
+                suggestions=self.suggest(probabilities),
             )
 
         return ChatResult(
@@ -384,8 +473,6 @@ class BaseChatbotEngine:
             confidence=confidence,
             source="model:answer",
         )
-
-from dataclasses import replace
 
 from english_responses import ENGLISH_RESPONSES, ENGLISH_SPECIAL
 
@@ -493,7 +580,10 @@ class ChatbotEngine(BaseChatbotEngine):
         if language == "fil":
             return result
 
-        if result.source.startswith("rule:"):
+        if result.source == "rule:smalltalk":
+            reply = ENGLISH_RESPONSES[result.intent]
+
+        elif result.source.startswith("rule:"):
             reply = ENGLISH_SPECIAL.get(result.source)
 
             if reply is None:
@@ -512,4 +602,12 @@ class ChatbotEngine(BaseChatbotEngine):
             reply = ENGLISH_RESPONSES[result.intent]
 
         # Preserve intent, score, and source for existing tests.
-        return replace(result, reply=reply)        
+        return replace(result, reply=reply)
+
+    def answer_intent(self, intent: str, message: str = "") -> ChatResult:
+        result = super().answer_intent(intent, message)
+
+        if detect_reply_language(message) == "en":
+            return replace(result, reply=ENGLISH_RESPONSES[intent])
+
+        return result        

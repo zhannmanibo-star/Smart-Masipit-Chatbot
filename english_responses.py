@@ -192,7 +192,10 @@ ENGLISH_RESPONSES = {
         "capture step. If a photo is blurry, use Retake before "
         "submitting. The Secretary or Captain will review your "
         "submission. Submit photos through the verification form, "
-        "not through this chatbot."
+        "not through this chatbot. "
+        "In the selfie, hold your valid ID and follow the random "
+        "instruction on screen, such as how many fingers to raise. "
+        "It proves the person in the photo is you, not an old picture."
     ),
 
     "account_pending": (
@@ -228,7 +231,10 @@ ENGLISH_RESPONSES = {
         "account may receive a notification. If you have no "
         "online account or did not receive an email, follow "
         "up with the barangay office. The chatbot cannot "
-        "confirm whether your document is actually ready."
+        "confirm whether your document is actually ready. "
+        "At the barangay, show the request's QR (Show QR in "
+        "My Document Requests) so staff can find it quickly, "
+        "and bring a valid ID."
     ),
 
     "document_additional_types": (
@@ -292,6 +298,54 @@ ENGLISH_RESPONSES = {
         "for transactions. Do not send passwords, valid ID photos, "
         "selfies, or clinical records here; use the designated "
         "verification or health workflow."
+    ),
+
+    "document_qr_code": (
+        "Every open document request has its own QR code. Open My "
+        "Document Requests and select Show QR; you can also keep "
+        "it with Save image. Show the QR at the barangay office "
+        "and the staff will scan it to open your request right "
+        "away. There is also a personal barangay QR on My "
+        "profile. Still bring a valid ID when you pick up the "
+        "document, and do not post your QR online."
+    ),
+
+    "document_for_dependent": (
+        "A linked parent or guardian can request documents for a "
+        "child under 18 who has no account of their own. Barangay "
+        "staff link the parent or guardian to the child's record. "
+        "Once linked, choose the child's name in Request a "
+        "document. The request appears in your My Document "
+        "Requests marked as being for the child. When the child "
+        "turns 13, they may create their own account."
+    ),
+
+    "account_minimum_age": (
+        "You must be at least 13 years old to create your own "
+        "SMART MASIPIT account. For a younger child, a linked "
+        "parent or guardian can request documents for them. If "
+        "the child is already on the barangay records and "
+        "registers at 13, the Secretary or Captain connects the "
+        "new account to the existing record during verification."
+    ),
+
+    "account_profile_settings": (
+        "Open My profile by selecting your avatar at the top "
+        "right. It shows your resident information, household, "
+        "and account details. You can upload a profile photo "
+        "(JPG, PNG, or WebP, up to 4 MB) and change your password "
+        "with Change password; the new password must be at least "
+        "12 characters. Other resident details are updated by "
+        "barangay staff. To sign out, open the same avatar menu "
+        "and choose Sign out."
+    ),
+
+    "census_sitio": (
+        "Barangay Masipit has seven sitios: Balaasan, Mataas na "
+        "Kahoy (Road I), Centro, Irrigation Site, Masitao, "
+        "Pulapog, and Road II. Choose the sitio where you "
+        "currently live. If you moved to another sitio, contact "
+        "barangay staff to update your record."
     ),
 }
 

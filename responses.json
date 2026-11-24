@@ -72,7 +72,7 @@
     "Hindi ko matiyak ang sagot sa tanong na iyan. Makakatulong ako sa paggamit ng SMART MASIPIT: accounts, document requests, walk-in services, resident registry, health modules, at barangay location. Maaari bang linawin ang inyong tanong?"
   ],
   "account_identity_verification": [
-    "Sa identity verification form, kunan ang harap at likod ng valid ID at ang inyong selfie. Payagan ang camera permission ng browser. Kung na-block, tingnan ang site permissions at payagan ang camera, pagkatapos buksan muli ang capture step. Kung malabo ang larawan, gamitin ang Retake o pagkuha muli bago isumite. Secretary o Captain ang magre-review ng submission. Sa verification form lamang isumite ang mga larawan, hindi sa chatbot."
+    "Sa identity verification form, kunan ang harap at likod ng valid ID at ang inyong selfie. Payagan ang camera permission ng browser. Kung na-block, tingnan ang site permissions at payagan ang camera, pagkatapos buksan muli ang capture step. Kung malabo ang larawan, gamitin ang Retake o pagkuha muli bago isumite. Secretary o Captain ang magre-review ng submission. Sa verification form lamang isumite ang mga larawan, hindi sa chatbot. Sa selfie, hawakan ang valid ID at sundin ang random na instruction sa screen, halimbawa ilang daliri ang itataas. Patunay ito na kayo mismo ang nasa larawan at hindi lumang litrato."
   ],
   "account_pending": [
     "Secretary o Captain ang nagre-review ng resident account. Mag-sign in para makita ang Account Status at kumpletuhin ang hinihinging verification evidence kung kulang. Para sa follow-up, makipag-ugnayan sa barangay office. Hindi kayang mag-approve o tingnan ng chatbot ang inyong application."
@@ -84,7 +84,7 @@
     "Puwedeng mag-walk-in document request kahit may online account o wala. Authorized staff ang magve-verify ng identity at maghahanap ng resident record. Kung wala pang record, kailangang mairehistro muna ang resident bago i-encode ang document request. Dadaan pa rin ito sa review at approval."
   ],
   "document_pickup": [
-    "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness."
+    "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness. Pagpunta sa barangay, ipakita ang QR ng request (Show QR sa My Document Requests) para mabilis itong mahanap ng staff, at dalhin ang valid ID."
   ],
   "document_additional_types": [
     "Piliin ang kaukulang certificate o permit sa document request form at kumpletuhin ang additional fields na ipinapakita. Para sa First-Time Jobseeker Certification, sinusuri rin ng staff ang signed oath at reference nito. Ang draft na hindi pa napipirmahan ay hindi signed oath. Kumpirmahin sa barangay ang eligibility at supporting requirements."
@@ -103,5 +103,20 @@
   ],
   "chatbot_capabilities": [
     "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko. Maaari kong ipaliwanag ang account verification, document requests, walk-in services, resident registry, at health modules. Hindi ako nakakakita ng personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang portal form o makipag-ugnayan sa authorized staff para sa mga transaksiyon. Huwag ipadala dito ang password, valid ID, selfie, o clinical records; gamitin ang nakalaang verification o health workflow."
+  ],
+  "document_qr_code": [
+    "Bawat bukas na document request ay may sariling QR code. Buksan ang My Document Requests at pindutin ang Show QR; maaari rin itong i-save bilang larawan gamit ang Save image. Ipakita ang QR sa barangay office at i-scan ito ng staff para mabuksan agad ang inyong request. May personal na barangay QR din sa My profile. Dalhin pa rin ang valid ID sa pagkuha ng dokumento, at huwag i-post online ang inyong QR."
+  ],
+  "document_for_dependent": [
+    "Ang naka-link na magulang o guardian ay maaaring mag-request ng dokumento para sa batang wala pang 18 taong gulang na walang sariling account. Ang barangay staff ang nag-uugnay ng magulang o guardian sa record ng bata. Kapag naka-link na, piliin ang pangalan ng bata sa Request a document. Lalabas ito sa inyong My Document Requests na may tatak na para sa bata. Kapag 13 taong gulang na ang bata, maaari na siyang gumawa ng sariling account."
+  ],
+  "account_minimum_age": [
+    "Kailangang 13 taong gulang pataas para gumawa ng sariling SMART MASIPIT account. Kung mas bata, ang naka-link na magulang o guardian ang maaaring mag-request ng dokumento para sa kanya. Kung naka-record na ang bata sa barangay at nag-register siya pagdating ng 13, iuugnay ng Secretary o Captain ang bagong account sa existing record habang nagve-verify."
+  ],
+  "account_profile_settings": [
+    "Buksan ang My profile sa pamamagitan ng pag-click sa inyong avatar sa kanang itaas. Makikita rito ang inyong resident information, household, at account details. Maaaring mag-upload ng profile photo (JPG, PNG, o WebP, hanggang 4 MB) at magpalit ng password gamit ang Change password; hindi bababa sa 12 characters ang bagong password. Ang ibang resident details ay ina-update ng barangay staff."
+  ],
+  "census_sitio": [
+    "May pitong sitio ang Barangay Masipit: Balaasan, Mataas na Kahoy (Road I), Centro, Irrigation Site, Masitao, Pulapog, at Road II. Piliin ang sitio kung saan kayo kasalukuyang nakatira. Kung lumipat kayo sa ibang sitio, makipag-ugnayan sa barangay staff para ma-update ang inyong record."
   ]
 }
