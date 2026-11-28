@@ -1,23 +1,23 @@
 {
   "evaluation": "three-fold development cross-validation",
-  "patterns": 1591,
+  "patterns": 1660,
   "intents": 46,
   "threshold": 0.4,
   "fold_accuracy": [
-    0.7627118644067796,
-    0.7622641509433963,
-    0.7490566037735849
+    0.7545126353790613,
+    0.7649186256781193,
+    0.755877034358047
   ],
   "fold_macro_f1": [
-    0.778301861525451,
-    0.7753801641368941,
-    0.7573052515611849
+    0.7731315973915168,
+    0.7713214216184603,
+    0.7627170091840627
   ],
-  "mean_accuracy": 0.7580108730412536,
-  "mean_macro_f1": 0.7703290924078434,
-  "answer_coverage": 0.5399120050282841,
-  "accepted_intent_accuracy": 0.9022118742724098,
-  "out_of_scope_false_answer_rate": 0.07692307692307693,
+  "mean_accuracy": 0.7584360984717425,
+  "mean_macro_f1": 0.7690566760646799,
+  "answer_coverage": 0.5668674698795181,
+  "accepted_intent_accuracy": 0.8947927736450585,
+  "out_of_scope_false_answer_rate": 0.08791208791208792,
   "python_version": "3.13.18",
   "sklearn_version": "1.9.1",
   "numpy_version": "2.5.4",

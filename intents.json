@@ -178,6 +178,14 @@
     {
       "tag": "document_request_process",
       "patterns": [
+        "paano mag start review ng request",
+        "paano i-approve ang request ng residente",
+        "paano tanggihan ang request at ilagay ang dahilan",
+        "paano i-prepare ang certificate bago i-release",
+        "paano gawing ready for release ang request",
+        "approval decision ng document request",
+        "how to reject a document request with a reason",
+        "steps to process a request until release",
         "Paano mag-request ng dokumento online?",
         "Ano ang proseso ng document request?",
         "Paano gumagana ang online request?",
@@ -226,6 +234,11 @@
     {
       "tag": "document_status",
       "patterns": [
+        "saan ang listahan ng mga request ng residente",
+        "document processing page nasaan",
+        "ilan ang under review na request ngayon",
+        "list of requests waiting for review",
+        "mga request na kailangan kong i-review",
         "Nasaan na ang request ko?",
         "Paano i-check ang status ng request ko?",
         "Aprubado na ba ang clearance ko?",
@@ -646,6 +659,10 @@
     {
       "tag": "census_registration",
       "patterns": [
+        "paano magdagdag ng resident record",
+        "mag encode ng bagong residente",
+        "add a new resident to the registry",
+        "saan ilalagay ang bagong lipat na residente sa registry",
         "Paano magparehistro sa resident census?",
         "Bagong lipat kami sa Masipit",
         "Saan magpaparehistro bilang bagong residente?",
@@ -748,6 +765,11 @@
     {
       "tag": "census_household_update",
       "patterns": [
+        "paano magdagdag ng member sa household",
+        "paano ilipat ang residente sa ibang bahay sa system",
+        "manage members ng household",
+        "change the household head",
+        "create a household record",
         "Paano magdagdag ng miyembro ng pamilya?",
         "Nanganak ako, paano iregister sa census?",
         "Paano i-update ang census record kapag may umalis sa bahay?",
@@ -1141,6 +1163,11 @@
     {
       "tag": "account_identity_verification",
       "patterns": [
+        "paano tingnan ang identity evidence ng applicant",
+        "malabo ang larawan ng id ng nag register ano gagawin",
+        "hindi tugma ang selfie sa id",
+        "check the id and selfie before approving",
+        "reject the account because the id is unreadable",
         "Paano mag submit ng valid ID",
         "Kailangan ba ng selfie sa registration",
         "Bakit may front at back ng ID",
@@ -1206,6 +1233,11 @@
     {
       "tag": "account_pending",
       "patterns": [
+        "listahan ng mga bagong account na i-aapprove",
+        "account approval page nasaan",
+        "paano aprubahan ang residenteng nag sign up",
+        "approve a new resident account",
+        "where are the applications waiting for approval",
         "Pending pa ang account ko",
         "Bakit hindi pa approved ang registration",
         "Sino ang nag aapprove ng account",
@@ -1288,6 +1320,10 @@
     {
       "tag": "document_walk_in",
       "patterns": [
+        "residente na walang account pumunta sa opisina para mag request",
+        "paano gumawa ng request para sa nasa hall",
+        "encode request ng walk in na residente",
+        "new walk-in request for a resident at the office",
         "Pwede mag request kahit walang account",
         "Paano mag walk in request",
         "Wala akong online account kailangan ko clearance",
@@ -1336,6 +1372,11 @@
     {
       "tag": "document_pickup",
       "patterns": [
+        "paano i-record ang actual release",
+        "saan ilalagay kung sino ang tumanggap ng dokumento",
+        "pickup schedule ng mga kukuha ngayon",
+        "record that the resident already picked up the document",
+        "who is picking up documents today",
         "Ready for pickup na document ko",
         "Kailan kukunin ang certificate",
         "Approved na pwede na kunin",
@@ -1603,6 +1644,12 @@
     {
       "tag": "document_qr_code",
       "patterns": [
+        "paano gamitin ang scan qr page",
+        "ayaw gumana ng camera sa pag scan",
+        "pwede bang i-type na lang ang code ng qr",
+        "scan qr ng request sa barangay hall",
+        "open the scanner for the qr code",
+        "camera cannot read the qr code",
         "saan ko makikita ang QR ko",
         "saan makikita yung qr code ng request ko",
         "para saan ang QR code",
@@ -1771,6 +1818,12 @@
     {
       "tag": "document_pickup_time",
       "patterns": [
+        "paano mag set ng closed date",
+        "paano palitan ang office hours ng pickup",
+        "ilang residente ang pwede sa isang time slot",
+        "lunch break sa pickup settings",
+        "set the days and hours for pickups",
+        "close pickups on a holiday",
         "paano mag set ng pickup time",
         "saan pipili ng oras ng pagkuha",
         "paano mag book ng oras para kunin ang dokumento",
@@ -1875,6 +1928,11 @@
     {
       "tag": "barangay_events",
       "patterns": [
+        "paano mag schedule ng event sa kalendaryo",
+        "gumawa ng event na para sa staff lang",
+        "ilagay ang clean up drive sa calendar",
+        "create a public event",
+        "add a meeting to the barangay calendar",
         "may event ba sa barangay",
         "ano ang mga darating na event",
         "saan makikita ang events",
@@ -1905,6 +1963,11 @@
     {
       "tag": "barangay_announcements",
       "patterns": [
+        "paano gumawa ng bagong abiso",
+        "paano i-pin ang announcement sa itaas",
+        "maglagay ng expiry date sa anunsyo",
+        "create an announcement for the barangay",
+        "post an emergency advisory",
         "saan ang announcements",
         "may abiso ba ang barangay",
         "saan makikita ang balita ng barangay",
@@ -1933,6 +1996,12 @@
     {
       "tag": "aid_programs",
       "patterns": [
+        "paano gumawa ng bagong ayuda program",
+        "paano itala ang household na nabigyan ng ayuda",
+        "mali ang naitala na household sa ayuda paano tanggalin",
+        "i-download ang listahan ng nabigyan ng ayuda",
+        "create a relief program",
+        "undo an ayuda entry",
         "kailan ang bigay ng ayuda",
         "paano mag apply ng ayuda",
         "kasama ba kami sa ayuda",

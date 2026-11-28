@@ -1,0 +1,41 @@
+﻿question,expected,got,confidence,suggestions,outcome
+paano mag scan ng qr ng residente,document_qr_code,document_qr_code,0.85,,right
+saan ko i-scan ang qr code ng request,document_qr_code,document_qr_code,0.97,,right
+hindi mabasa ng camera ang qr ano gagawin,document_qr_code,account_identity_verification,0.56,,wrong answer
+how do i scan a resident qr,document_qr_code,document_qr_code,0.93,,right
+paano makita lahat ng pending na request,document_status,document_status,0.68,,right
+ilan na ang request na naghihintay,document_status,document_status,0.54,,right
+where do i see submitted requests,document_status,unknown,0.25,document_status | document_request_process,suggested
+paano i-approve ang document request,document_request_process,document_request_process,0.94,,right
+paano mag reject ng request,document_request_process,document_status,0.56,,wrong answer
+paano mag release ng dokumento,document_request_process,document_request_process,0.63,,right
+paano i-mark na ready for release,document_request_process,document_pickup,0.67,,wrong answer
+how do i approve a certificate request,document_request_process,document_request_process,0.42,,right
+paano i-record na nakuha na ang dokumento,document_pickup,unknown,0.28,document_pickup | health_immunization_record,suggested
+sino ang kukuha ng dokumento ngayon,document_pickup,document_pickup,0.58,,right
+saan makikita ang mga pickup ngayong araw,document_pickup,unknown,0.26,document_pickup_time | document_pickup,suggested
+paano mag encode ng walk in,document_walk_in,document_walk_in,0.88,,right
+may residente dito sa hall gusto mag request,document_walk_in,unknown,0.11,census_registration | document_request_process,not answered
+how to create a walk-in request,document_walk_in,document_walk_in,0.78,,right
+paano baguhin ang oras ng pickup,document_pickup_time,document_pickup_time,0.92,,right
+paano isara ang pickup sa holiday,document_pickup_time,document_pickup_time,0.70,,right
+ilang tao kada slot ng pickup,document_pickup_time,document_pickup_time,0.94,,right
+paano mag approve ng bagong account,account_pending,account_pending,0.87,,right
+saan makikita ang mga nag register,account_pending,unknown,0.12,account_minimum_age | barangay_announcements,not answered
+paano i-reject ang account na malabo ang id,account_identity_verification,account_identity_verification,0.46,,right
+paano i-check ang selfie at valid id ng applicant,account_identity_verification,account_identity_verification,0.94,,right
+paano mag post ng announcement,barangay_announcements,barangay_announcements,0.94,,right
+paano maglagay ng anunsyo sa landing page,barangay_announcements,unknown,0.33,barangay_announcements,suggested
+how do i post a notice for residents,barangay_announcements,unknown,0.16,census_registration,not answered
+paano magdagdag ng event,barangay_events,unknown,0.30,barangay_events | census_household_update,suggested
+paano maglagay ng activity sa calendar,barangay_events,barangay_events,0.85,,right
+how to add an event to the calendar,barangay_events,barangay_events,0.95,,right
+paano gumawa ng bagong household,census_household_update,census_household_update,0.86,,right
+paano ilipat ang member sa ibang household,census_household_update,census_household_update,0.98,,right
+paano palitan ang head ng household,census_household_update,census_household_update,0.96,,right
+paano magdagdag ng bagong residente sa registry,census_registration,census_registration,0.96,,right
+paano mag encode ng resident record,census_registration,census_registration,0.56,,right
+paano mag record ng ayuda,aid_programs,aid_programs,0.87,,right
+paano gumawa ng programa ng relief,aid_programs,aid_programs,0.59,,right
+paano i-undo ang ayuda na mali ang household,aid_programs,aid_programs,0.50,,right
+how do i record relief distribution,aid_programs,aid_programs,0.64,,right

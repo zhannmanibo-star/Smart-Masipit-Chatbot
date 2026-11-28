@@ -1,0 +1,41 @@
+question,expected
+paano mag scan ng qr ng residente,document_qr_code
+saan ko i-scan ang qr code ng request,document_qr_code
+hindi mabasa ng camera ang qr ano gagawin,document_qr_code
+how do i scan a resident qr,document_qr_code
+paano makita lahat ng pending na request,document_status
+ilan na ang request na naghihintay,document_status
+where do i see submitted requests,document_status
+paano i-approve ang document request,document_request_process
+paano mag reject ng request,document_request_process
+paano mag release ng dokumento,document_request_process
+paano i-mark na ready for release,document_request_process
+how do i approve a certificate request,document_request_process
+paano i-record na nakuha na ang dokumento,document_pickup
+sino ang kukuha ng dokumento ngayon,document_pickup
+saan makikita ang mga pickup ngayong araw,document_pickup
+paano mag encode ng walk in,document_walk_in
+may residente dito sa hall gusto mag request,document_walk_in
+how to create a walk-in request,document_walk_in
+paano baguhin ang oras ng pickup,document_pickup_time
+paano isara ang pickup sa holiday,document_pickup_time
+ilang tao kada slot ng pickup,document_pickup_time
+paano mag approve ng bagong account,account_pending
+saan makikita ang mga nag register,account_pending
+paano i-reject ang account na malabo ang id,account_identity_verification
+paano i-check ang selfie at valid id ng applicant,account_identity_verification
+paano mag post ng announcement,barangay_announcements
+paano maglagay ng anunsyo sa landing page,barangay_announcements
+how do i post a notice for residents,barangay_announcements
+paano magdagdag ng event,barangay_events
+paano maglagay ng activity sa calendar,barangay_events
+how to add an event to the calendar,barangay_events
+paano gumawa ng bagong household,census_household_update
+paano ilipat ang member sa ibang household,census_household_update
+paano palitan ang head ng household,census_household_update
+paano magdagdag ng bagong residente sa registry,census_registration
+paano mag encode ng resident record,census_registration
+paano mag record ng ayuda,aid_programs
+paano gumawa ng programa ng relief,aid_programs
+paano i-undo ang ayuda na mali ang household,aid_programs
+how do i record relief distribution,aid_programs

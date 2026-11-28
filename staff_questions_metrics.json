@@ -1,0 +1,7 @@
+{
+  "questions": 40,
+  "answered_right": 0.725,
+  "right_or_suggested": 0.85,
+  "not_answered": 0.075,
+  "wrong_answers": 3
+}

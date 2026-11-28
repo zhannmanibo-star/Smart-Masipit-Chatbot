@@ -3,11 +3,11 @@
   "threshold": 0.4,
   "max_suggestions": 2,
   "min_suggestion_probability": 0.1,
-  "model_only_answered_right": 0.5261333333333333,
-  "answered_right_directly": 0.5347999999999999,
-  "answered_right_or_suggested": 0.8274666666666667,
-  "wrong_direct_answers": 83.8,
-  "out_of_scope_answered": 0.08571428571428572,
+  "model_only_answered_right": 0.5325685149776928,
+  "answered_right_directly": 0.5405991077119185,
+  "answered_right_or_suggested": 0.8270235818992988,
+  "wrong_direct_answers": 87.8,
+  "out_of_scope_answered": 0.07472527472527474,
   "python_version": "3.13.18",
   "sklearn_version": "1.9.1"
 }
