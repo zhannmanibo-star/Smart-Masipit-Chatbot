@@ -3,12 +3,13 @@
 
 ENGLISH_RESPONSES = {
     "greeting": (
-        "Good day! I am the SMART MASIPIT Virtual Assistant. I can help with "
-        "account registration and verification, document requests and pickup "
-        "times, walk-in services, the resident registry, health records, "
-        "events, announcements, and the barangay hall location. I give guidance "
-        "on using the system; I cannot see personal records or actual request "
-        "status."
+        "Good day! I am the SMART MASIPIT Virtual Assistant. I can help "
+        "with account registration and verification, document requests and "
+        "pickup times, walk-in services, the resident registry, health "
+        "records, events, announcements, and the barangay hall location. I "
+        "give guidance on using the system. I cannot see health records or "
+        "other personal records, but the status of your own document "
+        "requests is shown below the answer."
     ),
 
     "goodbye": (
@@ -55,10 +56,10 @@ ENGLISH_RESPONSES = {
     "document_status": (
         "Open My Document Requests to view your actual request status. "
         "Statuses include Submitted, Under review, Approved, Rejected, "
-        "Ready for release, Released, and Closed — Not released. "
-        "Approved means the request is approved for document "
-        "preparation; it does not yet mean the document is ready "
-        "for pickup. I cannot check your personal request status."
+        "Ready for release, Released, and Closed — Not released. Approved "
+        "means the request is approved for document preparation; it does "
+        "not yet mean the document is ready for pickup. When you are signed "
+        "in as a resident, your open requests are shown below this answer."
     ),
 
     "payment_info": (
@@ -93,9 +94,9 @@ ENGLISH_RESPONSES = {
     ),
 
     "health_center_schedule": (
-        "I do not have a verified, real-time Barangay Health Center "
-        "schedule. Contact health staff to confirm consultation, "
-        "immunization, and maternal service schedules."
+        "Health activities on the calendar are shown below, if there are "
+        "any. Still confirm the exact consultation, immunization, and "
+        "maternal service schedules with health staff."
     ),
 
     "health_privacy_access": (
@@ -172,10 +173,10 @@ ENGLISH_RESPONSES = {
     ),
 
     "barangay_operating_hours": (
-        "Contact the barangay office for confirmed office hours and the holiday "
-        "schedule. The pickup times shown on your request follow the office "
-        "days and hours set by the barangay. I cannot see real-time "
-        "information."
+        "Contact the barangay office for confirmed office hours and the "
+        "holiday schedule. The pickup times shown on your request follow "
+        "the office days and hours set by the barangay. If the office is "
+        "closed on any day in the next 30 days, it is shown below."
     ),
 
     "out_of_scope": (
@@ -227,12 +228,12 @@ ENGLISH_RESPONSES = {
 
     "document_pickup": (
         "Approved does not yet mean the document can be picked up; wait for "
-        "Ready for release. When it is ready, a pickup notice appears on your "
-        "request and is emailed to the eligible account. You can also choose a "
-        "pickup time on the request page. At the barangay office, bring one "
-        "valid ID and show the request's QR code or reference number (Show QR "
-        "in My Document Requests). The chatbot cannot confirm the actual "
-        "status."
+        "Ready for release. When it is ready, a pickup notice appears on "
+        "your request and is emailed to the eligible account. You can also "
+        "choose a pickup time on the request page. At the barangay office, "
+        "bring one valid ID and show the request's QR code or reference "
+        "number (Show QR in My Document Requests). If you have an open "
+        "request, its status and pickup time are shown below."
     ),
 
     "document_additional_types": (
@@ -287,10 +288,11 @@ ENGLISH_RESPONSES = {
         "I can guide you in using SMART MASIPIT: accounts and verification, "
         "document requests and pickup times, walk-in services, the resident "
         "registry, health modules, events, and announcements. I cannot see "
-        "personal records or actual request status, and I do not submit, edit "
-        "or approve records and requests. Use the matching page or contact "
-        "authorized staff. Do not send passwords, codes, valid IDs, selfies or "
-        "clinical records here."
+        "health records or other personal records, but the status of your "
+        "own document requests is shown below the answer. I do not submit, "
+        "edit or approve records and requests. Use the matching page or "
+        "contact authorized staff. Do not send passwords, codes, valid IDs, "
+        "selfies or clinical records here."
     ),
 
     "document_qr_code": (
@@ -371,17 +373,17 @@ ENGLISH_RESPONSES = {
     ),
     "barangay_events": (
         "Upcoming public events of Barangay Masipit are on the landing page "
-        "(Mga darating na event) and on the Events page. When signed in, open "
-        "Calendar to see events month by month. Barangay officials post the "
-        "events; some events are for staff only. The chatbot cannot see the "
-        "list itself, so check the Events page or contact the barangay office."
+        "(Mga darating na event) and on the Events page. When signed in, "
+        "open Calendar to see events month by month. Barangay officials "
+        "post the events; some events are for staff only. Some upcoming "
+        "events are shown below, if there are any."
     ),
     "barangay_announcements": (
-        "Barangay notices are on the landing page (Mga abiso ng barangay) and "
-        "on the Announcements page. They are grouped by category: General, "
-        "Health, Event, Advisory and Emergency; pinned ones come first. The "
-        "Barangay Secretary, Captain or administrator posts them. The chatbot "
-        "does not read the notices themselves, so check the Announcements page."
+        "Barangay notices are on the landing page (Mga abiso ng barangay) "
+        "and on the Announcements page. They are grouped by category: "
+        "General, Health, Event, Advisory and Emergency; pinned ones come "
+        "first. The Barangay Secretary, Captain or administrator posts "
+        "them. The latest notices are shown below, if there are any."
     ),
     "aid_programs": (
         "Aid or relief distributions are recorded by authorized barangay staff "

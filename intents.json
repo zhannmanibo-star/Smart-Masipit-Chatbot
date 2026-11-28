@@ -31,7 +31,7 @@
         "How are you?"
       ],
       "responses": [
-        "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration at verification, document requests at pickup time, walk-in services, resident registry, health records, events, announcements, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko; hindi ko nakikita ang personal records o actual request status."
+        "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration at verification, document requests at pickup time, walk-in services, resident registry, health records, events, announcements, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko. Hindi ko nakikita ang health records at ibang personal records, pero ipinapakita sa ibaba ng sagot ang status ng sarili mong document request."
       ]
     },
     {
@@ -281,7 +281,7 @@
         "why was my request rejected"
       ],
       "responses": [
-        "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Hindi kayang tingnan ng chatbot ang personal request status."
+        "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Kapag naka-sign in ka bilang resident, makikita sa ibaba ng sagot na ito ang mga bukas mong request."
       ]
     },
     {
@@ -522,7 +522,7 @@
         "health center schedule today"
       ],
       "responses": [
-        "Wala akong verified real-time schedule ng Barangay Health Center. Makipag-ugnayan sa health staff para sa consultation, immunization, at maternal service schedules."
+        "Makikita sa ibaba ang mga health activity na nasa kalendaryo, kung mayroon. Kumpirmahin pa rin sa health staff ang eksaktong schedule ng consultation, immunization, at maternal services."
       ]
     },
     {
@@ -1036,7 +1036,7 @@
         "bukas po ba kayo bukas"
       ],
       "responses": [
-        "Makipag-ugnayan sa barangay office para sa confirmed office hours at holiday schedule. Ang mga pickup time na makikita sa inyong request ay sumusunod sa office days at oras na itinakda ng barangay. Hindi ako nakakakita ng real-time na impormasyon."
+        "Makipag-ugnayan sa barangay office para sa confirmed office hours at holiday schedule. Ang mga pickup time na makikita sa inyong request ay sumusunod sa office days at oras na itinakda ng barangay. Kung may araw na sarado ang opisina sa susunod na 30 araw, makikita ito sa ibaba."
       ]
     },
     {
@@ -1365,7 +1365,7 @@
         "Where are the collection instructions for my document?"
       ],
       "responses": [
-        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento; hintayin ang Ready for release. Kapag handa na, may pickup notice sa inyong request at sa email ng eligible na account. Maaari ring pumili ng pickup time sa request page. Pagpunta sa barangay office, magdala ng isang valid ID at ipakita ang QR code o reference number ng request (Show QR sa My Document Requests). Hindi kayang kumpirmahin ng chatbot ang aktuwal na status."
+        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento; hintayin ang Ready for release. Kapag handa na, may pickup notice sa inyong request at sa email ng eligible na account. Maaari ring pumili ng pickup time sa request page. Pagpunta sa barangay office, magdala ng isang valid ID at ipakita ang QR code o reference number ng request (Show QR sa My Document Requests). Kung may bukas kang request, makikita sa ibaba ang status at pickup time nito."
       ]
     },
     {
@@ -1597,7 +1597,7 @@
         "can you do the request on my behalf"
       ],
       "responses": [
-        "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko: accounts at verification, document requests at pickup time, walk-in services, resident registry, health modules, events, at announcements. Hindi ko nakikita ang personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang page o makipag-ugnayan sa authorized staff. Huwag ipadala dito ang password, code, valid ID, selfie, o clinical records."
+        "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko: accounts at verification, document requests at pickup time, walk-in services, resident registry, health modules, events, at announcements. Hindi ko nakikita ang health records at ibang personal records, pero ipinapakita sa ibaba ng sagot ang status ng sarili mong document request. Hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang page o makipag-ugnayan sa authorized staff. Huwag ipadala dito ang password, code, valid ID, selfie, o clinical records."
       ]
     },
     {
@@ -1899,7 +1899,7 @@
         "calendar of activities"
       ],
       "responses": [
-        "Makikita ang mga darating na public event ng Barangay Masipit sa landing page (Mga darating na event) at sa Events page. Kapag naka-sign in, buksan ang Calendar para makita ang mga event bawat buwan. Ang mga barangay official ang naglalagay ng events; may ilang event na para sa staff lamang. Hindi nakikita ng chatbot ang mismong listahan, kaya tingnan ang Events page o makipag-ugnayan sa barangay office."
+        "Makikita ang mga darating na public event ng Barangay Masipit sa landing page (Mga darating na event) at sa Events page. Kapag naka-sign in, buksan ang Calendar para makita ang mga event bawat buwan. Ang mga barangay official ang naglalagay ng events; may ilang event na para sa staff lamang. Makikita sa ibaba ang ilang paparating na event, kung mayroon."
       ]
     },
     {
@@ -1927,7 +1927,7 @@
         "barangay bulletin"
       ],
       "responses": [
-        "Makikita ang mga abiso ng barangay sa landing page (Mga abiso ng barangay) at sa Announcements page. Nakaayos ang mga ito ayon sa kategorya: General, Health, Event, Advisory, at Emergency; nauuna ang mga naka-pin. Ang Barangay Secretary, Captain, o administrator ang nagpo-post ng announcements. Hindi binabasa ng chatbot ang mismong mga abiso, kaya tingnan ang Announcements page."
+        "Makikita ang mga abiso ng barangay sa landing page (Mga abiso ng barangay) at sa Announcements page. Nakaayos ang mga ito ayon sa kategorya: General, Health, Event, Advisory, at Emergency; nauuna ang mga naka-pin. Ang Barangay Secretary, Captain, o administrator ang nagpo-post ng announcements. Makikita sa ibaba ang mga pinakabagong abiso, kung mayroon."
       ]
     },
     {

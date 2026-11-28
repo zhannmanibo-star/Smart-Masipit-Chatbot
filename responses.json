@@ -1,6 +1,6 @@
 {
   "greeting": [
-    "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration at verification, document requests at pickup time, walk-in services, resident registry, health records, events, announcements, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko; hindi ko nakikita ang personal records o actual request status."
+    "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration at verification, document requests at pickup time, walk-in services, resident registry, health records, events, announcements, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko. Hindi ko nakikita ang health records at ibang personal records, pero ipinapakita sa ibaba ng sagot ang status ng sarili mong document request."
   ],
   "goodbye": [
     "Salamat po! Kung may iba pa kayong tanong tungkol sa SMART MASIPIT, maaari kayong magtanong muli."
@@ -18,7 +18,7 @@
     "Maaaring magsumite online gamit ang approved resident account o magpa-encode ng walk-in request sa barangay hall. Dadaan ang request sa review at approval o rejection. Kapag approved, ihahanda muna ng staff ang dokumento. Hintayin ang Ready for release at basahin ang pickup instructions bago pumunta. Sa barangay office ginagawa ang printing at release."
   ],
   "document_status": [
-    "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Hindi kayang tingnan ng chatbot ang personal request status."
+    "Buksan ang My Document Requests para makita ang actual status ng inyong request. Maaaring Submitted, Under review, Approved, Rejected, Ready for release, Released, o Closed — Not released. Ang Approved ay para sa document preparation pa lamang. Kapag naka-sign in ka bilang resident, makikita sa ibaba ng sagot na ito ang mga bukas mong request."
   ],
   "payment_info": [
     "Walang online payment feature sa kasalukuyang SMART MASIPIT. Hindi rin ako makapagkukumpirma ng eksaktong fee o exemption para sa bawat certificate. Makipag-ugnayan sa barangay office para sa applicable fees at paraan ng pagbabayad."
@@ -33,7 +33,7 @@
     "Authorized health staff ang nagtatala at nagre-review ng immunization records at correction history. Makipag-ugnayan sa Barangay Health Center para sa sariling record o record ng inyong anak. Kumpirmahin sa health staff ang schedule at mga kailangang dalhin."
   ],
   "health_center_schedule": [
-    "Wala akong verified real-time schedule ng Barangay Health Center. Makipag-ugnayan sa health staff para sa consultation, immunization, at maternal service schedules."
+    "Makikita sa ibaba ang mga health activity na nasa kalendaryo, kung mayroon. Kumpirmahin pa rin sa health staff ang eksaktong schedule ng consultation, immunization, at maternal services."
   ],
   "health_privacy_access": [
     "Ang clinical records ay para lamang sa authorized health personnel. Ang resident account at ordinaryong barangay account ay hindi nagbibigay ng access sa clinical records. Hindi rin nakakabasa ang chatbot ng patient records."
@@ -66,7 +66,7 @@
     "Piliin ang Create resident account sa landing page o Create an account sa login page. Ilagay ang required information at kumpletuhin ang identity verification submission. Pending muna ang account hanggang ma-review ng Barangay Secretary o Captain. Kung nakalimutan ang password, gamitin ang Forgot your password."
   ],
   "barangay_operating_hours": [
-    "Makipag-ugnayan sa barangay office para sa confirmed office hours at holiday schedule. Ang mga pickup time na makikita sa inyong request ay sumusunod sa office days at oras na itinakda ng barangay. Hindi ako nakakakita ng real-time na impormasyon."
+    "Makipag-ugnayan sa barangay office para sa confirmed office hours at holiday schedule. Ang mga pickup time na makikita sa inyong request ay sumusunod sa office days at oras na itinakda ng barangay. Kung may araw na sarado ang opisina sa susunod na 30 araw, makikita ito sa ibaba."
   ],
   "out_of_scope": [
     "Hindi ko matiyak ang sagot sa tanong na iyan. Makakatulong ako sa paggamit ng SMART MASIPIT: accounts, document requests at pickup, walk-in services, resident registry, health modules, events, announcements, at lokasyon ng barangay. Maaari bang linawin ang inyong tanong?"
@@ -84,7 +84,7 @@
     "Puwedeng mag-walk-in document request kahit may online account o wala. Authorized staff ang magve-verify ng identity at maghahanap ng resident record. Kung wala pang record, kailangang mairehistro muna ang resident bago i-encode ang document request. Dadaan pa rin ito sa review at approval."
   ],
   "document_pickup": [
-    "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento; hintayin ang Ready for release. Kapag handa na, may pickup notice sa inyong request at sa email ng eligible na account. Maaari ring pumili ng pickup time sa request page. Pagpunta sa barangay office, magdala ng isang valid ID at ipakita ang QR code o reference number ng request (Show QR sa My Document Requests). Hindi kayang kumpirmahin ng chatbot ang aktuwal na status."
+    "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento; hintayin ang Ready for release. Kapag handa na, may pickup notice sa inyong request at sa email ng eligible na account. Maaari ring pumili ng pickup time sa request page. Pagpunta sa barangay office, magdala ng isang valid ID at ipakita ang QR code o reference number ng request (Show QR sa My Document Requests). Kung may bukas kang request, makikita sa ibaba ang status at pickup time nito."
   ],
   "document_additional_types": [
     "Piliin ang kaukulang certificate o permit sa document request form at kumpletuhin ang additional fields na ipinapakita. Para sa First-Time Jobseeker Certification, sinusuri rin ng staff ang signed oath at reference nito. Ang draft na hindi pa napipirmahan ay hindi signed oath. Kumpirmahin sa barangay ang eligibility at supporting requirements."
@@ -102,7 +102,7 @@
     "Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit. Sakop nito ang resident registry at household records, resident account registration at verification, document requests na may pickup time at QR code, health record management, announcements, at events calendar. Kasama sa health module ang consultations, blood pressure records, immunization, health history, at maternal records. Magkakaiba ang access ng residents at authorized staff ayon sa kanilang role."
   ],
   "chatbot_capabilities": [
-    "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko: accounts at verification, document requests at pickup time, walk-in services, resident registry, health modules, events, at announcements. Hindi ko nakikita ang personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang page o makipag-ugnayan sa authorized staff. Huwag ipadala dito ang password, code, valid ID, selfie, o clinical records."
+    "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko: accounts at verification, document requests at pickup time, walk-in services, resident registry, health modules, events, at announcements. Hindi ko nakikita ang health records at ibang personal records, pero ipinapakita sa ibaba ng sagot ang status ng sarili mong document request. Hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang page o makipag-ugnayan sa authorized staff. Huwag ipadala dito ang password, code, valid ID, selfie, o clinical records."
   ],
   "document_qr_code": [
     "Bawat bukas na document request ay may sariling QR code. Buksan ang My Document Requests at pindutin ang Show QR; maaari rin itong i-save bilang larawan gamit ang Save image. Ipakita ang QR sa barangay office at i-scan ito ng staff para mabuksan agad ang inyong request. May personal na barangay QR din sa My profile. Dalhin pa rin ang valid ID sa pagkuha ng dokumento, at huwag i-post online ang inyong QR."
@@ -129,10 +129,10 @@
     "Maaaring i-install ang SMART MASIPIT sa phone o computer na parang app; wala itong hiwalay na app sa Play Store o App Store. Sa Chrome o Edge, pindutin ang Install app (o I-install ang app sa landing page) kapag lumabas ito, o buksan ang menu ng browser at piliin ang Install app o Add to Home screen. Sa iPhone, buksan ito sa Safari, pindutin ang Share, at piliin ang Add to Home Screen. Pareho pa rin ang account at mga feature."
   ],
   "barangay_events": [
-    "Makikita ang mga darating na public event ng Barangay Masipit sa landing page (Mga darating na event) at sa Events page. Kapag naka-sign in, buksan ang Calendar para makita ang mga event bawat buwan. Ang mga barangay official ang naglalagay ng events; may ilang event na para sa staff lamang. Hindi nakikita ng chatbot ang mismong listahan, kaya tingnan ang Events page o makipag-ugnayan sa barangay office."
+    "Makikita ang mga darating na public event ng Barangay Masipit sa landing page (Mga darating na event) at sa Events page. Kapag naka-sign in, buksan ang Calendar para makita ang mga event bawat buwan. Ang mga barangay official ang naglalagay ng events; may ilang event na para sa staff lamang. Makikita sa ibaba ang ilang paparating na event, kung mayroon."
   ],
   "barangay_announcements": [
-    "Makikita ang mga abiso ng barangay sa landing page (Mga abiso ng barangay) at sa Announcements page. Nakaayos ang mga ito ayon sa kategorya: General, Health, Event, Advisory, at Emergency; nauuna ang mga naka-pin. Ang Barangay Secretary, Captain, o administrator ang nagpo-post ng announcements. Hindi binabasa ng chatbot ang mismong mga abiso, kaya tingnan ang Announcements page."
+    "Makikita ang mga abiso ng barangay sa landing page (Mga abiso ng barangay) at sa Announcements page. Nakaayos ang mga ito ayon sa kategorya: General, Health, Event, Advisory, at Emergency; nauuna ang mga naka-pin. Ang Barangay Secretary, Captain, o administrator ang nagpo-post ng announcements. Makikita sa ibaba ang mga pinakabagong abiso, kung mayroon."
   ],
   "aid_programs": [
     "Ang ayuda o relief distribution ay itinatala ng authorized barangay staff bawat household, batay sa resident registry. Walang online na pag-apply o listahan ng ayuda para sa resident account, at hindi kayang kumpirmahin ng chatbot kung kasama kayo o kung may ayuda ngayon. Para sa schedule at eligibility, makipag-ugnayan sa barangay office o abangan ang Announcements. Huwag ipadala sa chat ang personal o household details."
