@@ -96,6 +96,18 @@ def main():
     same = engine.get_response("paano kumuha ng barangay clearance", context="kailan ang bakuna")
     check("a full question ignores the context", same.intent == engine.get_response("paano kumuha ng barangay clearance").intent)
 
+    # Staff get answers about their own pages, only for parts they work in.
+    resident_qr = engine.get_response("paano gamitin ang qr code")
+    staff_qr = engine.get_response("paano gamitin ang qr code", staff_areas=["documents"])
+    health_qr = engine.get_response("paano gamitin ang qr code", staff_areas=["events"])
+    check("staff QR answer is about Scan QR", resident_qr.intent == "document_qr_code" and "Scan QR" in staff_qr.reply and "Scan QR" not in resident_qr.reply)
+    check("staff without that part get the usual answer", health_qr.reply == resident_qr.reply)
+    english_staff = engine.get_response("english please", previous=staff_qr.key, staff_areas=["documents"])
+    check("staff answer in English", "Start camera" in english_staff.reply)
+    check("unknown staff areas are ignored", engine.get_response("paano gamitin ang qr code", staff_areas=["admin"]).reply == resident_qr.reply)
+    picked = engine.answer_intent("account_pending", "pending", staff_areas=["verification"])
+    check("picked topic gives the staff answer", "Account Approval" in picked.reply)
+
     # The API passes everything through.
     os.environ.setdefault("CHATBOT_API_KEY", "t" * 40)
     os.environ["CHATBOT_LOG_UNANSWERED"] = "0"
@@ -121,6 +133,10 @@ def main():
             check("API: old clients still work", old.status_code == 200)
             ctx = client.post("/chat", json={"message": "pano kung puno na lahat", "context": "paano pumili ng pickup time"}, headers=headers).json()
             check("API: context is used", ctx["intent"] == "document_pickup_time")
+            staff = client.post("/chat", json={"message": "paano gamitin ang qr code", "staff_areas": ["documents"]}, headers=headers).json()
+            check("API: staff answer", "Scan QR" in staff["reply"])
+            bad = client.post("/chat", json={"message": "hi", "staff_areas": ["admin"]}, headers=headers)
+            check("API: unknown staff area refused", bad.status_code == 422)
             check("API: context is passed on", ctx["context"] == "paano pumili ng pickup time pano kung puno na lahat")
             thanks = client.post("/chat", json={"message": "salamat", "context": "paano pumili ng pickup time"}, headers=headers).json()
             check("API: thanks keeps the topic", thanks["context"] == "paano pumili ng pickup time")

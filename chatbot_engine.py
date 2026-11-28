@@ -658,6 +658,7 @@ class BaseChatbotEngine:
         )
 
 from english_responses import ENGLISH_RESPONSES, ENGLISH_SPECIAL
+from staff_responses import KNOWN_AREAS, STAFF_AREAS, STAFF_RESPONSES
 
 
 FILIPINO_MARKERS = {
@@ -784,6 +785,14 @@ def language_request(message: str) -> str | None:
     return None
 
 
+def staff_area_set(areas) -> frozenset:
+    """Known staff areas only; anything else is ignored."""
+    if not areas:
+        return frozenset()
+
+    return frozenset(str(area) for area in areas if str(area) in KNOWN_AREAS)
+
+
 class ChatbotEngine(BaseChatbotEngine):
     def __init__(self, base_dir: Path = BASE_DIR):
         super().__init__(base_dir)
@@ -806,6 +815,12 @@ class ChatbotEngine(BaseChatbotEngine):
                 + ", ".join(missing)
                 + ". Add their translations to english_responses.py."
             )
+
+        for topic, answers in STAFF_RESPONSES.items():
+            if topic not in self.responses or topic not in STAFF_AREAS:
+                raise RuntimeError(f"Staff answer for unknown topic: {topic}")
+            if not all(isinstance(answers.get(code), str) and answers[code].strip() for code in ("fil", "en")):
+                raise RuntimeError(f"Staff answer needs Filipino and English: {topic}")
 
         required_special = {"fallback", "not_understood", *RULE_REPLIES}
 
@@ -833,14 +848,20 @@ class ChatbotEngine(BaseChatbotEngine):
 
         return key
 
-    def render(self, key: str, lang: str) -> str:
-        """The reply for an answer key, in Filipino ("fil") or English ("en")."""
+    def render(self, key: str, lang: str, staff_areas: frozenset = frozenset()) -> str:
+        """
+        The reply for an answer key, in Filipino ("fil") or English ("en").
+        staff_areas: the parts of the system the user works in; staff get
+        the staff answer for topics about those parts.
+        """
         main = key.split("|", 1)[0]
 
         if main.startswith("intent:"):
             intent = main[len("intent:"):]
             if intent not in self.responses:
                 raise ValueError("Unknown topic.")
+            if STAFF_AREAS.get(intent) in staff_areas:
+                return STAFF_RESPONSES[intent]["en" if lang == "en" else "fil"]
             return ENGLISH_RESPONSES[intent] if lang == "en" else self.responses[intent][0]
 
         if main in RULE_REPLIES:
@@ -860,6 +881,7 @@ class ChatbotEngine(BaseChatbotEngine):
         lang: str | None = None,
         previous: str | None = None,
         context: str | None = None,
+        staff_areas=None,
     ) -> ChatResult:
         """
         lang: the language the user chose earlier ("fil" or "en"); when not
@@ -867,7 +889,10 @@ class ChatbotEngine(BaseChatbotEngine):
         previous: the answer key of the last reply, so "english please"
         can show that same answer in English.
         context: the user's previous question, for short follow-ups.
+        staff_areas: parts of the system a staff user works in (see staff_responses.py).
         """
+        areas = staff_area_set(staff_areas)
+
         if isinstance(message, str) and message.strip():
             wanted = language_request(message.strip()[:MAX_MESSAGE_LENGTH])
 
@@ -876,7 +901,7 @@ class ChatbotEngine(BaseChatbotEngine):
                     main, _, tags = previous.partition("|")
                     suggestions = tuple(t for t in tags.split(",") if t in self.responses) if tags else ()
                     try:
-                        reply = self.render(main, wanted)
+                        reply = self.render(main, wanted, areas)
                     except ValueError:
                         reply = None
 
@@ -906,11 +931,17 @@ class ChatbotEngine(BaseChatbotEngine):
         language = lang if lang in {"fil", "en"} else detect_reply_language(message)
         key = self.answer_key(result)
 
-        return replace(result, reply=self.render(key, language), lang=language, key=key)
+        return replace(result, reply=self.render(key, language, areas), lang=language, key=key)
 
-    def answer_intent(self, intent: str, message: str = "", lang: str | None = None) -> ChatResult:
+    def answer_intent(
+        self,
+        intent: str,
+        message: str = "",
+        lang: str | None = None,
+        staff_areas=None,
+    ) -> ChatResult:
         result = super().answer_intent(intent, message)
         language = lang if lang in {"fil", "en"} else detect_reply_language(message)
         key = "intent:" + intent
 
-        return replace(result, reply=self.render(key, language), lang=language, key=key)
+        return replace(result, reply=self.render(key, language, staff_area_set(staff_areas)), lang=language, key=key)

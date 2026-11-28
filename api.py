@@ -115,6 +115,11 @@ class ChatInput(BaseModel):
         default=None,
         max_length=MAX_MESSAGE_LENGTH,
     )
+    # Parts of the system a staff user works in, so staff get answers about
+    # their own pages (see staff_responses.py). Empty for residents.
+    staff_areas: list[
+        Literal["documents", "pickup_settings", "verification", "announcements", "events", "households", "residents"]
+    ] = Field(default_factory=list, max_length=10)
 
 
 class Suggestion(BaseModel):
@@ -175,9 +180,9 @@ def chat(
 
     try:
         if body.intent:
-            result = engine.answer_intent(body.intent, body.message, body.lang)
+            result = engine.answer_intent(body.intent, body.message, body.lang, body.staff_areas)
         else:
-            result = engine.get_response(body.message, body.lang, body.previous, body.context)
+            result = engine.get_response(body.message, body.lang, body.previous, body.context, body.staff_areas)
     except ValueError as exception:
         raise HTTPException(
             status_code=422,
