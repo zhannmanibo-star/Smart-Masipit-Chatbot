@@ -109,6 +109,12 @@ class ChatInput(BaseModel):
         max_length=200,
         pattern=r"^[a-z_:|,]{1,200}$",
     )
+    # The user's previous question, so short follow-ups like
+    # "magkano naman" can be understood.
+    context: str | None = Field(
+        default=None,
+        max_length=MAX_MESSAGE_LENGTH,
+    )
 
 
 class Suggestion(BaseModel):
@@ -126,6 +132,24 @@ class ChatOutput(BaseModel):
     answer_key: str = ""
     # Set when the user asked for a language: keep sending it as "lang".
     chosen_lang: Literal["fil", "en"] | None = None
+    # Send this back as "context" with the next message.
+    context: str = ""
+
+
+def next_context(body: ChatInput, result) -> str:
+    """The question text that the next short follow-up refers to."""
+    earlier = (body.context or "").strip()
+
+    if body.intent:
+        text = body.message
+    elif result.source in {"rule:language_switch", "rule:smalltalk", "model:not_understood"}:
+        text = earlier
+    elif result.source == "model:context":
+        text = f"{earlier} {body.message}"
+    else:
+        text = body.message
+
+    return " ".join(text.split())[-MAX_MESSAGE_LENGTH:]
 
 
 @app.get("/health")
@@ -153,7 +177,7 @@ def chat(
         if body.intent:
             result = engine.answer_intent(body.intent, body.message, body.lang)
         else:
-            result = engine.get_response(body.message, body.lang, body.previous)
+            result = engine.get_response(body.message, body.lang, body.previous, body.context)
     except ValueError as exception:
         raise HTTPException(
             status_code=422,
@@ -191,4 +215,5 @@ def chat(
         lang=result.lang,
         answer_key=result.key,
         chosen_lang=result.chosen_lang,
+        context=next_context(body, result),
     )

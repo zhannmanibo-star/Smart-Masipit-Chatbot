@@ -9,16 +9,16 @@
     0.7490566037735849
   ],
   "fold_macro_f1": [
-    0.777186988633415,
-    0.7746346795630805,
-    0.7576824002759295
+    0.778301861525451,
+    0.7753801641368941,
+    0.7573052515611849
   ],
   "mean_accuracy": 0.7580108730412536,
-  "mean_macro_f1": 0.7698346894908082,
-  "answer_coverage": 0.541169076052797,
-  "accepted_intent_accuracy": 0.9001161440185831,
-  "out_of_scope_false_answer_rate": 0.06593406593406594,
-  "python_version": "3.15.1",
+  "mean_macro_f1": 0.7703290924078434,
+  "answer_coverage": 0.5399120050282841,
+  "accepted_intent_accuracy": 0.9022118742724098,
+  "out_of_scope_false_answer_rate": 0.07692307692307693,
+  "python_version": "3.13.18",
   "sklearn_version": "1.9.1",
   "numpy_version": "2.5.4",
   "joblib_version": "1.6.0"

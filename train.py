@@ -25,6 +25,8 @@ from sklearn.metrics import (
 from sklearn.model_selection import StratifiedKFold
 from sklearn.pipeline import make_pipeline
 
+from chatbot_engine import normalize_text
+
 
 BASE = Path(__file__).resolve().parent
 SKIP_TAGS = {"autocorrect_typo_handling"}
@@ -108,8 +110,8 @@ def load_dataset():
 
             seen_questions[key] = tag
 
-            # Match the existing API preprocessing.
-            rows.append((pattern.lower().strip(), tag))
+            # Same preprocessing as the chatbot (lowercase and shortcuts).
+            rows.append((normalize_text(pattern), tag))
 
     frame = pd.DataFrame(rows, columns=["text", "label"])
 

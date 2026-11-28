@@ -1,0 +1,31 @@
+previous,question,expected
+"paano kumuha ng barangay clearance","magkano naman",payment_info
+"paano kumuha ng barangay clearance","e yung indigency",document_indigency
+"paano kumuha ng barangay clearance","pwede ba walk in na lang",document_walk_in
+"paano kumuha ng barangay clearance","gaano katagal bago ma approve",document_status
+"how do i get a barangay clearance","how much is it",payment_info
+"how do i get a barangay clearance","and the certificate of residency",document_additional_types
+"ready for release na ang clearance ko","ano dadalhin ko",document_pickup
+"ready for release na ang clearance ko","pwede ba ako pumili ng oras",document_pickup_time
+"ready for release na ang clearance ko","saan ko kukunin",document_pickup
+"ready for release na ang clearance ko","need pa ba ng qr",document_qr_code
+"paano pumili ng pickup time","pano kung puno na lahat",document_pickup_time
+"paano pumili ng pickup time","pwede ko ba palitan",document_pickup_time
+"paano pumili ng pickup time","e kung hindi ako makakapunta",document_pickup_time
+"paano gumawa ng account","ilang taon dapat",account_minimum_age
+"paano gumawa ng account","gaano katagal bago ma approve",account_pending
+"paano gumawa ng account","bakit kailangan ng selfie",account_identity_verification
+"how do i create an account","what if i forgot my password",account_password_reset
+"nakalimutan ko password ko","hindi dumating yung code",account_password_reset
+"nakalimutan ko password ko","ilang minuto valid",account_password_reset
+"ano ang two factor","pano kung nawala phone ko",account_two_factor
+"ano ang two factor","saan ko makikita recovery codes",account_two_factor
+"may event ba ang barangay","saan ko makikita",barangay_events
+"may event ba ang barangay","e yung mga announcement",barangay_announcements
+"may ayuda ba","pano malalaman kung kasama kami",aid_programs
+"may ayuda ba","kailan ang susunod",aid_programs
+"saan ang barangay hall","anong oras bukas",barangay_operating_hours
+"kailan ang bakuna sa health center","saan makikita record ng bakuna ng anak ko",health_immunization_record
+"kailan ang bakuna sa health center","may bayad ba",health_center_schedule
+"pano mag request para sa anak ko","ilang taon pwede",document_for_dependent
+"anong sitio ang pipiliin ko","pano kung lumipat kami",census_household_update

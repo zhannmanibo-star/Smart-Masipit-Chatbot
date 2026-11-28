@@ -81,6 +81,45 @@ NOT_UNDERSTOOD = (
     "\"Paano pumili ng pickup time?\""
 )
 
+# Common Taglish shortcuts and spellings, written out before the model reads
+# a message (the same is done to the training questions in train.py).
+SHORTCUTS = {
+    "pano": "paano", "panu": "paano", "pnu": "paano", "pno": "paano", "paanu": "paano",
+    "ung": "yung", "yng": "yung",
+    "pde": "pwede", "pede": "pwede", "pwde": "pwede", "pwed": "pwede",
+    "cert": "certificate", "certi": "certificate", "certs": "certificates",
+    "brgy": "barangay", "bgy": "barangay", "brgay": "barangay",
+    "acc": "account", "acct": "account", "accnt": "account",
+    "docu": "document", "doc": "document", "docs": "documents",
+    "pw": "password", "pword": "password", "passw": "password",
+    "bkt": "bakit", "bat": "bakit",
+    "san": "saan",
+    "kelan": "kailan", "kylan": "kailan",
+    "mgkano": "magkano", "mgkno": "magkano", "mkano": "magkano",
+    "d2": "dito", "jan": "diyan", "dyan": "diyan",
+    "ndi": "hindi", "hnd": "hindi", "di": "hindi",
+    "kc": "kasi", "kse": "kasi",
+    "lng": "lang", "nmn": "naman", "nman": "naman",
+    "tlga": "talaga", "tlg": "talaga",
+    "kpg": "kapag", "pag": "kapag",
+    "pls": "please", "plz": "please",
+    "u": "you", "ur": "your", "wat": "what", "hw": "how", "wer": "where", "wen": "when",
+    "sched": "schedule", "bday": "birthday",
+    "gud": "good", "eve": "evening", "morn": "morning",
+    "thx": "thanks", "tnx": "thanks",
+}
+
+
+def normalize_text(message: str) -> str:
+    """
+    Lowercase, shorten stretched letters ("helloooo" -> "hello") and write
+    out common shortcuts ("pano" -> "paano", "brgy" -> "barangay").
+    """
+    text = " ".join(str(message).casefold().split())
+    text = re.sub(r"([a-z])\1{2,}", r"\1", text)
+    return re.sub(r"[a-z0-9]+", lambda m: SHORTCUTS.get(m.group(0), m.group(0)), text)
+
+
 # Words too common to show what a message is about.
 COMMON_WORDS = {
     "ano", "anong", "ang", "ng", "sa", "po", "ba", "na", "ko", "mo", "ka",
@@ -95,7 +134,7 @@ def build_vocabulary(texts) -> set[str]:
     """Words (3+ letters) used in in-scope training questions."""
     words = set()
     for text in texts:
-        words.update(w for w in re.findall(r"[a-z0-9]+", str(text).casefold()) if len(w) >= 3)
+        words.update(w for w in re.findall(r"[a-z0-9]+", normalize_text(text)) if len(w) >= 3)
     return words - COMMON_WORDS
 
 
@@ -107,7 +146,30 @@ def is_meaningful(message: str, vocabulary: set[str] | None) -> bool:
     """
     if not vocabulary:
         return True
-    return any(word in vocabulary for word in re.findall(r"[a-z0-9]+", message.casefold()))
+    return any(word in vocabulary for word in re.findall(r"[a-z0-9]+", normalize_text(message)))
+
+
+# Words that usually point back to the previous question.
+FOLLOWUP_WORDS = {
+    "naman", "yun", "yon", "yan", "ito", "iyon", "iyan", "dun", "doon",
+    "diyan", "kung", "eh", "e", "edi", "tapos", "din", "rin",
+    "then", "about", "also", "it", "that", "this", "there",
+}
+
+
+# A weaker combined topic is accepted only when the follow-up alone agrees.
+CONTEXT_AGREE_MIN = 0.25
+CONTEXT_ALONE_MIN = 0.15
+
+
+def looks_like_followup(message: str) -> bool:
+    """Short messages (up to 4 words), or up to 7 words with a word like "naman"/"kung"."""
+    words = re.findall(r"[a-z0-9]+", normalize_text(message))
+
+    if len(words) <= 4:
+        return True
+
+    return len(words) <= 7 and any(word in FOLLOWUP_WORDS for word in words)
 
 
 # When the model is unsure, offer up to this many topics as buttons,
@@ -466,7 +528,12 @@ class BaseChatbotEngine:
             source="suggestion",
         )
 
-    def get_response(self, message: str) -> ChatResult:
+    def get_response(self, message: str, context: str | None = None) -> ChatResult:
+        """
+        context: the user's previous question. A short follow-up such as
+        "magkano naman" is read together with it when the follow-up alone
+        is unclear.
+        """
         if not isinstance(message, str):
             raise ValueError("Enter a text message.")
 
@@ -494,12 +561,18 @@ class BaseChatbotEngine:
             return rule_result
 
         probabilities = self.model.predict_proba(
-            [message.lower().strip()]
+            [normalize_text(message)]
         )[0]
 
         best = int(probabilities.argmax())
         intent = str(self.model.classes_[best])
         confidence = float(probabilities[best])
+
+        if confidence < THRESHOLD or intent == "out_of_scope":
+            followup = self.context_answer(message, context)
+
+            if followup is not None:
+                return followup
 
         if (confidence < THRESHOLD or intent == "out_of_scope") and not is_meaningful(
             message, self.vocabulary
@@ -534,6 +607,54 @@ class BaseChatbotEngine:
             intent=intent,
             confidence=confidence,
             source="model:answer",
+        )
+
+    def context_answer(self, message: str, context: str | None) -> ChatResult | None:
+        """
+        Read an unclear short follow-up together with the previous question.
+        Used only when the follow-up has a word the chatbot knows and the
+        combined text gives one confident topic.
+        """
+        if not isinstance(context, str) or not context.strip():
+            return None
+
+        if not looks_like_followup(message) or not is_meaningful(message, self.vocabulary):
+            return None
+
+        combined = normalize_text(context.strip()[:MAX_MESSAGE_LENGTH] + " " + message)
+        probabilities = self.model.predict_proba([combined])[0]
+        best = int(probabilities.argmax())
+        intent = str(self.model.classes_[best])
+        confidence = float(probabilities[best])
+
+        if confidence < THRESHOLD or intent == "out_of_scope":
+            # Still accept a weaker topic when the follow-up alone already
+            # leaned the same way ("magkano naman" -> payments).
+            topics = [str(tag) for tag in self.model.classes_]
+            alone = self.model.predict_proba([normalize_text(message)])[0].copy()
+            together = probabilities.copy()
+
+            if "out_of_scope" in topics:
+                alone[topics.index("out_of_scope")] = 0
+                together[topics.index("out_of_scope")] = 0
+
+            best = int(together.argmax())
+
+            if not (
+                int(alone.argmax()) == best
+                and together[best] >= CONTEXT_AGREE_MIN
+                and alone[best] >= CONTEXT_ALONE_MIN
+            ):
+                return None
+
+            intent = topics[best]
+            confidence = float(together[best])
+
+        return ChatResult(
+            reply=self.responses[intent][0],
+            intent=intent,
+            confidence=confidence,
+            source="model:context",
         )
 
 from english_responses import ENGLISH_RESPONSES, ENGLISH_SPECIAL
@@ -738,12 +859,14 @@ class ChatbotEngine(BaseChatbotEngine):
         message: str,
         lang: str | None = None,
         previous: str | None = None,
+        context: str | None = None,
     ) -> ChatResult:
         """
         lang: the language the user chose earlier ("fil" or "en"); when not
         given, the reply follows the language of the message.
         previous: the answer key of the last reply, so "english please"
         can show that same answer in English.
+        context: the user's previous question, for short follow-ups.
         """
         if isinstance(message, str) and message.strip():
             wanted = language_request(message.strip()[:MAX_MESSAGE_LENGTH])
@@ -779,7 +902,7 @@ class ChatbotEngine(BaseChatbotEngine):
                 )
 
         # Run existing validation, rules, and model selection first.
-        result = super().get_response(message)
+        result = super().get_response(message, context=context)
         language = lang if lang in {"fil", "en"} else detect_reply_language(message)
         key = self.answer_key(result)
 

@@ -2,8 +2,8 @@
   "questions": 111,
   "in_scope": 102,
   "answered_right": 0.7647058823529411,
-  "right_or_suggested": 0.8725490196078431,
-  "not_answered": 0.0784313725490196,
+  "right_or_suggested": 0.8921568627450981,
+  "not_answered": 0.058823529411764705,
   "wrong_answers": 5,
   "out_of_scope_refused": 1.0
-}
+}

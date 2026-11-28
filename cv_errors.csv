@@ -1,386 +1,386 @@
 ﻿question,expected_intent,predicted_intent,confidence,api_action,intent_correct
-sino ang kasama sa household membership,census_requirements,census_household_update,0.8862904801964522,answer,False
-can i send my verification selfie here?,chatbot_capabilities,account_identity_verification,0.8451959166744032,answer,False
-health records module,health_patient_record,health_privacy_access,0.8114134843424087,answer,False
-saan makikita ang health record ko?,health_patient_record,health_privacy_access,0.7891541752618207,answer,False
-ano ang ginagawa ninyo sa id at selfie ko,data_privacy,account_identity_verification,0.7481521393980339,answer,False
-robot ka ba,chatbot_capabilities,out_of_scope,0.7369396062047255,fallback,False
-mali daw ang email o password ko,account_access,account_password_reset,0.7356322384777018,answer,False
-kasama ba ang resident registry sa system?,system_overview,census_registration,0.7303486184977461,answer,False
-what does my diastolic blood pressure result mean?,health_no_advice,health_blood_pressure,0.72266839702929,answer,False
-"may bagong baby kami, paano idagdag sa census",census_household_update,census_registration,0.6991436360134631,answer,False
-saan ang form para gumawa ng bagong resident account?,account_access,census_registration,0.6714476945800791,answer,False
-safe ba ang health data ko,health_privacy_access,data_privacy,0.6643853830949393,answer,False
-privacy ng patient record,health_privacy_access,health_patient_record,0.6623049832897984,answer,False
-oras ng checkup,health_center_schedule,document_pickup_time,0.641044232716683,answer,False
-may 2fa ba ang resident account,account_two_factor,account_access,0.6349420047861348,answer,False
-dito ba nagbabayad ng tuition fee?,out_of_scope,payment_info,0.6309466402793681,answer,False
-paano gamitin ang camera para sa account,account_identity_verification,account_access,0.6194930878763886,answer,False
-kaya mo bang makita ang status ng application ko,chatbot_capabilities,document_status,0.6085720326657097,answer,False
-indigency magkano,payment_info,document_indigency,0.6022951549149584,answer,False
-who can see my health record,health_privacy_access,health_patient_record,0.5961750750729802,answer,False
-can this chatbot approve my application?,chatbot_capabilities,account_pending,0.5871436495392154,answer,False
-walang smartphone ang aplikante paano magsubmit ng document request?,document_walk_in,document_request_process,0.5870513847621287,answer,False
-magkano ang bilang ng household,census_summary,census_household_update,0.5814600980075932,answer,False
-need ba ng approval,document_request_process,account_pending,0.561346754016123,answer,False
-can the chatbot approve my account,account_pending,chatbot_capabilities,0.5587344934684879,answer,False
-bakit ayaw tanggapin ang bagong password ko,account_profile_settings,account_password_reset,0.5573961134428057,answer,False
-sino ang nakakakita ng personal information ko,data_privacy,health_privacy_access,0.5537478006087104,answer,False
-anong araw ang bakuna ng baby,health_center_schedule,health_immunization_record,0.553483184784646,answer,False
-kailangan ko bang maging residente bago gumawa ng account,census_registration,account_access,0.5521294124120525,answer,False
-population by sitio,census_summary,census_sitio,0.5519453414768273,answer,False
-pwede ba clearance at indigency lang,document_list,payment_info,0.5515439138750631,answer,False
-can staff register a resident without creating an online account?,census_registration,document_walk_in,0.5480440757730882,answer,False
-may cash assistance ba ang barangay,aid_programs,payment_info,0.5433176083158099,answer,False
-paano i-edit ang census information,census_household_update,census_requirements,0.5411097258681155,answer,False
-paano mag sign out,account_profile_settings,account_access,0.5314455291463742,answer,False
-mgkano clearance,payment_info,document_clearance,0.5299607205881416,answer,False
-paano pinoprotektahan ang health data,health_privacy_access,data_privacy,0.525979521386994,answer,False
-ano ang ulam mo,out_of_scope,chatbot_capabilities,0.5257532465614627,answer,False
-ikaw ba ay robot,out_of_scope,chatbot_capabilities,0.5155028314777536,answer,False
-is the indigency certificate free,payment_info,document_indigency,0.5148410533181506,answer,False
-pwede ba online ang clearance,document_clearance,payment_info,0.5043730986056709,answer,False
-pwede bang resident record lang at walang online login?,census_registration,document_walk_in,0.5017169533708304,answer,False
-how do i change a forgotten password,account_password_reset,account_profile_settings,0.4902645305028712,answer,False
-ano ang mga serbisyo ng document request?,document_list,document_request_process,0.4862976096567403,answer,False
-saan kukunin ang barangay clearance,document_pickup,document_clearance,0.4829324043794696,answer,False
-mag-recommend ka ng gamot,health_no_advice,out_of_scope,0.477941497310393,fallback,False
-how can an applicant without internet submit a document request?,document_walk_in,document_request_process,0.47752571528394155,answer,False
-approved na pwede na kunin,document_pickup,account_pending,0.4703066158417159,answer,False
-may online checkout ba para sa clearance fee?,payment_info,document_clearance,0.46866623961992154,answer,False
-immunization schedule,health_center_schedule,health_immunization_record,0.46063939324504005,answer,False
-saan ang census form,census_registration,census_requirements,0.45430802015494015,answer,False
-paano mag-apply ng nbi clearance?,out_of_scope,document_clearance,0.44903226275784364,answer,False
-how can i track my barangay clearance application?,document_status,document_clearance,0.44626419469613826,answer,False
-is my document ready,document_status,document_pickup,0.4446705315990748,answer,False
-how can a health worker save a patient's measured bp?,health_blood_pressure,health_patient_record,0.44406263771429444,answer,False
-may app ba ang smart masipit,app_install,system_overview,0.44338549883059086,answer,False
-paano ma-link ang request ko sa resident profile,document_request_process,document_for_dependent,0.4363291815178902,answer,False
-may ibang services ba bukod sa document requests?,system_overview,document_list,0.43352620773488115,answer,False
-paano gumagana ang online request?,document_request_process,document_walk_in,0.43282199351179945,answer,False
-may konsulta ba ngayon,health_center_schedule,health_consultation_history,0.42731297217897274,answer,False
-past visits sa health center,health_consultation_history,health_center_schedule,0.42730404055451787,answer,False
-what services are available in smart masipit?,system_overview,document_list,0.4262168612325871,answer,False
-paano paganahin ang camera habang gumagawa ng resident account?,account_identity_verification,account_access,0.4250922259609058,answer,False
-nakikita ba ng ibang resident ang info ko,data_privacy,health_privacy_access,0.4241075903807814,answer,False
-para saan ang barangay census,census_not_official,census_registration,0.4223710263589712,answer,False
-secure ba ang health record ko?,health_privacy_access,health_patient_record,0.4216997861888395,answer,False
-schedule ng basurero,out_of_scope,health_center_schedule,0.421520257720345,answer,False
-sino ang may access sa patient records,health_privacy_access,health_patient_record,0.42084848197673785,answer,False
-how much is the barangay clearance,payment_info,document_clearance,0.42016353837332004,answer,False
-digital health record ng barangay,health_patient_record,health_privacy_access,0.4197302568648587,answer,False
-paano kumuha ng good moral,document_additional_types,out_of_scope,0.41848675788647144,fallback,False
-ano ang kailangan sa pagre-register ng household,census_requirements,census_household_update,0.41706956821332,answer,False
-see you,goodbye,chatbot_capabilities,0.4165942434589094,answer,False
-bakuna record sa health center,health_immunization_record,health_center_schedule,0.4155146682183973,answer,False
-may fee ba ang clearance,payment_info,document_clearance,0.41448066189905414,answer,False
-pangalagaan ba ang impormasyon ng residente,data_privacy,census_requirements,0.41287874724469353,answer,False
-paano mag-log out,account_access,account_profile_settings,0.4126512108892322,answer,False
-can you process my driver's license application?,out_of_scope,chatbot_capabilities,0.41258617709441553,answer,False
-kasama ba ang mga bata sa census,census_registration,census_requirements,0.4119542599826362,answer,False
-ano ang hinihingi sa household profile,census_requirements,census_household_update,0.41176043316601946,answer,False
-approved na ba ang certificate ko,document_status,account_pending,0.4105133533699978,answer,False
-tapos na ba ang indigency ko?,document_status,document_indigency,0.4097057515221992,answer,False
-ano ang ibig sabihin ng prenatal result ko?,health_no_advice,document_status,0.40907064727639125,answer,False
-pwede bang dito na lang ako magrequest ng certificate?,chatbot_capabilities,document_walk_in,0.4070102925340663,answer,False
-good evening,greeting,barangay_events,0.4050675249682235,answer,False
-registration ng account,account_access,account_pending,0.4034050390208627,answer,False
-are clearance and indigency the only available documents?,document_list,payment_info,0.40312558399391535,answer,False
-dati record lang ako ngayon gusto ko ng sariling account,account_minimum_age,account_access,0.40219518479855115,answer,False
-paano makuha ang dokumento pagkatapos maaprubahan,document_pickup,document_request_process,0.40089378212690396,answer,False
-sino ang nag-e-encode ng health record,health_patient_record,health_privacy_access,0.3987228861260609,fallback,False
-paano kumuha ng barangay business clearance?,out_of_scope,document_clearance,0.390772705587878,fallback,False
-how do i log out,account_profile_settings,account_access,0.3897596311284331,fallback,False
-libre po ba ang indigency,payment_info,document_indigency,0.38681365875725043,fallback,False
-pwede ba walk-in sa health center,health_center_schedule,document_walk_in,0.3865028388234925,fallback,False
-ano ang requirements sa census registration,census_registration,census_requirements,0.38575091447601007,fallback,False
-walang online account ang pasyente pwede bang mairegister?,health_patient_record,document_walk_in,0.3797286717797403,fallback,False
-i submitted all identity photos but my account is still pending,account_pending,account_identity_verification,0.37760079538639696,fallback,False
-may access ba ang secretary sa maternal records?,health_privacy_access,health_maternal,0.37628758099547865,fallback,False
-mga tanong sa census,census_requirements,census_registration,0.3722132579698597,fallback,False
-what day is the next immunization session?,health_center_schedule,health_immunization_record,0.36976606664484346,fallback,False
-ikaw ba ang nagveverify ng resident accounts?,chatbot_capabilities,account_pending,0.36925192079461316,fallback,False
-can you do the request on my behalf,chatbot_capabilities,document_for_dependent,0.3686698140211738,fallback,False
-ano ang alam mo,chatbot_capabilities,out_of_scope,0.36623695946792006,fallback,False
-anong request ang pwede,document_list,chatbot_capabilities,0.361634797774009,fallback,False
-which document categories are supported by smart masipit?,document_list,system_overview,0.3588105821630174,fallback,False
-address ng barangay hall,barangay_location,barangay_operating_hours,0.35708212770595177,fallback,False
-where should i submit my resident verification pictures?,account_identity_verification,account_pending,0.35635296113581855,fallback,False
-may dentista ba sa health center?,out_of_scope,health_center_schedule,0.3559779143440551,fallback,False
-barangay business clearance requirements para sa negosyo,out_of_scope,document_clearance,0.3539217392713327,fallback,False
-restricted ba ang medical history sa health personnel?,health_privacy_access,health_consultation_history,0.3528976692111798,fallback,False
-paano kumuha ng medical certificate?,out_of_scope,document_additional_types,0.34921682600908205,fallback,False
-sino ang nag-aapprove ng request?,document_request_process,document_status,0.3469643271657751,fallback,False
-pwede mo bang i approve ang account ko,account_pending,chatbot_capabilities,0.3461675440498134,fallback,False
-hindi ko natanggap ang 6 digit code,account_password_reset,account_two_factor,0.3457413826672187,fallback,False
-naka-register na ako sa barangay noong bata pa ako paano gumawa ng account ngayon,account_minimum_age,account_access,0.33998112013344445,fallback,False
-baguhan ako dito ano ang gamit ng website?,system_overview,out_of_scope,0.33858192673137805,fallback,False
-tracking ng document request,document_status,document_request_process,0.33825124020731384,fallback,False
-wala sa playstore ang smart masipit,app_install,system_overview,0.3369108407086166,fallback,False
-pwede bang makita ng ibang account ang bakuna record ng anak ko?,health_privacy_access,health_immunization_record,0.3356660294096018,fallback,False
-pwede kitang padalhan ng picture ng valid id?,chatbot_capabilities,account_identity_verification,0.33086572392532226,fallback,False
-can you give me an overview of the system?,system_overview,chatbot_capabilities,0.3296848251094503,fallback,False
-are vaccination records visible to other resident accounts?,health_privacy_access,health_immunization_record,0.32555673248391487,fallback,False
-pwede bang makita ng iba ang profile ko,data_privacy,health_privacy_access,0.32442824626018746,fallback,False
-paano maglogout pagkatapos gamitin ang account?,account_access,account_pending,0.3235686193018185,fallback,False
-secure ba ang password ko,data_privacy,account_password_reset,0.32310492288279313,fallback,False
-sputum test schedule,out_of_scope,health_center_schedule,0.32264679124650253,fallback,False
-android app ng barangay masipit,app_install,barangay_location,0.3218918162393274,fallback,False
-nakikita mo ba ang consultation results ko?,chatbot_capabilities,health_consultation_history,0.3193239534570719,fallback,False
-sino ang magrereview pagkatapos maipasa ang identity evidence?,account_pending,account_identity_verification,0.31884105902617865,fallback,False
-may medical mission ba,barangay_events,health_privacy_access,0.3168738221923737,fallback,False
-wala akong natanggap na pickup email,document_pickup,document_pickup_time,0.31426640577535764,fallback,False
-kailan ang bakunahan?,health_center_schedule,health_immunization_record,0.3142581584393202,fallback,False
-local summary ng census,census_summary,census_not_official,0.31380018228873324,fallback,False
-libreng konsulta,health_center_schedule,health_consultation_history,0.3134792978775342,fallback,False
-saan magapply ng barangay occupancy permit?,document_additional_types,out_of_scope,0.31218518933002226,fallback,False
-qr code para sa pickup ng clearance,document_qr_code,document_clearance,0.31185812339508506,fallback,False
-i was registered as a kid how do i get my own account now,account_minimum_age,account_access,0.3115428585197253,fallback,False
-can a patient be registered without an online account?,health_patient_record,document_walk_in,0.3080422813069607,fallback,False
-how do i report a change in household membership?,census_household_update,census_summary,0.30708805682352147,fallback,False
-goodbye,goodbye,greeting,0.3067497205035179,fallback,False
-pwede ko na bang kunin pag approved for preparation?,document_pickup,account_pending,0.30656112951669867,fallback,False
-may account na ba ako o wala pa,account_access,document_walk_in,0.30610369835114426,fallback,False
-lumipat kami ng sitio paano i-update,census_sitio,census_household_update,0.3051166959149839,fallback,False
-can authorized staff view resident counts by sitio?,census_summary,health_privacy_access,0.3047977575747429,fallback,False
-magkano ang gasolina,out_of_scope,payment_info,0.30400163867666996,fallback,False
-tnx,goodbye,out_of_scope,0.3017203228500867,fallback,False
-paano makikita ang kabuuang bilang ng households?,census_summary,census_household_update,0.29871027379713316,fallback,False
-saan pipili ng oras ng pagkuha,document_pickup_time,out_of_scope,0.2962103912640046,fallback,False
-ilang taon dapat para makapag-account,account_minimum_age,account_access,0.2954836521262683,fallback,False
-pwede mo ba akong bigyan ng reseta,health_no_advice,chatbot_capabilities,0.29211799819962725,fallback,False
-hi bot,greeting,out_of_scope,0.2908074065606497,fallback,False
-may dalawa akong profile sa census,census_duplicate_check,census_requirements,0.2884159684251554,fallback,False
-what is the review process for a submitted document application?,document_request_process,document_status,0.28810504863482095,fallback,False
-pwede bang magbayad ng water bill dito?,out_of_scope,payment_info,0.28716850703777114,fallback,False
-is there a community event this weekend,barangay_events,out_of_scope,0.2868937187138961,fallback,False
-kumusta,greeting,out_of_scope,0.28647253989583904,fallback,False
-paano i-check ang bakuna ng sanggol,health_immunization_record,health_center_schedule,0.2842730525946702,fallback,False
-anong oras na,out_of_scope,health_center_schedule,0.28397519223082623,fallback,False
-minimum age sa smart masipit,account_minimum_age,system_overview,0.28259456576442615,fallback,False
-what can i request in the portal,document_list,document_status,0.28083271209292937,fallback,False
-ano ang pwede kong itanong sa iyo,chatbot_capabilities,document_list,0.2799809954905533,fallback,False
-what if i have two resident profiles,census_duplicate_check,census_requirements,0.27993718795760714,fallback,False
-what time does the barangay hall close,barangay_operating_hours,barangay_location,0.27867138548153353,fallback,False
-my application is still waiting for approval,account_pending,document_request_process,0.2776836465473545,fallback,False
-pareho ba ang account sa app at website,app_install,account_access,0.2776668496118653,fallback,False
-is there cash assistance from the barangay,aid_programs,payment_info,0.27578766864506143,fallback,False
-ano ang itinatala sa konsulta,health_consultation_history,health_center_schedule,0.27459771287007856,fallback,False
-ano ang dapat gawin pagkatapos piliin ang document type?,document_request_process,document_list,0.271792869628131,fallback,False
-impormasyon ng pamilya sa census,census_requirements,census_household_update,0.27134229123329767,fallback,False
-bakit may hinihinging code pagkatapos ng password,account_two_factor,account_password_reset,0.27041480076156865,fallback,False
-can i request a document without registering online,document_walk_in,document_request_process,0.2699036211097096,fallback,False
-may account ba ang batang 5 taong gulang,document_for_dependent,account_minimum_age,0.26742862576355636,fallback,False
-how long before my request is approved,document_request_process,document_status,0.26535932204579277,fallback,False
-barangay bulletin,barangay_announcements,barangay_location,0.26515562840710877,fallback,False
-kailangan ba ng consent sa data,data_privacy,census_requirements,0.2650052570082646,fallback,False
-ano ang verification sa request,document_request_process,document_status,0.2647984003491489,fallback,False
-can staff submit a document application on my behalf?,document_walk_in,document_request_process,0.2643141658840705,fallback,False
-can a 13 year old create an account,account_minimum_age,account_access,0.2638653551636091,fallback,False
-may bayad ba ang konsultasyon?,health_center_schedule,payment_info,0.26041505478519456,fallback,False
-what barangay is this portal for?,system_overview,out_of_scope,0.25817475235240406,fallback,False
-is my medical record private,health_privacy_access,data_privacy,0.25750753484224903,fallback,False
-paano i-edit ang pangalan ko sa account,account_profile_settings,account_access,0.25713458733397837,fallback,False
-census statistics ng barangay,census_summary,census_registration,0.25642010034510476,fallback,False
-naproseso na ba ang indigency ko,document_status,document_indigency,0.2544692861324407,fallback,False
-can this chat create an account for me?,chatbot_capabilities,account_access,0.25037213420858484,fallback,False
-consultation entries,health_consultation_history,health_blood_pressure,0.24968809520887011,fallback,False
-may printable na dokumento ba,document_request_process,document_list,0.24830844969245547,fallback,False
-privacy policy ng smart masipit,data_privacy,system_overview,0.24774025954640463,fallback,False
-is the app different from the website,app_install,out_of_scope,0.24673080561051183,fallback,False
-is my account password confidential?,data_privacy,account_access,0.2445563898935382,fallback,False
-paano mag book ng oras para kunin ang dokumento,document_pickup_time,out_of_scope,0.24366443419157932,fallback,False
-can my mother request indigency at the office without signing up?,document_walk_in,document_status,0.2408313555803231,fallback,False
-where is the sign up page for smart masipit?,account_access,account_minimum_age,0.24074069302470302,fallback,False
-pwede bang walang bp kapag hindi nasukat?,health_blood_pressure,document_walk_in,0.23945647571848408,fallback,False
-may pregnancy history ba sa patient profile?,health_maternal,health_patient_record,0.23892208016773023,fallback,False
-"nanganak ako, paano iregister sa census?",census_household_update,census_registration,0.23839689272267664,fallback,False
-where is the sign out button,account_profile_settings,account_access,0.2381128490237041,fallback,False
-what activities are scheduled this month,barangay_events,health_center_schedule,0.23656468239564507,fallback,False
-why does registration reject my birth date,account_minimum_age,document_status,0.23643768926207415,fallback,False
-may doktor ba ngayon sa barangay?,health_center_schedule,out_of_scope,0.23287672791079428,fallback,False
-paano mag-logout sa smart masipit,account_profile_settings,account_access,0.2328560743123749,fallback,False
-anong certificates at permits ang kasama sa system?,document_list,system_overview,0.23108893129269498,fallback,False
-may tao ba dito?,greeting,out_of_scope,0.23030694323049064,fallback,False
-same name different person sa census,census_duplicate_check,census_requirements,0.22970755985078967,fallback,False
-where do i choose when to pick up my document,document_pickup_time,document_pickup,0.2290922073671025,fallback,False
-paano mag-request na burahin ang data ko,data_privacy,document_status,0.22836924837792397,fallback,False
-how do i request a certificate for my kid,document_for_dependent,document_status,0.22820997185143238,fallback,False
-pwede ba hingin ang kopya ng consultation record,health_consultation_history,health_privacy_access,0.22788528357476814,fallback,False
-pwede ko bang i-request ang clearance ng anak ko,document_for_dependent,document_clearance,0.22685714810541815,fallback,False
-required ba ang selfie bago mareview ang application?,account_identity_verification,document_status,0.22488107748259392,fallback,False
-nakikita ba ng staff ang mismong password ko?,data_privacy,chatbot_capabilities,0.2244492951436811,fallback,False
-how long should my password be,account_profile_settings,account_password_reset,0.2243118356535639,fallback,False
-schedule ng pagclaim ng certificate,document_pickup_time,health_center_schedule,0.2226408808744108,fallback,False
-how do i pay for my document,payment_info,document_pickup,0.22227859139766215,fallback,False
-bakit kailangan ang edad at kasarian,census_requirements,census_summary,0.2220158864814034,fallback,False
-is my id photo kept private,data_privacy,account_identity_verification,0.22122591421648716,fallback,False
-ano ang pinagkaiba ng mga module dito?,system_overview,out_of_scope,0.22049518500584817,fallback,False
-ano ang laman ng census record,census_requirements,census_registration,0.2172232111819337,fallback,False
-saan makikita ang balita ng barangay,barangay_announcements,barangay_location,0.21711109984305885,fallback,False
-may ibang certificates pa maliban sa indigency?,document_list,document_indigency,0.21646192261187003,fallback,False
-ilang senior citizen ang nasa barangay?,census_summary,out_of_scope,0.21597940379877076,fallback,False
-sino lang ang puwedeng bumasa ng consultation details?,health_privacy_access,census_requirements,0.21468255385393636,fallback,False
-paano mag-register ng pwd id?,out_of_scope,account_access,0.21403973492439057,fallback,False
-ilan ang residente sa masipit?,census_summary,census_requirements,0.21376504623075815,fallback,False
-"maling impormasyon sa census, paano ayusin",census_household_update,census_requirements,0.2135007429631764,fallback,False
-protektado ba ang medical information,health_privacy_access,data_privacy,0.21207882400769384,fallback,False
-google authenticator para sa smart masipit,account_two_factor,system_overview,0.21060119035197336,fallback,False
-kailan ang fiesta ng masipit,barangay_events,census_summary,0.21026058669249653,fallback,False
-is there any relief distribution,aid_programs,census_summary,0.2096529770322455,fallback,False
-sino ang presidente?,out_of_scope,census_requirements,0.2088294088404324,fallback,False
-ilang taon ka na,out_of_scope,account_minimum_age,0.20729256126081036,fallback,False
-kailan ko makukuha ang dokumento ko,document_pickup,document_list,0.20706735069785068,fallback,False
-may abiso ba ang barangay,barangay_announcements,barangay_operating_hours,0.2066792120966225,fallback,False
-"bagong pasyente ako, ano ang gagawin",health_patient_record,health_no_advice,0.20617411274038425,fallback,False
-events page ng smart masipit,barangay_events,system_overview,0.2052361369252087,fallback,False
-how do i answer the census form,census_registration,census_requirements,0.20506689369329334,fallback,False
-ilang characters ang password,account_profile_settings,account_password_reset,0.20480432071823254,fallback,False
-ano ibig sabihin ng closed not released,document_status,document_pickup,0.20360386151379709,fallback,False
-pwede magorder ng gamot sa website?,out_of_scope,system_overview,0.2031725790140636,fallback,False
-may liga ba ngayong buwan,barangay_events,out_of_scope,0.20303519294799907,fallback,False
-what photos are required for registration,account_identity_verification,census_requirements,0.20221234049931516,fallback,False
-ano ang mga serbisyo sa portal?,system_overview,document_list,0.2019595318263064,fallback,False
-paano mag-install ng windows,out_of_scope,app_install,0.20149373388780023,fallback,False
-ano ang limitations ng chatbot?,chatbot_capabilities,out_of_scope,0.1982625204907107,fallback,False
-may access ka ba sa database ng barangay?,chatbot_capabilities,health_privacy_access,0.1979596653470885,fallback,False
-are you a real person,chatbot_capabilities,data_privacy,0.19652230549510483,fallback,False
-anong balita ngayon,out_of_scope,health_center_schedule,0.19646599088510666,fallback,False
-how will i know about barangay news,barangay_announcements,out_of_scope,0.19549302087047574,fallback,False
-my previous checkups,health_consultation_history,health_center_schedule,0.19511457557382267,fallback,False
-paano ayusin ang doble na pangalan,census_duplicate_check,out_of_scope,0.19037111249493083,fallback,False
-ano ang kinokolekta ng system,census_requirements,data_privacy,0.1900483417361294,fallback,False
-may barangay assembly ba,barangay_events,barangay_announcements,0.18989451855265999,fallback,False
-na-approve na ba,document_status,out_of_scope,0.1888963189945066,fallback,False
-may encryption ba,data_privacy,out_of_scope,0.18831822918610752,fallback,False
-saan kukumpirmahin ang maternal clinic schedule?,health_center_schedule,health_maternal,0.1883085196168352,fallback,False
-kailangan naming baguhin ang listahan ng kasama sa bahay,census_household_update,census_requirements,0.18824606414678854,fallback,False
-step by step paano mag-request,document_request_process,out_of_scope,0.18748874281445368,fallback,False
-tinitingnan ba ng staff ang duplicate,census_duplicate_check,document_status,0.18745249786706217,fallback,False
-is there an age requirement for registration,account_minimum_age,census_registration,0.18732338640170426,fallback,False
-tell me a joke,out_of_scope,health_no_advice,0.18665722356030406,fallback,False
-paano mag-register sa smart masipit,account_access,system_overview,0.18527801822522663,fallback,False
-what file types are allowed for the photo,account_profile_settings,account_identity_verification,0.18509504552142572,fallback,False
-nakikita mo ba ang account ko?,chatbot_capabilities,health_privacy_access,0.1841591544095081,fallback,False
-may paraan bang mapabilis ang review ng account?,account_pending,account_access,0.18224047981860966,fallback,False
-how do i claim my certificate of indigency at the office?,document_pickup,payment_info,0.18068532906677856,fallback,False
-what other certificates can i request besides clearance?,document_list,document_status,0.17994113312840615,fallback,False
-kasama ba ang first name at last name sa resident profile?,census_requirements,census_duplicate_check,0.17966444084429337,fallback,False
-saan ang pinakamalapit na mall?,out_of_scope,barangay_location,0.17925606534470165,fallback,False
-how do i apply for aid,aid_programs,out_of_scope,0.1786822568016656,fallback,False
-nagsubmit na ako ng registration kailan ito irereview?,account_pending,account_identity_verification,0.17585001377475226,fallback,False
-what else can the system do besides certificates?,system_overview,document_list,0.17470708118388817,fallback,False
-may nakakakita ba ng sakit ko,health_privacy_access,data_privacy,0.17427985672883028,fallback,False
-magkano ang singil para sa barangay documents?,payment_info,out_of_scope,0.17376404756596575,fallback,False
-ayaw tanggapin ang token para magreset,account_password_reset,out_of_scope,0.1735102450580669,fallback,False
-pwede mo bang baguhin ang address ko sa system?,chatbot_capabilities,system_overview,0.17342946680481533,fallback,False
-tulungan mo ako sa homework ko,out_of_scope,health_no_advice,0.1733611549680335,fallback,False
-paano bayaran ang internet bill sa website na ito?,out_of_scope,system_overview,0.1727748616954022,fallback,False
-paano ma-validate ang record ko,census_duplicate_check,census_household_update,0.1716638075800678,fallback,False
-which button opens the resident sign-up form?,account_access,census_requirements,0.17117467580339057,fallback,False
-where should i pay for my requested certificate?,payment_info,document_for_dependent,0.17102184094199452,fallback,False
-may available bang laboratory package sa clinic?,out_of_scope,document_list,0.16941150832437957,fallback,False
-pa-checkup po,health_center_schedule,document_pickup_time,0.16858531881060881,fallback,False
-pwedeng magtanong?,greeting,out_of_scope,0.16844388879904537,fallback,False
-how are you?,greeting,chatbot_capabilities,0.16783587565478428,fallback,False
-can you name the documents offered in the request module?,document_list,chatbot_capabilities,0.1675444154692182,fallback,False
-sino ang kapitan ng masipit?,out_of_scope,system_overview,0.16736884606768487,fallback,False
-pakisuri ang resulta ng laboratory test ko,health_no_advice,health_consultation_history,0.16613897991603568,fallback,False
-saan ang evacuation center kapag may bagyo?,out_of_scope,health_center_schedule,0.16560279062066127,fallback,False
-paano malalaman ang oras ng serbisyo sa health center?,health_center_schedule,out_of_scope,0.16488002414098551,fallback,False
-pwede bang dito ko ilagay ang password ko?,chatbot_capabilities,data_privacy,0.16410851507570756,fallback,False
-who can see my uploaded id,data_privacy,account_identity_verification,0.16283307808426845,fallback,False
-saan makikita ang status,document_status,census_summary,0.16265572420566649,fallback,False
-paano tingnan ang progress ng clearance application ko?,document_status,document_clearance,0.16195898408845405,fallback,False
-hey,greeting,out_of_scope,0.16053471991170953,fallback,False
-nakalista ba ang mga sakit ko,health_consultation_history,health_no_advice,0.15943409673216893,fallback,False
-"may rashes ang anak ko, ano yun",health_no_advice,document_for_dependent,0.1584327379734992,fallback,False
-who reviews a resident registration application?,account_pending,account_identity_verification,0.157905619003172,fallback,False
-oras ng opisina,barangay_operating_hours,document_pickup_time,0.15724145407830553,fallback,False
-is there any news from the barangay,barangay_announcements,out_of_scope,0.15562253386419703,fallback,False
-my father has no portal account can he request clearance in person?,document_walk_in,document_status,0.15503158612076834,fallback,False
-saan makikita ang population data,census_summary,data_privacy,0.15268953675421737,fallback,False
-pwede sa opisina na lang magfile ng certificate?,document_walk_in,document_list,0.15206843582866386,fallback,False
-ayokong online saan puwedeng magpasa ng request?,document_walk_in,document_request_process,0.14981989960985168,fallback,False
-bakit kailangan ang dalawang side ng valid id?,account_identity_verification,census_requirements,0.1478029201011219,fallback,False
-tapos na po ako,goodbye,document_status,0.14669979360845328,fallback,False
-ano ang pwedeng kunin online?,document_list,document_pickup,0.14638135866203184,fallback,False
-ano ang mga datos na kinukuha,census_requirements,data_privacy,0.144726730400722,fallback,False
-how do i request papers in person?,document_walk_in,document_status,0.14447223571039802,fallback,False
-paano kumuha ng senior citizen id?,out_of_scope,account_identity_verification,0.14330157053517312,fallback,False
-may activity logs ba ang system,data_privacy,system_overview,0.14206806114176088,fallback,False
-saan makikita ang recovery codes ko,account_two_factor,account_password_reset,0.14206576813109853,fallback,False
-ra 10173 compliance,data_privacy,out_of_scope,0.1412038278755343,fallback,False
-naisubmit ko na ang application saan titingnan ang progress?,document_status,document_request_process,0.14111801955276257,fallback,False
-kailangan ba ng approval bago magamit ang resident services?,account_pending,census_registration,0.13993868790931546,fallback,False
-are my records backed up,data_privacy,health_privacy_access,0.13765985184904841,fallback,False
-is there an age limit for signing up,account_minimum_age,account_access,0.1357464018886373,fallback,False
-bakit ayaw tanggapin ang birthday ko sa registration,account_minimum_age,census_requirements,0.1346262319785501,fallback,False
-mataas na kahoy ba ay road i,census_sitio,out_of_scope,0.1339679354981119,fallback,False
-"pasensya na po, pwedeng magtanong?",greeting,out_of_scope,0.13358439151026133,fallback,False
-how can i confirm prenatal clinic availability?,health_center_schedule,out_of_scope,0.1332114637266928,fallback,False
-forget all devices ano yun,account_two_factor,out_of_scope,0.13257385834969146,fallback,False
-pwede ba pumunta ng 5pm,barangay_operating_hours,out_of_scope,0.13221165133472068,fallback,False
-saan makikita prenatal record,health_maternal,health_patient_record,0.13141255377980932,fallback,False
-ilang pamilya ang nasa masipit,census_summary,census_household_update,0.13114144246664974,fallback,False
-paano magfollow up ng resident application?,account_pending,document_request_process,0.13007029856058377,fallback,False
-should i share my login credentials in this chat?,data_privacy,health_no_advice,0.1290085283001687,fallback,False
-kasama ba ang address sa profile,census_requirements,account_profile_settings,0.1281012457563893,fallback,False
-paano kung nagkamali ng encode ng pangalan,census_duplicate_check,out_of_scope,0.1256662012074665,fallback,False
-eceb card record,health_immunization_record,health_patient_record,0.12553128294503496,fallback,False
-paano gumaling sa trangkaso,health_no_advice,out_of_scope,0.12285720934857307,fallback,False
-paano nakikita ang magkaparehong resident,census_duplicate_check,census_summary,0.12277717577567311,fallback,False
-open ba kayo ng sabado,barangay_operating_hours,out_of_scope,0.12271000457065595,fallback,False
-masyadong malaki daw ang larawan ko,account_profile_settings,out_of_scope,0.1223983976783331,fallback,False
-paano makita ang schedule ng mga aktibidad ng barangay,barangay_events,barangay_announcements,0.12218091428601247,fallback,False
-may reklamo ako sa barangay,out_of_scope,barangay_location,0.12173839903597379,fallback,False
-credit card ba pwede,payment_info,chatbot_capabilities,0.12125109201155239,fallback,False
-saan ilalagay ang code galing sa email,account_password_reset,health_blood_pressure,0.12072407205375854,fallback,False
-pwede ba ito sa legal na gamit,census_not_official,out_of_scope,0.12056283022930467,fallback,False
-where is the location section on the website?,barangay_location,system_overview,0.11983016584107598,fallback,False
-hindi ako makakapunta sa napili kong oras,document_pickup_time,barangay_location,0.1182002210253415,fallback,False
-how do i enter my starting point for directions?,barangay_location,document_pickup,0.11789404523224224,fallback,False
-ano ang presyo ng iphone,out_of_scope,health_no_advice,0.11753421117921577,fallback,False
-what is the weather today?,out_of_scope,health_center_schedule,0.11680129810802013,fallback,False
-what are the main features of the portal?,system_overview,out_of_scope,0.11529372405364523,fallback,False
-are you open on saturdays,barangay_operating_hours,chatbot_capabilities,0.1148011755177345,fallback,False
-may google maps ba,barangay_location,out_of_scope,0.11424100500331354,fallback,False
-paano i-set up ang 2fa,account_two_factor,out_of_scope,0.11371537159766816,fallback,False
-ano ang pwede kong hilingin sa barangay online,document_list,payment_info,0.11274689052044823,fallback,False
-paliwanag naman kung para saan ang portal.,system_overview,account_access,0.11070960966786207,fallback,False
-relief goods paano makakuha,aid_programs,out_of_scope,0.1097658525047796,fallback,False
-kailan ang feeding program,barangay_events,census_requirements,0.10591515295554516,fallback,False
-opening hours,barangay_operating_hours,greeting,0.10528250610782453,fallback,False
-may age limit ba ang registration,account_minimum_age,account_identity_verification,0.10402358746695588,fallback,False
-okay na po,goodbye,out_of_scope,0.10391913738888035,fallback,False
-do you process transactions or only provide guidance?,chatbot_capabilities,out_of_scope,0.10274863429436058,fallback,False
-uy,greeting,out_of_scope,0.10206547763929706,fallback,False
-pwede bang buksan ang barangay map sa cellphone?,barangay_location,app_install,0.10193097287854579,fallback,False
-pwede bang i-download ang system,app_install,document_list,0.10188863614064554,fallback,False
-paano malalaman kung verified na ako,account_pending,document_status,0.10100710175302285,fallback,False
-bagong tirahan sa loob ng masipit,census_household_update,census_registration,0.10096334457301967,fallback,False
-how many residents are there,census_summary,census_registration,0.10085945877707105,fallback,False
-saan ko makikita ang mga aktibidad,barangay_events,data_privacy,0.10053327669610358,fallback,False
-may bahagi rin ba dito para sa barangay staff?,system_overview,out_of_scope,0.09918020358334712,fallback,False
-may scholarship ba ang barangay?,out_of_scope,health_center_schedule,0.09890365667466693,fallback,False
-safe ba ang mga rekord ng barangay,data_privacy,barangay_operating_hours,0.09853645471442166,fallback,False
-gusto ko sanang may icon sa phone ko,app_install,data_privacy,0.0981409230181559,fallback,False
-which fields are collected when registering a resident?,census_requirements,census_registration,0.09575078801515653,fallback,False
-paano idagdag ang follow up ng buntis?,health_maternal,census_household_update,0.095081909323358,fallback,False
-does this portal accept payments for utility bills?,out_of_scope,payment_info,0.09458361398215938,fallback,False
-ano ang antepartum visits,health_maternal,health_consultation_history,0.09114722424896954,fallback,False
-ano ang signed oath reference,document_additional_types,out_of_scope,0.08848365693464441,fallback,False
-hiwalay ba ang record sa bawat pagbubuntis?,health_maternal,health_immunization_record,0.08797462324894766,fallback,False
-paano malaman ang mga anunsyo,barangay_announcements,health_consultation_history,0.08724989071264028,fallback,False
-ano ang username ko,account_access,census_duplicate_check,0.08573817221773669,fallback,False
-bakit walang slot sa araw na gusto ko,document_pickup_time,account_profile_settings,0.08391298573593817,fallback,False
-"nawala ang baby booklet ko, may record ba",health_immunization_record,health_no_advice,0.08265900185843612,fallback,False
-kailangan ko bang mag 2fa,account_two_factor,census_requirements,0.08159942167597348,fallback,False
-can i edit my own details,account_profile_settings,census_requirements,0.0807594624438677,fallback,False
-tao ba ang kausap ko,chatbot_capabilities,greeting,0.08018807478805817,fallback,False
-saan makikita ang lokasyon,barangay_location,data_privacy,0.07944436544046153,fallback,False
-ilang tao ang nakatira sa purok,census_summary,out_of_scope,0.07754509776232753,fallback,False
-ang anak ko ay 10 years old paano siya makakakuha ng certificate,document_for_dependent,document_additional_types,0.07163590929036243,fallback,False
-paano maidagdag ang pangalan ko sa barangay registry?,census_registration,census_duplicate_check,0.07002996250221256,fallback,False
-umalis na ang kapatid ko sa bahay,census_household_update,out_of_scope,0.06274817618771757,fallback,False
-how do i check if we received aid,aid_programs,document_pickup,0.062342285276349156,fallback,False
+sino ang kasama sa household membership,census_requirements,census_household_update,0.8833899377481966,answer,False
+can i send my verification selfie here?,chatbot_capabilities,account_identity_verification,0.8491265593474169,answer,False
+health records module,health_patient_record,health_privacy_access,0.8066860994233546,answer,False
+saan makikita ang health record ko?,health_patient_record,health_privacy_access,0.7840940088698767,answer,False
+ano ang ginagawa ninyo sa id at selfie ko,data_privacy,account_identity_verification,0.7509786041614686,answer,False
+mali daw ang email o password ko,account_access,account_password_reset,0.739517017320583,answer,False
+robot ka ba,chatbot_capabilities,out_of_scope,0.7366467903472115,fallback,False
+"may bagong baby kami, paano idagdag sa census",census_household_update,census_registration,0.7331995387869631,answer,False
+kasama ba ang resident registry sa system?,system_overview,census_registration,0.7186822013312367,answer,False
+what does my diastolic blood pressure result mean?,health_no_advice,health_blood_pressure,0.7186131005207316,answer,False
+saan ang form para gumawa ng bagong resident account?,account_access,census_registration,0.6810314401863748,answer,False
+safe ba ang health data ko,health_privacy_access,data_privacy,0.6592120884112087,answer,False
+privacy ng patient record,health_privacy_access,health_patient_record,0.6541984350447702,answer,False
+oras ng checkup,health_center_schedule,document_pickup_time,0.6424637274312408,answer,False
+dito ba nagbabayad ng tuition fee?,out_of_scope,payment_info,0.6209832399984218,answer,False
+may 2fa ba ang resident account,account_two_factor,account_access,0.6195845631875245,answer,False
+kaya mo bang makita ang status ng application ko,chatbot_capabilities,document_status,0.6101388649590436,answer,False
+paano gamitin ang camera para sa account,account_identity_verification,account_access,0.6014983503179372,answer,False
+who can see my health record,health_privacy_access,health_patient_record,0.593531751048643,answer,False
+walang smartphone ang aplikante paano magsubmit ng document request?,document_walk_in,document_request_process,0.5852722363135356,answer,False
+is the indigency certificate free,payment_info,document_indigency,0.5845124679116969,answer,False
+can this chatbot approve my application?,chatbot_capabilities,account_pending,0.5816423762943458,answer,False
+indigency magkano,payment_info,document_indigency,0.578129108956809,answer,False
+magkano ang bilang ng household,census_summary,census_household_update,0.5748281653554718,answer,False
+can the chatbot approve my account,account_pending,chatbot_capabilities,0.5652676565293431,answer,False
+need ba ng approval,document_request_process,account_pending,0.5611727770336007,answer,False
+may cash assistance ba ang barangay,aid_programs,payment_info,0.5595894363489923,answer,False
+sino ang nakakakita ng personal information ko,data_privacy,health_privacy_access,0.5593433248887152,answer,False
+anong araw ang bakuna ng baby,health_center_schedule,health_immunization_record,0.5591121257372695,answer,False
+bakit ayaw tanggapin ang bagong password ko,account_profile_settings,account_password_reset,0.5565724456055702,answer,False
+kailangan ko bang maging residente bago gumawa ng account,census_registration,account_access,0.5554756037147646,answer,False
+can staff register a resident without creating an online account?,census_registration,document_walk_in,0.5535084818247598,answer,False
+paano i-edit ang census information,census_household_update,census_requirements,0.551134309121863,answer,False
+population by sitio,census_summary,census_sitio,0.548557722798095,answer,False
+pwede ba clearance at indigency lang,document_list,payment_info,0.5375838647194028,answer,False
+paano mag sign out,account_profile_settings,account_access,0.5318708155435176,answer,False
+ano ang ulam mo,out_of_scope,chatbot_capabilities,0.5231735178024031,answer,False
+paano pinoprotektahan ang health data,health_privacy_access,data_privacy,0.5229932371836603,answer,False
+ikaw ba ay robot,out_of_scope,chatbot_capabilities,0.5121138558258262,answer,False
+pwede ba online ang clearance,document_clearance,payment_info,0.5021279005452244,answer,False
+pwede bang resident record lang at walang online login?,census_registration,document_walk_in,0.49823243180023274,answer,False
+ano ang mga serbisyo ng document request?,document_list,document_request_process,0.4909596666298633,answer,False
+saan kukunin ang barangay clearance,document_pickup,document_clearance,0.48894928485588196,answer,False
+how do i change a forgotten password,account_password_reset,account_profile_settings,0.4852786208618742,answer,False
+how can an applicant without internet submit a document request?,document_walk_in,document_request_process,0.47566589031825557,answer,False
+paano mag-apply ng nbi clearance?,out_of_scope,document_clearance,0.47120225103786134,answer,False
+mag-recommend ka ng gamot,health_no_advice,out_of_scope,0.47010683359492317,fallback,False
+may online checkout ba para sa clearance fee?,payment_info,document_clearance,0.4689316876433489,answer,False
+approved na pwede na kunin,document_pickup,account_pending,0.46666786150197287,answer,False
+how can i track my barangay clearance application?,document_status,document_clearance,0.45592086327183123,answer,False
+immunization schedule,health_center_schedule,health_immunization_record,0.44936334657904453,answer,False
+saan ang census form,census_registration,census_requirements,0.4492664851316451,answer,False
+secure ba ang health record ko?,health_privacy_access,health_patient_record,0.448832352788482,answer,False
+may app ba ang smart masipit,app_install,system_overview,0.4448861666338068,answer,False
+is my document ready,document_status,document_pickup,0.44482706976603115,answer,False
+how can a health worker save a patient's measured bp?,health_blood_pressure,health_patient_record,0.44081951135540065,answer,False
+nakikita ba ng ibang resident ang info ko,data_privacy,health_privacy_access,0.440350364131369,answer,False
+para saan ang barangay census,census_not_official,census_registration,0.43504168261783577,answer,False
+may ibang services ba bukod sa document requests?,system_overview,document_list,0.4319329689124296,answer,False
+paano ma-link ang request ko sa resident profile,document_request_process,document_for_dependent,0.4304868661824029,answer,False
+paano gumagana ang online request?,document_request_process,document_walk_in,0.428248290867317,answer,False
+what services are available in smart masipit?,system_overview,document_list,0.4272204751067531,answer,False
+may konsulta ba ngayon,health_center_schedule,health_consultation_history,0.4267336031744478,answer,False
+paano paganahin ang camera habang gumagawa ng resident account?,account_identity_verification,account_access,0.4234833838600179,answer,False
+past visits sa health center,health_consultation_history,health_center_schedule,0.4233214856073662,answer,False
+may fee ba ang clearance,payment_info,document_clearance,0.4227762673756973,answer,False
+kasama ba ang mga bata sa census,census_registration,census_requirements,0.4213660863295778,answer,False
+sino ang may access sa patient records,health_privacy_access,health_patient_record,0.42057654508653874,answer,False
+schedule ng basurero,out_of_scope,health_center_schedule,0.4198250757854137,answer,False
+paano mag-log out,account_access,account_profile_settings,0.41713577601244595,answer,False
+pangalagaan ba ang impormasyon ng residente,data_privacy,census_requirements,0.4169013706896538,answer,False
+approved na ba ang certificate ko,document_status,account_pending,0.41540655526946113,answer,False
+see you,goodbye,chatbot_capabilities,0.4146991960923695,answer,False
+paano makuha ang dokumento pagkatapos maaprubahan,document_pickup,document_request_process,0.41447216172192797,answer,False
+how much is the barangay clearance,payment_info,document_clearance,0.41419846838247465,answer,False
+pwede bang dito na lang ako magrequest ng certificate?,chatbot_capabilities,document_walk_in,0.4135864599267524,answer,False
+can you process my driver's license application?,out_of_scope,chatbot_capabilities,0.41046242082921247,answer,False
+bakuna record sa health center,health_immunization_record,health_center_schedule,0.40954815107535797,answer,False
+registration ng account,account_access,account_pending,0.4085870203380346,answer,False
+digital health record ng barangay,health_patient_record,health_privacy_access,0.40821160472013623,answer,False
+tapos na ba ang indigency ko?,document_status,document_indigency,0.40816641716363145,answer,False
+ano ang ibig sabihin ng prenatal result ko?,health_no_advice,document_status,0.40761665182658285,answer,False
+paano kumuha ng barangay business clearance?,out_of_scope,document_clearance,0.4054949514679216,answer,False
+good evening,greeting,barangay_events,0.40216109577653475,answer,False
+ano ang hinihingi sa household profile,census_requirements,census_household_update,0.4013191388084386,answer,False
+paano kumuha ng good moral,document_additional_types,out_of_scope,0.4010812810801997,fallback,False
+ano ang kailangan sa pagre-register ng household,census_requirements,census_household_update,0.40107067604989854,answer,False
+dati record lang ako ngayon gusto ko ng sariling account,account_minimum_age,account_access,0.39398366674103047,fallback,False
+sino ang nag-e-encode ng health record,health_patient_record,health_privacy_access,0.39073383956831703,fallback,False
+ano ang requirements sa census registration,census_registration,census_requirements,0.38965675692166635,fallback,False
+are clearance and indigency the only available documents?,document_list,payment_info,0.3889651258101717,fallback,False
+pwede ba walk-in sa health center,health_center_schedule,document_walk_in,0.3877324133320312,fallback,False
+how do i log out,account_profile_settings,account_access,0.3856518008712233,fallback,False
+i submitted all identity photos but my account is still pending,account_pending,account_identity_verification,0.3852154311857915,fallback,False
+walang online account ang pasyente pwede bang mairegister?,health_patient_record,document_walk_in,0.3783871602238025,fallback,False
+may access ba ang secretary sa maternal records?,health_privacy_access,health_maternal,0.3781863816222524,fallback,False
+mga tanong sa census,census_requirements,census_registration,0.36964947279688254,fallback,False
+libre po ba ang indigency,payment_info,document_indigency,0.36941750176021904,fallback,False
+ano ang alam mo,chatbot_capabilities,out_of_scope,0.368901738190989,fallback,False
+ikaw ba ang nagveverify ng resident accounts?,chatbot_capabilities,account_pending,0.3663022808586941,fallback,False
+can you do the request on my behalf,chatbot_capabilities,document_for_dependent,0.3647256529528315,fallback,False
+what day is the next immunization session?,health_center_schedule,health_immunization_record,0.36343243642342105,fallback,False
+which document categories are supported by smart masipit?,document_list,system_overview,0.358869097785354,fallback,False
+where should i submit my resident verification pictures?,account_identity_verification,account_pending,0.3562908565034226,fallback,False
+may dentista ba sa health center?,out_of_scope,health_center_schedule,0.35565987837032365,fallback,False
+restricted ba ang medical history sa health personnel?,health_privacy_access,health_consultation_history,0.3553782978621744,fallback,False
+pwede ko na bang kunin kapag approved for preparation?,document_pickup,account_pending,0.35399321453331245,fallback,False
+address ng barangay hall,barangay_location,barangay_operating_hours,0.35173187159450037,fallback,False
+paano kumuha ng medical certificate?,out_of_scope,document_additional_types,0.3507411248424498,fallback,False
+anong request ang pwede,document_list,chatbot_capabilities,0.3487168513333328,fallback,False
+pwede mo bang i approve ang account ko,account_pending,chatbot_capabilities,0.34724194238680267,fallback,False
+hindi ko natanggap ang 6 digit code,account_password_reset,account_two_factor,0.34517677595441165,fallback,False
+sino ang nag-aapprove ng request?,document_request_process,document_status,0.3442902683918414,fallback,False
+barangay business clearance requirements para sa negosyo,out_of_scope,document_clearance,0.34392786479938015,fallback,False
+baguhan ako dito ano ang gamit ng website?,system_overview,out_of_scope,0.3395635779148771,fallback,False
+pwede bang makita ng ibang account ang bakuna record ng anak ko?,health_privacy_access,health_immunization_record,0.33682150309472686,fallback,False
+naka-register na ako sa barangay noong bata pa ako paano gumawa ng account ngayon,account_minimum_age,account_access,0.3359054937365995,fallback,False
+pwede bang makita ng iba ang profile ko,data_privacy,health_privacy_access,0.33332404727050674,fallback,False
+can you give me an overview of the system?,system_overview,chatbot_capabilities,0.3321350089599287,fallback,False
+tracking ng document request,document_status,document_request_process,0.33150984344905976,fallback,False
+pwede kitang padalhan ng picture ng valid id?,chatbot_capabilities,account_identity_verification,0.3312459566321994,fallback,False
+are vaccination records visible to other resident accounts?,health_privacy_access,health_immunization_record,0.33034986074677525,fallback,False
+sputum test schedule,out_of_scope,health_center_schedule,0.32733571128963473,fallback,False
+wala sa playstore ang smart masipit,app_install,system_overview,0.32610835199387594,fallback,False
+paano maglogout pagkatapos gamitin ang account?,account_access,account_pending,0.3224867772232248,fallback,False
+android app ng barangay masipit,app_install,barangay_location,0.3209590957122017,fallback,False
+sino ang magrereview pagkatapos maipasa ang identity evidence?,account_pending,account_identity_verification,0.3209326656315861,fallback,False
+local summary ng census,census_summary,census_not_official,0.3204976989333565,fallback,False
+secure ba ang password ko,data_privacy,account_password_reset,0.3194516131749947,fallback,False
+may medical mission ba,barangay_events,health_privacy_access,0.3188430186040987,fallback,False
+nakikita mo ba ang consultation results ko?,chatbot_capabilities,health_consultation_history,0.31837762558431426,fallback,False
+magkano ang gasolina,out_of_scope,payment_info,0.3145915766358775,fallback,False
+saan magapply ng barangay occupancy permit?,document_additional_types,out_of_scope,0.3129830156079968,fallback,False
+kailan ang bakunahan?,health_center_schedule,health_immunization_record,0.3125492557016385,fallback,False
+libreng konsulta,health_center_schedule,health_consultation_history,0.3112118062677833,fallback,False
+can a patient be registered without an online account?,health_patient_record,document_walk_in,0.3095859590108919,fallback,False
+wala akong natanggap na pickup email,document_pickup,document_pickup_time,0.3094897551922289,fallback,False
+i was registered as a kid how do i get my own account now,account_minimum_age,account_access,0.30908540177149596,fallback,False
+goodbye,goodbye,greeting,0.30902948902319466,fallback,False
+how do i report a change in household membership?,census_household_update,census_summary,0.30681121538238143,fallback,False
+can authorized staff view resident counts by sitio?,census_summary,health_privacy_access,0.3062872537067653,fallback,False
+may account na ba ako o wala pa,account_access,document_walk_in,0.3041831828948167,fallback,False
+qr code para sa pickup ng clearance,document_qr_code,document_clearance,0.3027712685143298,fallback,False
+lumipat kami ng sitio paano i-update,census_sitio,census_household_update,0.29539085910960977,fallback,False
+saan pipili ng oras ng pagkuha,document_pickup_time,out_of_scope,0.2943449110333258,fallback,False
+is there a community event this weekend,barangay_events,out_of_scope,0.29307335040102245,fallback,False
+ilang taon dapat para makapag-account,account_minimum_age,account_access,0.29106582453447916,fallback,False
+may dalawa akong profile sa census,census_duplicate_check,census_requirements,0.290821960022246,fallback,False
+my application is still waiting for approval,account_pending,document_request_process,0.28954757433125256,fallback,False
+hi bot,greeting,out_of_scope,0.28953864805373486,fallback,False
+paano makikita ang kabuuang bilang ng households?,census_summary,census_household_update,0.288286399831071,fallback,False
+pwede mo ba akong bigyan ng reseta,health_no_advice,chatbot_capabilities,0.28755362522490163,fallback,False
+paano i-check ang bakuna ng sanggol,health_immunization_record,health_center_schedule,0.2857411823062321,fallback,False
+pwede bang magbayad ng water bill dito?,out_of_scope,payment_info,0.2852749471146352,fallback,False
+anong oras na,out_of_scope,health_center_schedule,0.284806529004248,fallback,False
+what can i request in the portal,document_list,document_status,0.28447738503992537,fallback,False
+kumusta,greeting,out_of_scope,0.28256821453044983,fallback,False
+ano ang pwede kong itanong sa iyo,chatbot_capabilities,document_list,0.2824814395841655,fallback,False
+is there cash assistance from the barangay,aid_programs,payment_info,0.28222256139582746,fallback,False
+ano ang itinatala sa konsulta,health_consultation_history,health_center_schedule,0.2810891881097238,fallback,False
+what is the review process for a submitted document application?,document_request_process,document_status,0.27964489349820715,fallback,False
+what time does the barangay hall close,barangay_operating_hours,barangay_location,0.27656878640759186,fallback,False
+what if i have two resident profiles,census_duplicate_check,census_requirements,0.27611157304762396,fallback,False
+can staff submit a document application on my behalf?,document_walk_in,document_request_process,0.2756105589075059,fallback,False
+ano ang dapat gawin pagkatapos piliin ang document type?,document_request_process,document_list,0.2725123767673408,fallback,False
+minimum age sa smart masipit,account_minimum_age,system_overview,0.27191269728704875,fallback,False
+bakit may hinihinging code pagkatapos ng password,account_two_factor,account_password_reset,0.26973952595966194,fallback,False
+impormasyon ng pamilya sa census,census_requirements,census_household_update,0.26835784354013736,fallback,False
+pareho ba ang account sa app at website,app_install,account_access,0.26831970456673593,fallback,False
+may account ba ang batang 5 taong gulang,document_for_dependent,account_minimum_age,0.2673377660781734,fallback,False
+can i request a document without registering online,document_walk_in,document_request_process,0.26511376014393373,fallback,False
+ano ang verification sa request,document_request_process,document_status,0.2643186890706177,fallback,False
+barangay bulletin,barangay_announcements,barangay_location,0.2640819060630897,fallback,False
+how long before my request is approved,document_request_process,document_status,0.2629627542350525,fallback,False
+kailangan ba ng consent sa data,data_privacy,census_requirements,0.26065196118518824,fallback,False
+is my medical record private,health_privacy_access,data_privacy,0.2598908373483755,fallback,False
+gaano katagal ang review ng request,document_status,document_request_process,0.25954662888723307,fallback,False
+census statistics ng barangay,census_summary,census_registration,0.2576305729538005,fallback,False
+may printable na dokumento ba,document_request_process,document_list,0.25724254904253085,fallback,False
+naproseso na ba ang indigency ko,document_status,document_indigency,0.25611173362107964,fallback,False
+may bayad ba ang konsultasyon?,health_center_schedule,payment_info,0.2547778516485025,fallback,False
+paano i-edit ang pangalan ko sa account,account_profile_settings,account_access,0.25467604883530903,fallback,False
+what barangay is this portal for?,system_overview,out_of_scope,0.2523283858777026,fallback,False
+is the app different from the website,app_install,out_of_scope,0.24738358397842294,fallback,False
+consultation entries,health_consultation_history,health_blood_pressure,0.24569698737089618,fallback,False
+can this chat create an account for me?,chatbot_capabilities,account_access,0.24281972116529932,fallback,False
+can my mother request indigency at the office without signing up?,document_walk_in,document_status,0.242261437248819,fallback,False
+where is the sign up page for smart masipit?,account_access,system_overview,0.2421547781962872,fallback,False
+may ibang certificates pa maliban sa indigency?,document_list,document_indigency,0.24201510984296604,fallback,False
+where is the sign out button,account_profile_settings,account_access,0.24030398483785043,fallback,False
+privacy policy ng smart masipit,data_privacy,system_overview,0.23936807377395078,fallback,False
+paano mag-logout sa smart masipit,account_profile_settings,account_access,0.239116271704349,fallback,False
+may pregnancy history ba sa patient profile?,health_maternal,health_patient_record,0.23798375169324268,fallback,False
+pwede bang walang bp kapag hindi nasukat?,health_blood_pressure,document_walk_in,0.23674684627949996,fallback,False
+what activities are scheduled this month,barangay_events,health_center_schedule,0.23664928307396982,fallback,False
+is my account password confidential?,data_privacy,account_access,0.2361082360457427,fallback,False
+paano mag book ng oras para kunin ang dokumento,document_pickup_time,out_of_scope,0.23593092064101406,fallback,False
+why does registration reject my birth date,account_minimum_age,document_status,0.2359215471974861,fallback,False
+anong certificates at permits ang kasama sa system?,document_list,system_overview,0.2344944942129007,fallback,False
+"nanganak ako, paano iregister sa census?",census_household_update,census_registration,0.23412877367731844,fallback,False
+may tao ba dito?,greeting,out_of_scope,0.23215995289351612,fallback,False
+pwede ba hingin ang kopya ng consultation record,health_consultation_history,health_privacy_access,0.23010256576018914,fallback,False
+same name different person sa census,census_duplicate_check,census_requirements,0.2299234926904104,fallback,False
+how do i request a certificate for my kid,document_for_dependent,document_status,0.2294561076632228,fallback,False
+pwede ko bang i-request ang clearance ng anak ko,document_for_dependent,document_clearance,0.22867936721037388,fallback,False
+may doktor ba ngayon sa barangay?,health_center_schedule,out_of_scope,0.22772203063209798,fallback,False
+where do i choose when to pick up my document,document_pickup_time,document_pickup,0.22667844823257607,fallback,False
+paano mag-request na burahin ang data ko,data_privacy,document_status,0.226269810379186,fallback,False
+paano mag-register ng pwd id?,out_of_scope,account_access,0.22481674889090722,fallback,False
+schedule ng pagclaim ng certificate,document_pickup_time,health_center_schedule,0.22285355605447804,fallback,False
+nakikita ba ng staff ang mismong password ko?,data_privacy,chatbot_capabilities,0.22221897325831866,fallback,False
+how long should my password be,account_profile_settings,account_password_reset,0.22184112633980316,fallback,False
+is my id photo kept private,data_privacy,account_identity_verification,0.2217024233228135,fallback,False
+required ba ang selfie bago mareview ang application?,account_identity_verification,document_status,0.22131058456011082,fallback,False
+ano ang pinagkaiba ng mga module dito?,system_overview,out_of_scope,0.21835358196073051,fallback,False
+bakit kailangan ang edad at kasarian,census_requirements,census_summary,0.21708147520130994,fallback,False
+ilang senior citizen ang nasa barangay?,census_summary,out_of_scope,0.2170068474500914,fallback,False
+ilan ang residente sa masipit?,census_summary,census_requirements,0.21580876338768434,fallback,False
+sino lang ang puwedeng bumasa ng consultation details?,health_privacy_access,census_requirements,0.21540624082503657,fallback,False
+saan makikita ang balita ng barangay,barangay_announcements,barangay_location,0.21505115313637235,fallback,False
+how do i pay for my document,payment_info,document_pickup,0.21454081988924223,fallback,False
+"maling impormasyon sa census, paano ayusin",census_household_update,census_requirements,0.21385093179778214,fallback,False
+ano ang laman ng census record,census_requirements,census_registration,0.21331181677713834,fallback,False
+kailan ko makukuha ang dokumento ko,document_pickup,document_list,0.21021066680679507,fallback,False
+is there any relief distribution,aid_programs,census_summary,0.20975724802683665,fallback,False
+protektado ba ang medical information,health_privacy_access,data_privacy,0.20957586776246498,fallback,False
+kailan ang fiesta ng masipit,barangay_events,census_summary,0.20934493919467925,fallback,False
+"bagong pasyente ako, ano ang gagawin",health_patient_record,health_no_advice,0.20852240491119073,fallback,False
+ilang taon ka na,out_of_scope,account_minimum_age,0.2060387789401457,fallback,False
+google authenticator para sa smart masipit,account_two_factor,system_overview,0.205968352571281,fallback,False
+ano ang mga serbisyo sa portal?,system_overview,document_list,0.20515696984974494,fallback,False
+how do i answer the census form,census_registration,census_requirements,0.20445019220591218,fallback,False
+may liga ba ngayong buwan,barangay_events,out_of_scope,0.20418363003429948,fallback,False
+what photos are required for registration,account_identity_verification,census_requirements,0.20402808922236895,fallback,False
+paano mag-install ng windows,out_of_scope,app_install,0.20376988789931394,fallback,False
+sino ang presidente?,out_of_scope,census_requirements,0.20356074227563914,fallback,False
+ano ibig sabihin ng closed not released,document_status,document_pickup,0.20274395830952338,fallback,False
+ilang characters ang password,account_profile_settings,account_password_reset,0.2027139741156068,fallback,False
+may abiso ba ang barangay,barangay_announcements,barangay_operating_hours,0.20239162804424066,fallback,False
+pwede magorder ng gamot sa website?,out_of_scope,system_overview,0.20125518614402738,fallback,False
+may access ka ba sa database ng barangay?,chatbot_capabilities,health_privacy_access,0.19979701706677216,fallback,False
+ano ang limitations ng chatbot?,chatbot_capabilities,out_of_scope,0.19860702720576087,fallback,False
+are you a real person,chatbot_capabilities,data_privacy,0.1970623689773502,fallback,False
+my previous checkups,health_consultation_history,health_center_schedule,0.19630259249252097,fallback,False
+how will i know about barangay news,barangay_announcements,out_of_scope,0.19595407402745207,fallback,False
+events page ng smart masipit,barangay_events,system_overview,0.1942804171582878,fallback,False
+anong balita ngayon,out_of_scope,health_center_schedule,0.19336759777417292,fallback,False
+paano ayusin ang doble na pangalan,census_duplicate_check,out_of_scope,0.19204654821811662,fallback,False
+may barangay assembly ba,barangay_events,barangay_announcements,0.19105020373498804,fallback,False
+saan kukumpirmahin ang maternal clinic schedule?,health_center_schedule,health_maternal,0.1906667463453302,fallback,False
+na-approve na ba,document_status,out_of_scope,0.18894187826977538,fallback,False
+paano mag-register sa smart masipit,account_access,system_overview,0.1886358398278455,fallback,False
+kailangan naming baguhin ang listahan ng kasama sa bahay,census_household_update,census_requirements,0.18779841942525097,fallback,False
+may encryption ba,data_privacy,out_of_scope,0.18756445953135034,fallback,False
+tell me a joke,out_of_scope,health_no_advice,0.1870527498129902,fallback,False
+ano ang kinokolekta ng system,census_requirements,data_privacy,0.1869851259308067,fallback,False
+what file types are allowed for the photo,account_profile_settings,account_identity_verification,0.18578212929560062,fallback,False
+tinitingnan ba ng staff ang duplicate,census_duplicate_check,document_status,0.18494322513400988,fallback,False
+nakikita mo ba ang account ko?,chatbot_capabilities,health_privacy_access,0.18466892112522754,fallback,False
+is there an age requirement for registration,account_minimum_age,census_registration,0.1831894633490608,fallback,False
+what other certificates can i request besides clearance?,document_list,document_status,0.180062848018618,fallback,False
+how do i apply for aid,aid_programs,out_of_scope,0.1798960676279052,fallback,False
+may paraan bang mapabilis ang review ng account?,account_pending,account_access,0.17809824008118705,fallback,False
+kasama ba ang first name at last name sa resident profile?,census_requirements,census_duplicate_check,0.17724867297385388,fallback,False
+pwede mo bang baguhin ang address ko sa system?,chatbot_capabilities,system_overview,0.1768915175164146,fallback,False
+saan ang pinakamalapit na mall?,out_of_scope,barangay_location,0.17666293853947407,fallback,False
+may nakakakita ba ng sakit ko,health_privacy_access,health_no_advice,0.1765590695707272,fallback,False
+tulungan mo ako sa homework ko,out_of_scope,health_no_advice,0.175960308745084,fallback,False
+ayaw tanggapin ang token para magreset,account_password_reset,out_of_scope,0.17560255086314325,fallback,False
+nagsubmit na ako ng registration kailan ito irereview?,account_pending,account_identity_verification,0.17506937890622695,fallback,False
+what else can the system do besides certificates?,system_overview,document_list,0.17453511209838432,fallback,False
+paano bayaran ang internet bill sa website na ito?,out_of_scope,system_overview,0.17332387243733485,fallback,False
+how do i claim my certificate of indigency at the office?,document_pickup,payment_info,0.17161995601337113,fallback,False
+how are you?,greeting,chatbot_capabilities,0.17024398028017315,fallback,False
+which button opens the resident sign-up form?,account_access,census_requirements,0.1700389747961806,fallback,False
+where should i pay for my requested certificate?,payment_info,document_for_dependent,0.16980154897274574,fallback,False
+can you name the documents offered in the request module?,document_list,chatbot_capabilities,0.1697500902629695,fallback,False
+records ng konsultasyon,health_consultation_history,health_center_schedule,0.16973674867792693,fallback,False
+paano ma-validate ang record ko,census_duplicate_check,health_patient_record,0.16906167407903766,fallback,False
+may available bang laboratory package sa clinic?,out_of_scope,document_list,0.1677999296017435,fallback,False
+pa-checkup po,health_center_schedule,document_pickup_time,0.16759058117297024,fallback,False
+magkano ang singil para sa barangay documents?,payment_info,document_list,0.1669812713415963,fallback,False
+pwedeng magtanong?,greeting,out_of_scope,0.16660108381445868,fallback,False
+pakisuri ang resulta ng laboratory test ko,health_no_advice,health_consultation_history,0.16629201546559383,fallback,False
+paano mag pa-census,census_registration,census_household_update,0.16607515416268911,fallback,False
+pwede bang dito ko ilagay ang password ko?,chatbot_capabilities,data_privacy,0.16455644954261148,fallback,False
+paano tingnan ang progress ng clearance application ko?,document_status,document_clearance,0.16445143453460218,fallback,False
+nakalista ba ang mga sakit ko,health_consultation_history,health_no_advice,0.16389965888037167,fallback,False
+saan makikita ang status,document_status,census_summary,0.16386566396792693,fallback,False
+paano malalaman ang oras ng serbisyo sa health center?,health_center_schedule,out_of_scope,0.16329214217243296,fallback,False
+sino ang kapitan ng masipit?,out_of_scope,system_overview,0.16311426237505633,fallback,False
+who can see my uploaded id,data_privacy,account_identity_verification,0.16274021528857477,fallback,False
+saan ang evacuation center kapag may bagyo?,out_of_scope,health_center_schedule,0.16271651767604467,fallback,False
+hey,greeting,out_of_scope,0.1613184749631112,fallback,False
+"may rashes ang anak ko, ano yun",health_no_advice,document_for_dependent,0.15936339218957507,fallback,False
+oras ng opisina,barangay_operating_hours,document_pickup_time,0.15777125600815606,fallback,False
+is there any news from the barangay,barangay_announcements,out_of_scope,0.1565134200220301,fallback,False
+who reviews a resident registration application?,account_pending,account_identity_verification,0.1550601702205228,fallback,False
+my father has no portal account can he request clearance in person?,document_walk_in,document_status,0.15409357576872898,fallback,False
+pwede sa opisina na lang magfile ng certificate?,document_walk_in,document_list,0.1530328173275276,fallback,False
+saan makikita ang population data,census_summary,data_privacy,0.15271892693777794,fallback,False
+tapos na po ako,goodbye,document_status,0.1491755329925759,fallback,False
+ano ang pwedeng kunin online?,document_list,document_pickup,0.1488399303250115,fallback,False
+ayokong online saan puwedeng magpasa ng request?,document_walk_in,document_request_process,0.14741498727544355,fallback,False
+how do i request papers in person?,document_walk_in,document_status,0.14598342319944158,fallback,False
+bakit kailangan ang dalawang side ng valid id?,account_identity_verification,census_requirements,0.145687658558866,fallback,False
+ra 10173 compliance,data_privacy,out_of_scope,0.1444672738358887,fallback,False
+may activity logs ba ang system,data_privacy,system_overview,0.14351095346352158,fallback,False
+may resident record pero walang login pwede clearance?,document_walk_in,census_registration,0.14345771053898282,fallback,False
+paano kumuha ng senior citizen id?,out_of_scope,account_identity_verification,0.14283371491580807,fallback,False
+ano ang mga datos na kinukuha,census_requirements,data_privacy,0.14165321440148126,fallback,False
+naisubmit ko na ang application saan titingnan ang progress?,document_status,document_request_process,0.14148991630025046,fallback,False
+kailangan ba ng approval bago magamit ang resident services?,account_pending,census_registration,0.1412714691829009,fallback,False
+saan makikita ang recovery codes ko,account_two_factor,account_password_reset,0.14032228084373016,fallback,False
+is there an age limit for signing up,account_minimum_age,account_access,0.1386141209586685,fallback,False
+are my records backed up,data_privacy,health_privacy_access,0.1380550758291228,fallback,False
+saan makikita prenatal record,health_maternal,health_patient_record,0.13547084498580503,fallback,False
+bakit ayaw tanggapin ang birthday ko sa registration,account_minimum_age,census_requirements,0.13456209314994852,fallback,False
+how can i confirm prenatal clinic availability?,health_center_schedule,out_of_scope,0.13379747564028596,fallback,False
+forget all devices ano yun,account_two_factor,out_of_scope,0.13370465340908896,fallback,False
+paano magfollow up ng resident application?,account_pending,document_request_process,0.13320405274695,fallback,False
+mataas na kahoy ba ay road i,census_sitio,out_of_scope,0.1326598307156125,fallback,False
+"pasensya na po, pwedeng magtanong?",greeting,out_of_scope,0.1325235919848898,fallback,False
+ilang pamilya ang nasa masipit,census_summary,census_household_update,0.13205538736253072,fallback,False
+pwede ba pumunta ng 5pm,barangay_operating_hours,out_of_scope,0.1310352121970489,fallback,False
+paano kung nagkamali ng encode ng pangalan,census_duplicate_check,out_of_scope,0.1289801303340959,fallback,False
+kasama ba ang address sa profile,census_requirements,account_profile_settings,0.12775871654619528,fallback,False
+should i share my login credentials in this chat?,data_privacy,health_no_advice,0.1276389785011405,fallback,False
+eceb card record,health_immunization_record,health_privacy_access,0.1242762351515562,fallback,False
+masyadong malaki daw ang larawan ko,account_profile_settings,out_of_scope,0.12290924789841408,fallback,False
+pwede ba ito sa legal na gamit,census_not_official,out_of_scope,0.12229683569042017,fallback,False
+open ba kayo ng sabado,barangay_operating_hours,out_of_scope,0.12213429684425066,fallback,False
+paano makita ang schedule ng mga aktibidad ng barangay,barangay_events,barangay_announcements,0.12201013863842464,fallback,False
+may reklamo ako sa barangay,out_of_scope,barangay_location,0.12189877482604763,fallback,False
+ano ang pwede kong hilingin sa barangay online,document_list,payment_info,0.12062351504554339,fallback,False
+credit card ba pwede,payment_info,chatbot_capabilities,0.119987725454426,fallback,False
+where is the location section on the website?,barangay_location,system_overview,0.1198064835959772,fallback,False
+saan ilalagay ang code galing sa email,account_password_reset,health_blood_pressure,0.11973608216417743,fallback,False
+paano nakikita ang magkaparehong resident,census_duplicate_check,census_summary,0.11950070363716493,fallback,False
+paano gumaling sa trangkaso,health_no_advice,out_of_scope,0.1174552566818619,fallback,False
+ano ang presyo ng iphone,out_of_scope,health_no_advice,0.11717910407783728,fallback,False
+what are the main features of the portal?,system_overview,out_of_scope,0.11680721737966533,fallback,False
+how do i enter my starting point for directions?,barangay_location,document_pickup,0.11655822480015288,fallback,False
+hindi ako makakapunta sa napili kong oras,document_pickup_time,barangay_location,0.11521294720976079,fallback,False
+what is the weather today?,out_of_scope,health_center_schedule,0.11500416355679073,fallback,False
+are you open on saturdays,barangay_operating_hours,chatbot_capabilities,0.11378210925969551,fallback,False
+may google maps ba,barangay_location,out_of_scope,0.11334265726489184,fallback,False
+paliwanag naman kung para saan ang portal.,system_overview,account_access,0.11312382655610072,fallback,False
+paano i-set up ang 2fa,account_two_factor,out_of_scope,0.10914288431439893,fallback,False
+relief goods paano makakuha,aid_programs,out_of_scope,0.10719315030534059,fallback,False
+uy,greeting,out_of_scope,0.10616693774612708,fallback,False
+opening hours,barangay_operating_hours,greeting,0.10530986465815528,fallback,False
+kailan ang feeding program,barangay_events,census_requirements,0.10485054277351269,fallback,False
+may age limit ba ang registration,account_minimum_age,account_identity_verification,0.10427659346444049,fallback,False
+pwede bang i-download ang system,app_install,document_list,0.10362226040562945,fallback,False
+okay na po,goodbye,out_of_scope,0.10348736782304613,fallback,False
+do you process transactions or only provide guidance?,chatbot_capabilities,out_of_scope,0.10254887684453831,fallback,False
+how many residents are there,census_summary,census_registration,0.10138099679522561,fallback,False
+paano malalaman kung verified na ako,account_pending,document_status,0.10085713515391406,fallback,False
+pwede bang buksan ang barangay map sa cellphone?,barangay_location,app_install,0.10027528292487842,fallback,False
+bagong tirahan sa loob ng masipit,census_household_update,census_registration,0.09880807889929057,fallback,False
+gusto ko sanang may icon sa phone ko,app_install,data_privacy,0.0985481044203658,fallback,False
+may scholarship ba ang barangay?,out_of_scope,health_center_schedule,0.0984404732387912,fallback,False
+may bahagi rin ba dito para sa barangay staff?,system_overview,out_of_scope,0.09836298608474935,fallback,False
+saan ko makikita ang mga aktibidad,barangay_events,data_privacy,0.09791588834732577,fallback,False
+safe ba ang mga rekord ng barangay,data_privacy,barangay_operating_hours,0.09684057356483902,fallback,False
+which fields are collected when registering a resident?,census_requirements,census_registration,0.0959473587808323,fallback,False
+paano idagdag ang follow up ng buntis?,health_maternal,census_household_update,0.09366121025286644,fallback,False
+ano ang antepartum visits,health_maternal,health_consultation_history,0.09112776723378033,fallback,False
+does this portal accept payments for utility bills?,out_of_scope,payment_info,0.08969580745730463,fallback,False
+ano ang signed oath reference,document_additional_types,out_of_scope,0.08948882925727497,fallback,False
+hiwalay ba ang record sa bawat pagbubuntis?,health_maternal,health_immunization_record,0.0873237052374849,fallback,False
+paano malaman ang mga anunsyo,barangay_announcements,health_consultation_history,0.0860037784749501,fallback,False
+ano ang username ko,account_access,census_duplicate_check,0.08486764023464767,fallback,False
+bakit walang slot sa araw na gusto ko,document_pickup_time,account_profile_settings,0.08312802791110824,fallback,False
+"nawala ang baby booklet ko, may record ba",health_immunization_record,health_no_advice,0.08222780647656659,fallback,False
+kailangan ko bang mag 2fa,account_two_factor,census_requirements,0.08160246096761618,fallback,False
+can i edit my own details,account_profile_settings,census_requirements,0.08083186524082049,fallback,False
+tao ba ang kausap ko,chatbot_capabilities,greeting,0.080189519781162,fallback,False
+saan makikita ang lokasyon,barangay_location,census_summary,0.07889434973470535,fallback,False
+ilang tao ang nakatira sa purok,census_summary,out_of_scope,0.07729583888390877,fallback,False
+ang anak ko ay 10 years old paano siya makakakuha ng certificate,document_for_dependent,document_additional_types,0.07202139800935761,fallback,False
+paano maidagdag ang pangalan ko sa barangay registry?,census_registration,census_duplicate_check,0.07096096160675591,fallback,False
+how do i check if we received aid,aid_programs,document_pickup,0.06339100758521234,fallback,False
+umalis na ang kapatid ko sa bahay,census_household_update,out_of_scope,0.06197206836985141,fallback,False

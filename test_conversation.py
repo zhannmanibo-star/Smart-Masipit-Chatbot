@@ -86,6 +86,16 @@ def main():
     picked = engine.answer_intent("document_pickup_time", "Paano pumili ng oras ng pagkuha?", lang="en")
     check("picked suggestion answers in the chosen language", picked.lang == "en" and picked.key == "intent:document_pickup_time")
 
+    # Short follow-ups use the previous question; other messages do not.
+    followup = engine.get_response("magkano naman", context="paano kumuha ng barangay clearance")
+    check("'magkano naman' after clearance", followup.intent == "payment_info")
+    time = engine.get_response("pano kung puno na lahat", context="paano pumili ng pickup time")
+    check("'pano kung puno na lahat' after pickup time", time.intent == "document_pickup_time")
+    noise = engine.get_response("qwrtyp zxcv", context="paano kumuha ng barangay clearance")
+    check("nonsense is not answered from context", noise.source == "model:not_understood")
+    same = engine.get_response("paano kumuha ng barangay clearance", context="kailan ang bakuna")
+    check("a full question ignores the context", same.intent == engine.get_response("paano kumuha ng barangay clearance").intent)
+
     # The API passes everything through.
     os.environ.setdefault("CHATBOT_API_KEY", "t" * 40)
     os.environ["CHATBOT_LOG_UNANSWERED"] = "0"
@@ -109,6 +119,13 @@ def main():
             check("API: invalid language refused", bad.status_code == 422)
             old = client.post("/chat", json={"message": "paano kunin ang barangay clearance"}, headers=headers)
             check("API: old clients still work", old.status_code == 200)
+            ctx = client.post("/chat", json={"message": "pano kung puno na lahat", "context": "paano pumili ng pickup time"}, headers=headers).json()
+            check("API: context is used", ctx["intent"] == "document_pickup_time")
+            check("API: context is passed on", ctx["context"] == "paano pumili ng pickup time pano kung puno na lahat")
+            thanks = client.post("/chat", json={"message": "salamat", "context": "paano pumili ng pickup time"}, headers=headers).json()
+            check("API: thanks keeps the topic", thanks["context"] == "paano pumili ng pickup time")
+            long = client.post("/chat", json={"message": "hi", "context": "x" * 501}, headers=headers)
+            check("API: too long context refused", long.status_code == 422)
 
     print()
     print("All checks passed." if not FAILURES else f"{len(FAILURES)} check(s) failed.")
