@@ -75,6 +75,41 @@ RESIDENCY_FALLBACK = (
 )
 
 
+NOT_UNDERSTOOD = (
+    "Pasensya na, hindi ko naintindihan ang mensahe. Subukang itanong "
+    "nang buo, halimbawa: \"Paano kumuha ng barangay clearance?\" o "
+    "\"Paano pumili ng pickup time?\""
+)
+
+# Words too common to show what a message is about.
+COMMON_WORDS = {
+    "ano", "anong", "ang", "ng", "sa", "po", "ba", "na", "ko", "mo", "ka",
+    "ako", "you", "the", "is", "are", "to", "of", "in", "it", "my", "me",
+    "what", "how", "yan", "yung", "ito", "pa", "lang", "naman", "din",
+    "rin", "may", "mga", "and", "or", "for", "do", "can", "pano", "paano",
+    "saan", "kailan", "bakit", "sino", "yes", "no", "ok", "oo", "hindi",
+}
+
+
+def build_vocabulary(texts) -> set[str]:
+    """Words (3+ letters) used in in-scope training questions."""
+    words = set()
+    for text in texts:
+        words.update(w for w in re.findall(r"[a-z0-9]+", str(text).casefold()) if len(w) >= 3)
+    return words - COMMON_WORDS
+
+
+def is_meaningful(message: str, vocabulary: set[str] | None) -> bool:
+    """
+    True when the message has at least one word the chatbot knows from its
+    topics. Random letters ("gadgsgd") or unrelated words ("secret") get a
+    "please ask again" reply instead of topic suggestions.
+    """
+    if not vocabulary:
+        return True
+    return any(word in vocabulary for word in re.findall(r"[a-z0-9]+", message.casefold()))
+
+
 # When the model is unsure, offer up to this many topics as buttons,
 # but only topics with at least this probability.
 MAX_SUGGESTIONS = 2
@@ -103,6 +138,14 @@ class ChatResult:
     source: str
     # Intent tags to offer as "Ito ba ang ibig mong sabihin?" buttons.
     suggestions: tuple[str, ...] = ()
+    # Language of the reply ("fil" or "en").
+    lang: str = "fil"
+    # Which answer this is (e.g. "intent:document_pickup" or
+    # "rule:bp_interpretation", plus "|tag,tag" for suggestions), so the
+    # same answer can be shown again in the other language.
+    key: str = ""
+    # Set only when the user asked for a language ("english please").
+    chosen_lang: str | None = None
 
 
 def smalltalk_response(message: str) -> ChatResult | None:
@@ -374,6 +417,18 @@ class BaseChatbotEngine:
                     f"Missing or invalid responses for intent: {label}"
                 )
 
+        try:
+            with (base_dir / "intents.json").open(encoding="utf-8-sig") as file:
+                intents = json.load(file).get("intents", [])
+            self.vocabulary = build_vocabulary(
+                pattern
+                for intent in intents
+                if intent.get("tag") != "out_of_scope"
+                for pattern in intent.get("patterns", [])
+            )
+        except (OSError, ValueError, AttributeError):
+            self.vocabulary = None  # no check: suggestions as before
+
     def suggest(self, probabilities) -> tuple[str, ...]:
         """The closest in-scope topics, offered when the model is unsure."""
         order = probabilities.argsort()[::-1]
@@ -445,6 +500,16 @@ class BaseChatbotEngine:
         best = int(probabilities.argmax())
         intent = str(self.model.classes_[best])
         confidence = float(probabilities[best])
+
+        if (confidence < THRESHOLD or intent == "out_of_scope") and not is_meaningful(
+            message, self.vocabulary
+        ):
+            return ChatResult(
+                reply=NOT_UNDERSTOOD,
+                intent="unknown",
+                confidence=confidence,
+                source="model:not_understood",
+            )
 
         if confidence < THRESHOLD:
             return ChatResult(
@@ -527,6 +592,77 @@ def detect_reply_language(message: str) -> str:
     return "fil"
 
 
+# Filipino text of each rule reply, by source (English is in english_responses.py).
+RULE_REPLIES = {
+    "rule:system_overview": SYSTEM_OVERVIEW,
+    "rule:bp_feature_scope": BP_FEATURE_SCOPE,
+    "rule:bp_interpretation": MEDICAL_FALLBACK,
+    "rule:unsupported_payment": UNSUPPORTED_PAYMENT,
+    "rule:unconfirmed_dental_service": DENTAL_FALLBACK,
+    "rule:garbage_schedule": GARBAGE_FALLBACK,
+    "rule:unconfirmed_residency_duration": RESIDENCY_FALLBACK,
+}
+
+SWITCH_REPLY = {
+    "en": "Sure, I will answer in English. What would you like to ask?",
+    "fil": "Sige po, sasagot ako sa Tagalog. Ano po ang inyong tanong?",
+}
+
+# "english please", "pa-english po", "can you say that in english",
+# "tagalog po", "pakitagalog", "translate to filipino": the whole message
+# must be such a request, so questions like "may english version ba ang
+# certificate?" are still answered normally.
+LANGUAGE_WORDS = {
+    "en": {"english", "eng", "ingles", "inglis"},
+    "fil": {"tagalog", "filipino", "pilipino", "tagalug"},
+}
+REQUEST_FILLER = {
+    "please", "pls", "plz", "po", "nga", "naman", "lang", "can", "could",
+    "you", "pa", "paki", "pwede", "puwede", "mo", "ba", "in", "to", "into",
+    "sa", "ng", "say", "that", "it", "this", "again", "ulit", "translate",
+    "isalin", "itranslate", "i", "version", "speak", "explain", "sagot",
+    "sagutin", "use", "the", "gamitin", "ang", "na", "yan", "iyan", "ito",
+    "ko", "me", "reply", "answer", "mode", "language", "wika", "salita",
+    "only", "now", "na", "ngayon", "talk", "write", "lagay",
+}
+PREVIOUS_KEY = re.compile(
+    r"^(?:intent:[a-z_]{1,60}|rule:[a-z_]{1,60}|fallback|not_understood)"
+    r"(?:\|[a-z_]{1,60}(?:,[a-z_]{1,60}){0,2})?$"
+)
+
+
+def language_request(message: str) -> str | None:
+    """'en' or 'fil' when the whole message asks for that language."""
+    text = message.casefold().replace("-", " ")
+    if re.search(r"\b(?:don\'?t|dont|do\s+not|cannot|can\'?t|cant)\s+understand\s+(?:tagalog|filipino)\b", text):
+        return "en"
+    if re.search(r"\b(?:don\'?t|dont|do\s+not|cannot|can\'?t|cant)\s+understand\s+english\b", text) or re.search(
+        r"\b(?:hindi|di)\s+ko\s+(?:maintindihan|naiintindihan|gets)\s+(?:ang\s+)?english\b", text
+    ):
+        return "fil"
+
+    names = set().union(*LANGUAGE_WORDS.values())
+    words = []
+    for word in re.findall(r"[a-z]+", text):
+        # "pakitagalog", "paenglish", "itagalog" -> "tagalog", "english"
+        for prefix in ("paki", "pa", "i"):
+            if word.startswith(prefix) and word[len(prefix):] in names:
+                word = word[len(prefix):]
+                break
+        words.append(word)
+
+    if not words or len(words) > 8:
+        return None
+
+    for lang, names in LANGUAGE_WORDS.items():
+        if any(word in names for word in words) and all(
+            word in names or word in REQUEST_FILLER for word in words
+        ):
+            return lang
+
+    return None
+
+
 class ChatbotEngine(BaseChatbotEngine):
     def __init__(self, base_dir: Path = BASE_DIR):
         super().__init__(base_dir)
@@ -550,16 +686,7 @@ class ChatbotEngine(BaseChatbotEngine):
                 + ". Add their translations to english_responses.py."
             )
 
-        required_special = {
-            "fallback",
-            "rule:system_overview",
-            "rule:bp_feature_scope",
-            "rule:bp_interpretation",
-            "rule:unsupported_payment",
-            "rule:unconfirmed_dental_service",
-            "rule:garbage_schedule",
-            "rule:unconfirmed_residency_duration",
-        }
+        required_special = {"fallback", "not_understood", *RULE_REPLIES}
 
         for key in required_special:
             value = ENGLISH_SPECIAL.get(key)
@@ -569,42 +696,98 @@ class ChatbotEngine(BaseChatbotEngine):
                     f"Missing English special response: {key}"
                 )
 
-    def get_response(self, message: str) -> ChatResult:
-        # Run existing validation, rules, and model selection first.
-        result = super().get_response(message)
-        language = detect_reply_language(message)
+    @staticmethod
+    def answer_key(result: ChatResult) -> str:
+        if result.source in {"model:fallback", "model:out_of_scope"}:
+            key = "fallback"
+        elif result.source == "model:not_understood":
+            key = "not_understood"
+        elif result.source.startswith("rule:") and result.source != "rule:smalltalk":
+            key = result.source
+        else:
+            key = "intent:" + result.intent
 
-        if language == "fil":
-            return result
+        if result.suggestions:
+            key += "|" + ",".join(result.suggestions)
 
-        if result.source == "rule:smalltalk":
-            reply = ENGLISH_RESPONSES[result.intent]
+        return key
 
-        elif result.source.startswith("rule:"):
-            reply = ENGLISH_SPECIAL.get(result.source)
+    def render(self, key: str, lang: str) -> str:
+        """The reply for an answer key, in Filipino ("fil") or English ("en")."""
+        main = key.split("|", 1)[0]
 
-            if reply is None:
-                raise RuntimeError(
-                    "Missing English translation for rule: "
-                    + result.source
+        if main.startswith("intent:"):
+            intent = main[len("intent:"):]
+            if intent not in self.responses:
+                raise ValueError("Unknown topic.")
+            return ENGLISH_RESPONSES[intent] if lang == "en" else self.responses[intent][0]
+
+        if main in RULE_REPLIES:
+            return ENGLISH_SPECIAL[main] if lang == "en" else RULE_REPLIES[main]
+
+        if main == "fallback":
+            return ENGLISH_SPECIAL["fallback"] if lang == "en" else FALLBACK
+
+        if main == "not_understood":
+            return ENGLISH_SPECIAL["not_understood"] if lang == "en" else NOT_UNDERSTOOD
+
+        raise ValueError("Unknown answer.")
+
+    def get_response(
+        self,
+        message: str,
+        lang: str | None = None,
+        previous: str | None = None,
+    ) -> ChatResult:
+        """
+        lang: the language the user chose earlier ("fil" or "en"); when not
+        given, the reply follows the language of the message.
+        previous: the answer key of the last reply, so "english please"
+        can show that same answer in English.
+        """
+        if isinstance(message, str) and message.strip():
+            wanted = language_request(message.strip()[:MAX_MESSAGE_LENGTH])
+
+            if wanted is not None:
+                if previous and PREVIOUS_KEY.match(previous):
+                    main, _, tags = previous.partition("|")
+                    suggestions = tuple(t for t in tags.split(",") if t in self.responses) if tags else ()
+                    try:
+                        reply = self.render(main, wanted)
+                    except ValueError:
+                        reply = None
+
+                    if reply is not None:
+                        return ChatResult(
+                            reply=reply,
+                            intent=main[len("intent:"):] if main.startswith("intent:") else main,
+                            confidence=None,
+                            source="rule:language_switch",
+                            suggestions=suggestions,
+                            lang=wanted,
+                            key=previous,
+                            chosen_lang=wanted,
+                        )
+
+                return ChatResult(
+                    reply=SWITCH_REPLY[wanted],
+                    intent="language_switch",
+                    confidence=None,
+                    source="rule:language_switch",
+                    lang=wanted,
+                    chosen_lang=wanted,
                 )
 
-        elif result.source in {
-            "model:fallback",
-            "model:out_of_scope",
-        }:
-            reply = ENGLISH_SPECIAL["fallback"]
+        # Run existing validation, rules, and model selection first.
+        result = super().get_response(message)
+        language = lang if lang in {"fil", "en"} else detect_reply_language(message)
+        key = self.answer_key(result)
 
-        else:
-            reply = ENGLISH_RESPONSES[result.intent]
+        return replace(result, reply=self.render(key, language), lang=language, key=key)
 
-        # Preserve intent, score, and source for existing tests.
-        return replace(result, reply=reply)
-
-    def answer_intent(self, intent: str, message: str = "") -> ChatResult:
+    def answer_intent(self, intent: str, message: str = "", lang: str | None = None) -> ChatResult:
         result = super().answer_intent(intent, message)
+        language = lang if lang in {"fil", "en"} else detect_reply_language(message)
+        key = "intent:" + intent
 
-        if detect_reply_language(message) == "en":
-            return replace(result, reply=ENGLISH_RESPONSES[intent])
-
-        return result        
+        return replace(result, reply=self.render(key, language), lang=language, key=key)

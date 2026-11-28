@@ -1,6 +1,6 @@
 ﻿question,expected,got,confidence,suggestions,outcome,topic_known_to_model
 hi there assistant,greeting,unknown,0.36,greeting | aid_programs,suggested,True
-gud eve po,greeting,unknown,0.22,barangay_events | greeting,suggested,True
+gud eve po,greeting,unknown,0.22,,not answered,True
 thank you so much po,goodbye,goodbye,0.75,,right,True
 ok na po salamat sa info,goodbye,goodbye,0.88,,right,True
 anu ba tong website na to,system_overview,system_overview,0.49,,right,True
@@ -103,7 +103,7 @@ may record ba para sa buntis,health_maternal,unknown,0.30,health_maternal,sugges
 pre natal checkup record po,health_maternal,unknown,0.24,health_maternal | health_center_schedule,suggested,True
 sino ang presidente ng pilipinas,out_of_scope,unknown,0.28,,right (not answered),True
 anong panahon bukas,out_of_scope,unknown,0.25,barangay_operating_hours | health_center_schedule,right (not answered),True
-gawan mo ako ng essay,out_of_scope,unknown,0.28,chatbot_capabilities,right (not answered),True
+gawan mo ako ng essay,out_of_scope,unknown,0.28,,right (not answered),True
 who won the nba finals,out_of_scope,unknown,0.22,,right (not answered),True
 pautang naman,out_of_scope,unknown,0.07,,right (not answered),True
 magkano ang bayad sa kuryente,out_of_scope,out_of_scope,,,right (not answered),True

@@ -396,6 +396,12 @@ ENGLISH_RESPONSES = {
 
 
 ENGLISH_SPECIAL = {
+    "not_understood": (
+        "Sorry, I did not understand the message. Try asking a full "
+        "question, for example: \"How do I get a barangay clearance?\" or "
+        "\"How do I choose a pickup time?\""
+    ),
+
     "fallback": (
         "I am not sure how to answer that. Could you clarify "
         "your question? I can help with using SMART MASIPIT. "

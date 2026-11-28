@@ -6,6 +6,7 @@ import threading
 from contextlib import asynccontextmanager
 from datetime import datetime
 from pathlib import Path
+from typing import Literal
 
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
@@ -13,7 +14,6 @@ from pydantic import BaseModel, Field
 from chatbot_engine import (
     ChatbotEngine,
     MAX_MESSAGE_LENGTH,
-    detect_reply_language,
 )
 from suggestion_labels import SUGGESTION_LABELS
 
@@ -101,6 +101,14 @@ class ChatInput(BaseModel):
         default=None,
         max_length=MAX_MESSAGE_LENGTH,
     )
+    # Language the user chose earlier with "english please" or "tagalog po".
+    lang: Literal["fil", "en"] | None = None
+    # answer_key of the last reply, so "english please" can repeat it.
+    previous: str | None = Field(
+        default=None,
+        max_length=200,
+        pattern=r"^[a-z_:|,]{1,200}$",
+    )
 
 
 class Suggestion(BaseModel):
@@ -112,6 +120,12 @@ class ChatOutput(BaseModel):
     reply: str
     intent: str
     suggestions: list[Suggestion] = []
+    # Language of this reply, and which answer it is (send it back as
+    # "previous" with the next message).
+    lang: Literal["fil", "en"] = "fil"
+    answer_key: str = ""
+    # Set when the user asked for a language: keep sending it as "lang".
+    chosen_lang: Literal["fil", "en"] | None = None
 
 
 @app.get("/health")
@@ -137,9 +151,9 @@ def chat(
 
     try:
         if body.intent:
-            result = engine.answer_intent(body.intent, body.message)
+            result = engine.answer_intent(body.intent, body.message, body.lang)
         else:
-            result = engine.get_response(body.message)
+            result = engine.get_response(body.message, body.lang, body.previous)
     except ValueError as exception:
         raise HTTPException(
             status_code=422,
@@ -152,7 +166,7 @@ def chat(
             question=body.asked or "",
             picked_topic=body.intent,
         )
-    elif result.source in {"model:fallback", "model:out_of_scope"}:
+    elif result.source in {"model:fallback", "model:out_of_scope", "model:not_understood"}:
         log_unanswered(
             action="suggested" if result.suggestions else "no_answer",
             question=body.message,
@@ -164,7 +178,7 @@ def chat(
             suggestions_offered=" | ".join(result.suggestions),
         )
 
-    language = 1 if detect_reply_language(body.message) == "en" else 0
+    language = 1 if result.lang == "en" else 0
 
     return ChatOutput(
         reply=result.reply,
@@ -174,4 +188,7 @@ def chat(
             for tag in result.suggestions
             if tag in SUGGESTION_LABELS
         ],
+        lang=result.lang,
+        answer_key=result.key,
+        chosen_lang=result.chosen_lang,
     )

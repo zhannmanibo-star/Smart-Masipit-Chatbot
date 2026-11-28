@@ -5,7 +5,7 @@
   "min_suggestion_probability": 0.1,
   "model_only_answered_right": 0.5233333333333332,
   "answered_right_directly": 0.5318666666666666,
-  "answered_right_or_suggested": 0.8286666666666667,
+  "answered_right_or_suggested": 0.8269333333333334,
   "wrong_direct_answers": 84.0,
   "out_of_scope_answered": 0.08571428571428572,
   "python_version": "3.13.18",

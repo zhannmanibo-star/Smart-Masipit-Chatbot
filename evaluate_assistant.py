@@ -27,6 +27,8 @@ from chatbot_engine import (
     MAX_SUGGESTIONS,
     MIN_SUGGESTION_PROBABILITY,
     THRESHOLD,
+    build_vocabulary,
+    is_meaningful,
     smalltalk_response,
 )
 from train import load_dataset
@@ -54,6 +56,11 @@ def evaluate(texts, targets, seed):
 
     for train_ids, test_ids in folds.split(texts, targets):
         fitted = clone(model()).fit(texts[train_ids], targets[train_ids])
+        # Same check as the engine: no suggestions for messages without a
+        # single known word (from this fold's training questions only).
+        vocabulary = build_vocabulary(
+            texts[i] for i in train_ids if targets[i] != "out_of_scope"
+        )
         probabilities = fitted.predict_proba(texts[test_ids])
         labels = fitted.classes_
 
@@ -78,7 +85,7 @@ def evaluate(texts, targets, seed):
             picks = [
                 labels[j] for j in p.argsort()[::-1]
                 if labels[j] != "out_of_scope" and p[j] >= MIN_SUGGESTION_PROBABILITY
-            ][:MAX_SUGGESTIONS]
+            ][:MAX_SUGGESTIONS] if is_meaningful(texts[index], vocabulary) else []
             suggested_right[index] = targets[index] in picks
 
     in_scope = ~out_of_scope
