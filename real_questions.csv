@@ -1,0 +1,112 @@
+question,expected
+"hi there assistant",greeting
+"gud eve po",greeting
+"thank you so much po",goodbye
+"ok na po salamat sa info",goodbye
+"anu ba tong website na to",system_overview
+"ano ano ang features ng smart masipit",system_overview
+"what can you help me with",chatbot_capabilities
+"kaya mo bang i check kung approved na request ko",chatbot_capabilities
+"bot ka lang ba o tao",chatbot_capabilities
+"anong mga certificate pwede kong kunin dito",document_list
+"list of certificates available in the portal",document_list
+"need ko ng clearance sa brgy pano po",document_clearance
+"i need a barangay clearance for my job application",document_clearance
+"pwede ba ako mag request ng indigency para sa hospital bill",document_indigency
+"certificate of indigency requirements po",document_indigency
+"step by step pano mag request ng dokumento",document_request_process
+"how do i request a certificate here",document_request_process
+"musta na kaya yung pinasa kong request",document_status
+"ano ibig sabihin ng under review sa request",document_status
+"rejected yung request ko bakit kaya",document_status
+"libre lang ba kumuha ng certificate o may singil",payment_info
+"how much is the certificate of residency",payment_info
+"pwede ba magbayad thru gcash",payment_info
+"approved na pero hindi pa ready ano ibig sabihin",document_pickup
+"ready for release na request ko ano gagawin ko",document_pickup
+"what should i bring when i claim my document",document_pickup
+"paano pumili ng oras ng pagkuha ng dokumento",document_pickup_time
+"saan ko ilalagay kung kelan ko kukunin yung clearance",document_pickup_time
+"pwede ko bang palitan yung napili kong pickup time",document_pickup_time
+"puno na lahat ng oras sa pickup ano gagawin",document_pickup_time
+"how do i choose a pickup schedule",document_pickup_time
+"can i cancel my pickup time",document_pickup_time
+"pwede ba walk in na lang ako sa barangay",document_walk_in
+"wala akong account pwede pa rin ba kumuha ng cert",document_walk_in
+"saan ko makikita qr ng request ko",document_qr_code
+"need ko pa ba ipakita qr pag kukuha",document_qr_code
+"pwede ko ba ipag request ang anak ko ng certificate",document_for_dependent
+"my son is 10 can i get his certificate through my account",document_for_dependent
+"first time jobseeker cert pano po",document_additional_types
+"pano kumuha ng certificate of good moral",document_additional_types
+"pano gumawa ng account sa smart masipit",account_access
+"di ako maka login",account_access
+"how to sign up",account_access
+"pending pa rin account ko ilang araw na",account_pending
+"when will my account be approved",account_pending
+"di ko na maalala pw ko pano to",account_password_reset
+"forgot password paano",account_password_reset
+"hindi dumating yung code sa email ko para sa reset",account_password_reset
+"ilang minutes valid ang reset code",account_password_reset
+"pano magpalit ng password kung alam ko pa yung luma",account_profile_settings
+"pano palitan profile pic ko",account_profile_settings
+"where can i log out",account_profile_settings
+"bakit kailangan ng selfie na may id",account_identity_verification
+"ayaw gumana ng camera sa verification",account_identity_verification
+"grade 6 pa lang ako pwede na ba ako mag sign up",account_minimum_age
+"what is the age requirement for an account",account_minimum_age
+"ano ang two factor sa account ko",account_two_factor
+"bakit humihingi ng code galing sa authenticator app",account_two_factor
+"nawala phone ko paano mag login staff account may 2fa",account_two_factor
+"ano yung remember this device for 30 days",account_two_factor
+"how do i set up two factor authentication",account_two_factor
+"pwede ko bang i-install ang smart masipit sa phone",app_install
+"may app ba kayo sa playstore",app_install
+"how to add smart masipit to my home screen",app_install
+"wala akong makitang install button sa iphone",app_install
+"may mga event ba ang barangay ngayong buwan",barangay_events
+"saan makikita ang calendar ng barangay",barangay_events
+"are there upcoming events in masipit",barangay_events
+"kailan ang susunod na clean up drive",barangay_events
+"saan makikita ang mga anunsyo ng barangay",barangay_announcements
+"may bagong announcement ba",barangay_announcements
+"where can i see barangay advisories",barangay_announcements
+"meron bang binibigay na tulong ang barangay ngayong linggo",aid_programs
+"pano malaman kung kasama kami sa ayuda",aid_programs
+"saan mag apply ng ayuda online",aid_programs
+"will the barangay give food packs this week",aid_programs
+"nasaan ang barangay hall ng masipit",barangay_location
+"how do i get to the barangay office",barangay_location
+"hanggang anong oras ang opisina ng barangay",barangay_operating_hours
+"bukas ba barangay sa sabado",barangay_operating_hours
+"di ko alam kung anong sitio ilalagay ko sa form",census_sitio
+"list ng mga sitio dito sa masipit",census_sitio
+"magkaiba ba ang resident record at account",census_registration
+"bagong lipat ako sa masipit pano ako mairerecord",census_registration
+"ano ang kailangan para ma register sa resident registry",census_requirements
+"lumipat kami ng bahay paano i update household",census_household_update
+"duplicate daw ang pangalan ko sa registration",census_duplicate_check
+"ilan ang population ng masipit",census_summary
+"ito ba ang official na census ng psa",census_not_official
+"safe ba ang personal info ko dito",data_privacy
+"sino nakakakita ng mga data ko",data_privacy
+"pano magpa register sa health center bilang pasyente",health_patient_record
+"saan makikita ang record ng checkup ko",health_consultation_history
+"gusto ko makita mga bakuna na naibigay sa baby ko",health_immunization_record
+"kailan ang bakuna sa health center",health_center_schedule
+"may doktor ba sa health center bukas ng umaga",health_center_schedule
+"sino pwede makakita ng medical record ko",health_privacy_access
+"ano dapat inumin kung masakit ulo ko",health_no_advice
+"mataas ba ang 150 over 90 na bp",health_no_advice
+"paano i-record ang bp sa consultation",health_blood_pressure
+"may record ba para sa buntis",health_maternal
+"pre natal checkup record po",health_maternal
+"sino ang presidente ng pilipinas",out_of_scope
+"anong panahon bukas",out_of_scope
+"gawan mo ako ng essay",out_of_scope
+"who won the nba finals",out_of_scope
+"pautang naman",out_of_scope
+"magkano ang bayad sa kuryente",out_of_scope
+"kailan kukunin ang basura",out_of_scope
+"may dentista ba sa barangay",out_of_scope
+"qwrtyp zxcv",out_of_scope

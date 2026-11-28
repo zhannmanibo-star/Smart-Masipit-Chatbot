@@ -1,0 +1,112 @@
+﻿question,expected,got,confidence,suggestions,outcome,topic_known_to_model
+hi there assistant,greeting,unknown,0.36,greeting | aid_programs,suggested,True
+gud eve po,greeting,unknown,0.22,barangay_events | greeting,suggested,True
+thank you so much po,goodbye,goodbye,0.75,,right,True
+ok na po salamat sa info,goodbye,goodbye,0.88,,right,True
+anu ba tong website na to,system_overview,system_overview,0.49,,right,True
+ano ano ang features ng smart masipit,system_overview,system_overview,,,right,True
+what can you help me with,chatbot_capabilities,chatbot_capabilities,0.46,,right,True
+kaya mo bang i check kung approved na request ko,chatbot_capabilities,document_status,0.49,,wrong answer,True
+bot ka lang ba o tao,chatbot_capabilities,unknown,0.34,chatbot_capabilities | greeting,suggested,True
+anong mga certificate pwede kong kunin dito,document_list,document_list,0.93,,right,True
+list of certificates available in the portal,document_list,document_list,0.94,,right,True
+need ko ng clearance sa brgy pano po,document_clearance,document_clearance,0.72,,right,True
+i need a barangay clearance for my job application,document_clearance,document_clearance,0.53,,right,True
+pwede ba ako mag request ng indigency para sa hospital bill,document_indigency,document_indigency,0.60,,right,True
+certificate of indigency requirements po,document_indigency,document_indigency,0.64,,right,True
+step by step pano mag request ng dokumento,document_request_process,document_request_process,0.82,,right,True
+how do i request a certificate here,document_request_process,unknown,0.20,document_status | document_list,not answered,True
+musta na kaya yung pinasa kong request,document_status,unknown,0.26,chatbot_capabilities | document_status,suggested,True
+ano ibig sabihin ng under review sa request,document_status,document_status,0.97,,right,True
+rejected yung request ko bakit kaya,document_status,document_status,0.74,,right,True
+libre lang ba kumuha ng certificate o may singil,payment_info,unknown,0.24,payment_info | document_additional_types,suggested,True
+how much is the certificate of residency,payment_info,unknown,0.35,document_additional_types | payment_info,suggested,True
+pwede ba magbayad thru gcash,payment_info,payment_info,0.99,,right,True
+approved na pero hindi pa ready ano ibig sabihin,document_pickup,document_status,0.89,,wrong answer,True
+ready for release na request ko ano gagawin ko,document_pickup,document_status,0.63,,wrong answer,True
+what should i bring when i claim my document,document_pickup,unknown,0.14,health_no_advice | document_pickup,suggested,True
+paano pumili ng oras ng pagkuha ng dokumento,document_pickup_time,document_pickup_time,0.77,,right,True
+saan ko ilalagay kung kelan ko kukunin yung clearance,document_pickup_time,document_pickup,0.49,,wrong answer,True
+pwede ko bang palitan yung napili kong pickup time,document_pickup_time,document_pickup_time,0.86,,right,True
+puno na lahat ng oras sa pickup ano gagawin,document_pickup_time,document_pickup_time,0.73,,right,True
+how do i choose a pickup schedule,document_pickup_time,document_pickup_time,0.76,,right,True
+can i cancel my pickup time,document_pickup_time,document_pickup_time,0.83,,right,True
+pwede ba walk in na lang ako sa barangay,document_walk_in,document_walk_in,0.61,,right,True
+wala akong account pwede pa rin ba kumuha ng cert,document_walk_in,document_walk_in,0.44,,right,True
+saan ko makikita qr ng request ko,document_qr_code,document_qr_code,0.63,,right,True
+need ko pa ba ipakita qr pag kukuha,document_qr_code,document_qr_code,0.78,,right,True
+pwede ko ba ipag request ang anak ko ng certificate,document_for_dependent,document_for_dependent,0.65,,right,True
+my son is 10 can i get his certificate through my account,document_for_dependent,unknown,0.09,,not answered,True
+first time jobseeker cert pano po,document_additional_types,document_additional_types,0.68,,right,True
+pano kumuha ng certificate of good moral,document_additional_types,document_additional_types,0.95,,right,True
+pano gumawa ng account sa smart masipit,account_access,account_access,0.83,,right,True
+di ako maka login,account_access,account_access,0.59,,right,True
+how to sign up,account_access,account_access,0.60,,right,True
+pending pa rin account ko ilang araw na,account_pending,account_pending,0.78,,right,True
+when will my account be approved,account_pending,account_pending,0.70,,right,True
+di ko na maalala pw ko pano to,account_password_reset,unknown,0.10,,not answered,True
+forgot password paano,account_password_reset,account_password_reset,0.82,,right,True
+hindi dumating yung code sa email ko para sa reset,account_password_reset,account_password_reset,0.80,,right,True
+ilang minutes valid ang reset code,account_password_reset,account_password_reset,0.65,,right,True
+pano magpalit ng password kung alam ko pa yung luma,account_profile_settings,account_profile_settings,0.50,,right,True
+pano palitan profile pic ko,account_profile_settings,account_profile_settings,0.91,,right,True
+where can i log out,account_profile_settings,account_profile_settings,0.60,,right,True
+bakit kailangan ng selfie na may id,account_identity_verification,account_identity_verification,0.94,,right,True
+ayaw gumana ng camera sa verification,account_identity_verification,account_identity_verification,0.86,,right,True
+grade 6 pa lang ako pwede na ba ako mag sign up,account_minimum_age,account_minimum_age,0.48,,right,True
+what is the age requirement for an account,account_minimum_age,unknown,0.33,account_minimum_age | account_access,suggested,True
+ano ang two factor sa account ko,account_two_factor,account_two_factor,0.86,,right,True
+bakit humihingi ng code galing sa authenticator app,account_two_factor,account_two_factor,0.97,,right,True
+nawala phone ko paano mag login staff account may 2fa,account_two_factor,account_two_factor,0.70,,right,True
+ano yung remember this device for 30 days,account_two_factor,account_two_factor,0.79,,right,True
+how do i set up two factor authentication,account_two_factor,account_two_factor,0.97,,right,True
+pwede ko bang i-install ang smart masipit sa phone,app_install,app_install,0.96,,right,True
+may app ba kayo sa playstore,app_install,app_install,0.83,,right,True
+how to add smart masipit to my home screen,app_install,app_install,0.67,,right,True
+wala akong makitang install button sa iphone,app_install,app_install,0.76,,right,True
+may mga event ba ang barangay ngayong buwan,barangay_events,barangay_events,0.94,,right,True
+saan makikita ang calendar ng barangay,barangay_events,barangay_events,0.66,,right,True
+are there upcoming events in masipit,barangay_events,barangay_events,0.76,,right,True
+kailan ang susunod na clean up drive,barangay_events,unknown,0.15,,not answered,True
+saan makikita ang mga anunsyo ng barangay,barangay_announcements,barangay_announcements,0.77,,right,True
+may bagong announcement ba,barangay_announcements,barangay_announcements,0.96,,right,True
+where can i see barangay advisories,barangay_announcements,barangay_announcements,0.58,,right,True
+meron bang binibigay na tulong ang barangay ngayong linggo,aid_programs,unknown,0.10,,not answered,True
+pano malaman kung kasama kami sa ayuda,aid_programs,aid_programs,0.71,,right,True
+saan mag apply ng ayuda online,aid_programs,aid_programs,0.87,,right,True
+will the barangay give food packs this week,aid_programs,unknown,0.13,,not answered,True
+nasaan ang barangay hall ng masipit,barangay_location,barangay_location,0.82,,right,True
+how do i get to the barangay office,barangay_location,barangay_location,0.57,,right,True
+hanggang anong oras ang opisina ng barangay,barangay_operating_hours,barangay_operating_hours,0.82,,right,True
+bukas ba barangay sa sabado,barangay_operating_hours,barangay_operating_hours,0.85,,right,True
+di ko alam kung anong sitio ilalagay ko sa form,census_sitio,unknown,0.32,census_sitio | census_requirements,suggested,True
+list ng mga sitio dito sa masipit,census_sitio,census_sitio,0.81,,right,True
+magkaiba ba ang resident record at account,census_registration,unknown,0.28,account_access | health_privacy_access,not answered,True
+bagong lipat ako sa masipit pano ako mairerecord,census_registration,census_registration,0.44,,right,True
+ano ang kailangan para ma register sa resident registry,census_requirements,census_registration,0.57,,wrong answer,True
+lumipat kami ng bahay paano i update household,census_household_update,census_household_update,0.97,,right,True
+duplicate daw ang pangalan ko sa registration,census_duplicate_check,census_duplicate_check,0.75,,right,True
+ilan ang population ng masipit,census_summary,census_summary,0.92,,right,True
+ito ba ang official na census ng psa,census_not_official,census_not_official,0.99,,right,True
+safe ba ang personal info ko dito,data_privacy,data_privacy,0.85,,right,True
+sino nakakakita ng mga data ko,data_privacy,data_privacy,0.54,,right,True
+pano magpa register sa health center bilang pasyente,health_patient_record,health_patient_record,0.90,,right,True
+saan makikita ang record ng checkup ko,health_consultation_history,unknown,0.16,health_privacy_access | health_consultation_history,suggested,True
+gusto ko makita mga bakuna na naibigay sa baby ko,health_immunization_record,health_immunization_record,0.64,,right,True
+kailan ang bakuna sa health center,health_center_schedule,health_center_schedule,0.93,,right,True
+may doktor ba sa health center bukas ng umaga,health_center_schedule,health_center_schedule,0.86,,right,True
+sino pwede makakita ng medical record ko,health_privacy_access,health_privacy_access,0.91,,right,True
+ano dapat inumin kung masakit ulo ko,health_no_advice,health_no_advice,0.90,,right,True
+mataas ba ang 150 over 90 na bp,health_no_advice,health_no_advice,,,right,True
+paano i-record ang bp sa consultation,health_blood_pressure,health_blood_pressure,0.72,,right,True
+may record ba para sa buntis,health_maternal,unknown,0.30,health_maternal,suggested,True
+pre natal checkup record po,health_maternal,unknown,0.24,health_maternal | health_center_schedule,suggested,True
+sino ang presidente ng pilipinas,out_of_scope,unknown,0.28,,right (not answered),True
+anong panahon bukas,out_of_scope,unknown,0.25,barangay_operating_hours | health_center_schedule,right (not answered),True
+gawan mo ako ng essay,out_of_scope,unknown,0.28,chatbot_capabilities,right (not answered),True
+who won the nba finals,out_of_scope,unknown,0.22,,right (not answered),True
+pautang naman,out_of_scope,unknown,0.07,,right (not answered),True
+magkano ang bayad sa kuryente,out_of_scope,out_of_scope,,,right (not answered),True
+kailan kukunin ang basura,out_of_scope,out_of_scope,,,right (not answered),True
+may dentista ba sa barangay,out_of_scope,out_of_scope,,,right (not answered),True
+qwrtyp zxcv,out_of_scope,unknown,0.22,,right (not answered),True

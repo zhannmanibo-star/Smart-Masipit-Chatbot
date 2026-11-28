@@ -31,7 +31,7 @@
         "How are you?"
       ],
       "responses": [
-        "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration, verification, document requests, walk-in services, resident registry, health records, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko; hindi ko nakikita ang personal records o actual request status."
+        "Magandang araw! Ako ang SMART MASIPIT Virtual Assistant. Makakatulong ako sa account registration at verification, document requests at pickup time, walk-in services, resident registry, health records, events, announcements, at lokasyon ng barangay hall. Gabay sa paggamit ng system ang maibibigay ko; hindi ko nakikita ang personal records o actual request status."
       ]
     },
     {
@@ -462,7 +462,11 @@
         "Where are previously administered vaccinations recorded?",
         "Who maintains the patient's immunization history?",
         "How do I report an incorrect vaccination record entry?",
-        "Can health staff review the vaccines already recorded?"
+        "Can health staff review the vaccines already recorded?",
+        "saan nakatala ang bakuna ng anak ko",
+        "may kopya ba ng immunization record",
+        "nakarecord ba ang mga bakuna ko",
+        "where is my child's vaccination record kept"
       ],
       "responses": [
         "Authorized health staff ang nagtatala at nagre-review ng immunization records at correction history. Makipag-ugnayan sa Barangay Health Center para sa sariling record o record ng inyong anak. Kumpirmahin sa health staff ang schedule at mga kailangang dalhin."
@@ -510,7 +514,12 @@
         "How can I confirm prenatal clinic availability?",
         "Where should I ask about health center service hours?",
         "Is the health center offering consultations this week?",
-        "Who should I contact for the vaccination schedule?"
+        "Who should I contact for the vaccination schedule?",
+        "anong araw ang bakunahan sa health center",
+        "kailan may check up sa barangay health center",
+        "oras ng health center",
+        "when is the vaccination schedule",
+        "health center schedule today"
       ],
       "responses": [
         "Wala akong verified real-time schedule ng Barangay Health Center. Makipag-ugnayan sa health staff para sa consultation, immunization, at maternal service schedules."
@@ -673,7 +682,11 @@
         "How do I get listed in the barangay resident registry?",
         "I recently moved to Masipit how can I register as a resident?",
         "Who can create a resident registry entry for me?",
-        "Can staff register a resident without creating an online account?"
+        "Can staff register a resident without creating an online account?",
+        "paano maitala sa resident registry",
+        "hindi pa ako nakarehistro bilang residente",
+        "kailangan ko bang maging residente bago gumawa ng account",
+        "how do i get listed as a resident"
       ],
       "responses": [
         "Magkaiba ang resident registry record at online account. Maaaring magdagdag ang authorized staff ng resident record kahit walang online account ang tao. Para magkaroon ng online access, gumawa ng resident account at kumpletuhin ang barangay verification."
@@ -722,7 +735,11 @@
         "What address information belongs in the resident profile?",
         "What basic details should I prepare for resident registration?",
         "Is contact information included in the resident registry?",
-        "What information is stored in a basic resident record?"
+        "What information is stored in a basic resident record?",
+        "anong impormasyon ang hinihingi sa resident registry",
+        "ano ang kailangan para maitala bilang residente",
+        "anong dokumento ang dadalhin para sa resident registration",
+        "what details are needed for the resident registry"
       ],
       "responses": [
         "Nagtatala ang resident registry ng pangalan, birth date, sex, sitio, address, at contact number kung mayroon. Authorized staff ang nagve-verify ng impormasyon. Para sa eksaktong supporting documents na kailangan, makipag-ugnayan sa barangay office."
@@ -939,7 +956,6 @@
         "Paano gumawa ng account?",
         "Hindi ako makapag-login",
         "Paano mag-sign up sa portal?",
-        "Paano palitan ang password?",
         "how to create an account",
         "cant log in to the portal",
         "paano mag-login sa SMART MASIPIT",
@@ -977,7 +993,14 @@
         "How do I sign in with my registered email address?",
         "Where can residents log in to use online services?",
         "How can I sign out of the resident portal?",
-        "I am a new portal user how do I create an account?"
+        "I am a new portal user how do I create an account?",
+        "paano mag register ng bagong account",
+        "saan ang create resident account",
+        "ayaw akong papasukin sa login",
+        "mali daw ang email o password ko",
+        "may account na ba ako o wala pa",
+        "how do i make a resident account",
+        "i cannot sign in to my account"
       ],
       "responses": [
         "Piliin ang Create resident account sa landing page o Create an account sa login page. Ilagay ang required information at kumpletuhin ang identity verification submission. Pending muna ang account hanggang ma-review ng Barangay Secretary o Captain. Kung nakalimutan ang password, gamitin ang Forgot your password."
@@ -1013,7 +1036,7 @@
         "bukas po ba kayo bukas"
       ],
       "responses": [
-        "Makipag-ugnayan sa barangay office para sa confirmed office hours, holiday schedule, at service availability. Hindi ako nakakakita ng real-time opening hours."
+        "Makipag-ugnayan sa barangay office para sa confirmed office hours at holiday schedule. Ang mga pickup time na makikita sa inyong request ay sumusunod sa office days at oras na itinakda ng barangay. Hindi ako nakakakita ng real-time na impormasyon."
       ]
     },
     {
@@ -1084,8 +1107,6 @@
         "Magkano ang pamasahe?",
         "Saan ang pinakamalapit na mall?",
         "paano mag-apply ng trabaho",
-        "may ayuda ba ngayon",
-        "relief goods paano makakuha",
         "Paano magapply ng business clearance para sa tindahan?",
         "Barangay business clearance requirements para sa negosyo",
         "Kailangan ko ng permit para magbukas ng sari sari store",
@@ -1114,7 +1135,7 @@
         "Can I order prescription medicine from this website?"
       ],
       "responses": [
-        "Hindi ko matiyak ang sagot sa tanong na iyan. Makakatulong ako sa paggamit ng SMART MASIPIT: accounts, document requests, walk-in services, resident registry, health modules, at barangay location. Maaari bang linawin ang inyong tanong?"
+        "Hindi ko matiyak ang sagot sa tanong na iyan. Makakatulong ako sa paggamit ng SMART MASIPIT: accounts, document requests at pickup, walk-in services, resident registry, health modules, events, announcements, at lokasyon ng barangay. Maaari bang linawin ang inyong tanong?"
       ]
     },
     {
@@ -1250,10 +1271,18 @@
         "I cannot remember my login password",
         "Can I send you my password reset link?",
         "Nakalimutan ang password ng resident login",
-        "Nasa spam ba ang password recovery message?"
+        "Nasa spam ba ang password recovery message?",
+        "hindi ko natanggap ang 6 digit code",
+        "expired na ang reset code",
+        "ilang beses pwede humingi ng reset code",
+        "mali daw ang code sa forgot password",
+        "saan ilalagay ang code galing sa email",
+        "the reset code did not arrive",
+        "my reset code expired",
+        "how many reset codes can i request"
       ],
       "responses": [
-        "Sa login page, piliin ang Forgot your password at ilagay ang registered email. Buksan ang reset email at sundin ang instructions. Tingnan din ang Spam folder. Kung nagamit na o hindi na valid ang link, humingi ng bago. Huwag ibahagi ang reset link o password sa chatbot."
+        "Sa login page, piliin ang Forgot your password at ilagay ang registered email. Magpapadala ang system ng 6-digit code sa email; tingnan din ang Spam folder. Ilagay ang code at ang bagong password (hindi bababa sa 12 characters, may letra at numero). Valid ang code nang 15 minuto; maaaring humingi ng bago pagkalipas ng isang minuto, hanggang 5 code bawat araw. Huwag ibigay ang code o password sa chatbot."
       ]
     },
     {
@@ -1336,7 +1365,7 @@
         "Where are the collection instructions for my document?"
       ],
       "responses": [
-        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento. Tingnan kung Ready for release na at basahin ang pickup instructions. Maaaring makatanggap ng notification ang eligible linked resident account. Kung walang online account o walang dumating na email, mag-follow up sa barangay office. Hindi kayang kumpirmahin ng chatbot ang actual readiness. Pagpunta sa barangay, ipakita ang QR ng request (Show QR sa My Document Requests) para mabilis itong mahanap ng staff, at dalhin ang valid ID."
+        "Ang Approved ay hindi pa nangangahulugang handa nang kunin ang dokumento; hintayin ang Ready for release. Kapag handa na, may pickup notice sa inyong request at sa email ng eligible na account. Maaari ring pumili ng pickup time sa request page. Pagpunta sa barangay office, magdala ng isang valid ID at ipakita ang QR code o reference number ng request (Show QR sa My Document Requests). Hindi kayang kumpirmahin ng chatbot ang aktuwal na status."
       ]
     },
     {
@@ -1511,10 +1540,16 @@
         "Can you give me an overview of the system?",
         "Baguhan ako dito ano ang gamit ng website?",
         "What barangay is this portal for?",
-        "Para sa Barangay Masipit ba itong system?"
+        "Para sa Barangay Masipit ba itong system?",
+        "ano ang laman ng smart masipit",
+        "anu-ano ang pwedeng gawin sa website",
+        "ano ang mga parte ng system",
+        "para kanino ang smart masipit",
+        "who is smart masipit for",
+        "what can residents do on this website"
       ],
       "responses": [
-        "Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit. Sakop nito ang resident registry at household records, resident account registration at verification, document requests, at health record management. Kasama sa health module ang consultations, blood pressure records, immunization, health history, at maternal records. Maaaring mag-request ng dokumento online gamit ang approved resident account o magpa-encode ng walk-in request sa barangay hall. Magkakaiba ang access ng residents at authorized staff ayon sa kanilang role; hindi lahat ng module ay direktang magagamit ng resident account."
+        "Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit. Sakop nito ang resident registry at household records, resident account registration at verification, document requests na may pickup time at QR code, health record management, announcements, at events calendar. Kasama sa health module ang consultations, blood pressure records, immunization, health history, at maternal records. Magkakaiba ang access ng residents at authorized staff ayon sa kanilang role."
       ]
     },
     {
@@ -1550,10 +1585,19 @@
         "pwede ka bang mag file ng request para sa akin",
         "what questions can i ask you",
         "can you check my request for me",
-        "can you file a request for me"
+        "can you file a request for me",
+        "ano ang alam mo",
+        "anong mga tanong ang kaya mong sagutin",
+        "tao ba ang kausap ko",
+        "robot ka ba",
+        "pwede mo bang gawin ang request para sa akin",
+        "kaya mo bang makita ang status ng application ko",
+        "are you a real person",
+        "what topics do you know",
+        "can you do the request on my behalf"
       ],
       "responses": [
-        "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko. Maaari kong ipaliwanag ang account verification, document requests, walk-in services, resident registry, at health modules. Hindi ako nakakakita ng personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang portal form o makipag-ugnayan sa authorized staff para sa mga transaksiyon. Huwag ipadala dito ang password, valid ID, selfie, o clinical records; gamitin ang nakalaang verification o health workflow."
+        "Gabay sa paggamit ng SMART MASIPIT ang maibibigay ko: accounts at verification, document requests at pickup time, walk-in services, resident registry, health modules, events, at announcements. Hindi ko nakikita ang personal records o aktuwal na request status, at hindi ako nagsusumite, nag-eedit, o nag-aapprove ng records at requests. Gamitin ang kaukulang page o makipag-ugnayan sa authorized staff. Huwag ipadala dito ang password, code, valid ID, selfie, o clinical records."
       ]
     },
     {
@@ -1643,7 +1687,13 @@
         "my child is 12 can they register",
         "i was registered as a kid how do i get my own account now",
         "why does registration reject my birth date",
-        "do i need to be 18 to create an account"
+        "do i need to be 18 to create an account",
+        "ilang taon dapat para makapag-account",
+        "pwede ba ang menor de edad gumawa ng account",
+        "anong edad pwede mag sign up",
+        "13 years old pwede na ba",
+        "is there an age limit for signing up",
+        "how old do i need to be to register"
       ],
       "responses": [
         "Kailangang 13 taong gulang pataas para gumawa ng sariling SMART MASIPIT account. Kung mas bata, ang naka-link na magulang o guardian ang maaaring mag-request ng dokumento para sa kanya. Kung naka-record na ang bata sa barangay at nag-register siya pagdating ng 13, iuugnay ng Secretary o Captain ang bagong account sa existing record habang nagve-verify."
@@ -1675,7 +1725,16 @@
         "what file types are allowed for the photo",
         "how do i log out",
         "where is the sign out button",
-        "can i edit my own details"
+        "can i edit my own details",
+        "Paano palitan ang password?",
+        "gusto kong palitan ang password habang naka login",
+        "saan ang change password",
+        "paano mag change password sa profile",
+        "saan ang my profile page",
+        "paano mag-logout sa smart masipit",
+        "paano palitan ang larawan sa account",
+        "where is the change password option",
+        "how do i update my profile photo"
       ],
       "responses": [
         "Buksan ang My profile sa pamamagitan ng pag-click sa inyong avatar sa kanang itaas. Makikita rito ang inyong resident information, household, at account details. Maaaring mag-upload ng profile photo (JPG, PNG, o WebP, hanggang 4 MB) at magpalit ng password gamit ang Change password; hindi bababa sa 12 characters ang bagong password. Ang ibang resident details ay ina-update ng barangay staff."
@@ -1707,6 +1766,197 @@
       ],
       "responses": [
         "May pitong sitio ang Barangay Masipit: Balaasan, Mataas na Kahoy (Road I), Centro, Irrigation Site, Masitao, Pulapog, at Road II. Piliin ang sitio kung saan kayo kasalukuyang nakatira. Kung lumipat kayo sa ibang sitio, makipag-ugnayan sa barangay staff para ma-update ang inyong record."
+      ]
+    },
+    {
+      "tag": "document_pickup_time",
+      "patterns": [
+        "paano mag set ng pickup time",
+        "saan pipili ng oras ng pagkuha",
+        "paano mag book ng oras para kunin ang dokumento",
+        "pwede ba akong pumili kung anong oras ako pupunta para kunin",
+        "paano baguhin ang pickup time ko",
+        "gusto kong ilipat ang oras ng pagkuha ko",
+        "paano tanggalin ang pickup time",
+        "bakit walang lumalabas na oras sa pickup",
+        "full na lahat ng slot ng pickup",
+        "bakit walang slot sa araw na gusto ko",
+        "may pickup slot ba tuwing sabado",
+        "ilang tao bawat pickup slot",
+        "kailangan ko bang pumili ng pickup time",
+        "save pickup time saan makikita",
+        "ano ang pickup time sa request ko",
+        "pwede ba akong pumunta kahit hindi ako pumili ng oras",
+        "hindi ako makakapunta sa napili kong oras",
+        "how do i book a pickup time",
+        "where do i choose when to pick up my document",
+        "how do i change my pickup time",
+        "how do i remove my pickup slot",
+        "why are there no pickup times available",
+        "all pickup slots are full what now",
+        "is there a limit of people per pickup slot",
+        "do i need to pick a time before claiming",
+        "pickup slot schedule",
+        "schedule ng pagclaim ng certificate"
+      ],
+      "responses": [
+        "Kapag Ready for release na ang request, buksan ito sa My Document Requests. Sa bahaging Pickup time, pumili ng petsa at oras mula sa mga bakanteng slot at pindutin ang Save pickup time. Maaari itong palitan gamit ang Change pickup time o alisin gamit ang Remove my pickup time. Sumusunod ang mga slot sa office days at oras na itinakda ng barangay; may limitadong bilang ng tao bawat slot, at walang slot sa mga araw na sarado ang tanggapan. Kung walang angkop na oras, makipag-ugnayan sa barangay office."
+      ]
+    },
+    {
+      "tag": "account_two_factor",
+      "patterns": [
+        "ano ang two factor authentication",
+        "paano i-set up ang 2fa",
+        "bakit humihingi ng 6 digit code pagka login",
+        "anong app ang gagamitin para sa two factor",
+        "kailangan ko bang mag 2fa",
+        "required ba ang two factor sa staff",
+        "may 2fa ba ang resident account",
+        "nawala ang cellphone ko na may authenticator",
+        "paano gamitin ang recovery code",
+        "saan makikita ang recovery codes ko",
+        "ano ang remember this device",
+        "paano tanggalin ang naka remember na device",
+        "forget all devices ano yun",
+        "ayaw tanggapin ang authenticator code",
+        "bago akong staff kailangan daw i-on ang two factor",
+        "pwede bang patayin ang two factor ng staff account",
+        "google authenticator para sa smart masipit",
+        "what is two-factor sign in",
+        "how do i turn on 2fa",
+        "which authenticator app should i use",
+        "i lost my phone with my authenticator",
+        "where are my recovery codes",
+        "what does remember this device for 30 days do",
+        "my two factor code is not accepted",
+        "do residents need two factor authentication",
+        "can i disable two factor on a staff account",
+        "bakit may hinihinging code pagkatapos ng password",
+        "staff ako at may code na hinihingi tuwing mag sign in",
+        "saan kukunin ang code na hinihingi sa login ng staff",
+        "why does the staff login ask for a code",
+        "where do i get the sign in code for my staff account"
+      ],
+      "responses": [
+        "Ang two-factor sign-in ay required sa staff accounts ng SMART MASIPIT; password lang ang gamit ng resident accounts. I-set up ito sa My profile, sa Two-factor sign-in: i-scan ang QR gamit ang authenticator app (halimbawa Google o Microsoft Authenticator), ilagay ang code, at itabi ang recovery codes. Sa pag-sign in, ilagay ang 6-digit code mula sa app. Maaaring i-check ang Remember this device for 30 days sa sariling device lang; magagamit ang Forget all devices sa My profile. Kapag nawala ang phone, gumamit ng recovery code; kung wala, makipag-ugnayan sa administrator. Huwag ibigay ang code o recovery codes sa chatbot."
+      ]
+    },
+    {
+      "tag": "app_install",
+      "patterns": [
+        "may app ba ang smart masipit",
+        "paano i-install sa cellphone",
+        "paano ilagay sa home screen ang smart masipit",
+        "ano ang install app button",
+        "saan ang i-install ang app",
+        "wala sa playstore ang smart masipit",
+        "may app store ba kayo",
+        "paano i-install sa iphone",
+        "walang install button sa safari",
+        "pwede bang i-download ang system",
+        "gusto ko sanang may icon sa phone ko",
+        "pwede ba sa laptop i-install",
+        "pareho ba ang account sa app at website",
+        "android app ng barangay masipit",
+        "is there a mobile app",
+        "how do i install smart masipit",
+        "can i download the app from the play store",
+        "add to home screen on iphone",
+        "the install app button is missing",
+        "can i install it on my computer",
+        "is the app different from the website",
+        "how to put the website on my phone like an app"
+      ],
+      "responses": [
+        "Maaaring i-install ang SMART MASIPIT sa phone o computer na parang app; wala itong hiwalay na app sa Play Store o App Store. Sa Chrome o Edge, pindutin ang Install app (o I-install ang app sa landing page) kapag lumabas ito, o buksan ang menu ng browser at piliin ang Install app o Add to Home screen. Sa iPhone, buksan ito sa Safari, pindutin ang Share, at piliin ang Add to Home Screen. Pareho pa rin ang account at mga feature."
+      ]
+    },
+    {
+      "tag": "barangay_events",
+      "patterns": [
+        "may event ba sa barangay",
+        "ano ang mga darating na event",
+        "saan makikita ang events",
+        "saan ang calendar",
+        "paano makita ang schedule ng mga aktibidad ng barangay",
+        "may liga ba ngayong buwan",
+        "kailan ang feeding program",
+        "may medical mission ba",
+        "may barangay assembly ba",
+        "kailan ang fiesta ng masipit",
+        "saan ko makikita ang mga aktibidad",
+        "events page ng smart masipit",
+        "bakit hindi ko makita ang ibang event sa calendar",
+        "sino ang naglalagay ng events",
+        "pwede ba akong maglagay ng event",
+        "upcoming events in barangay masipit",
+        "where is the events calendar",
+        "what activities are scheduled this month",
+        "is there a community event this weekend",
+        "where can i see barangay activities",
+        "who posts the events",
+        "calendar of activities"
+      ],
+      "responses": [
+        "Makikita ang mga darating na public event ng Barangay Masipit sa landing page (Mga darating na event) at sa Events page. Kapag naka-sign in, buksan ang Calendar para makita ang mga event bawat buwan. Ang mga barangay official ang naglalagay ng events; may ilang event na para sa staff lamang. Hindi nakikita ng chatbot ang mismong listahan, kaya tingnan ang Events page o makipag-ugnayan sa barangay office."
+      ]
+    },
+    {
+      "tag": "barangay_announcements",
+      "patterns": [
+        "saan ang announcements",
+        "may abiso ba ang barangay",
+        "saan makikita ang balita ng barangay",
+        "may bagong paalala ba",
+        "saan nakapost ang mga advisory",
+        "may emergency announcement ba",
+        "paano malaman ang mga anunsyo",
+        "sino ang nagpo-post ng announcement",
+        "pwede ba akong mag post ng announcement",
+        "ano ang pinned announcement",
+        "may health advisory ba",
+        "saan ko makikita ang mga paalala",
+        "announcements page",
+        "where are the barangay announcements",
+        "is there any news from the barangay",
+        "where can i read the latest advisory",
+        "who posts announcements",
+        "are there emergency announcements",
+        "how will i know about barangay news",
+        "barangay bulletin"
+      ],
+      "responses": [
+        "Makikita ang mga abiso ng barangay sa landing page (Mga abiso ng barangay) at sa Announcements page. Nakaayos ang mga ito ayon sa kategorya: General, Health, Event, Advisory, at Emergency; nauuna ang mga naka-pin. Ang Barangay Secretary, Captain, o administrator ang nagpo-post ng announcements. Hindi binabasa ng chatbot ang mismong mga abiso, kaya tingnan ang Announcements page."
+      ]
+    },
+    {
+      "tag": "aid_programs",
+      "patterns": [
+        "kailan ang bigay ng ayuda",
+        "paano mag apply ng ayuda",
+        "kasama ba kami sa ayuda",
+        "saan makikita kung nakatanggap na kami ng ayuda",
+        "may relief goods ba",
+        "may cash assistance ba ang barangay",
+        "bakit hindi kami nabigyan ng ayuda",
+        "paano malalaman kung qualified ako sa ayuda",
+        "ayuda para sa 4ps",
+        "ayuda para sa senior at pwd",
+        "may listahan ba ng ayuda online",
+        "sino ang nagbibigay ng ayuda",
+        "ayuda tracker",
+        "how do i apply for aid",
+        "is there any relief distribution",
+        "am i qualified for financial assistance",
+        "how do i check if we received aid",
+        "when is the next ayuda",
+        "is there cash assistance from the barangay",
+        "may ayuda ba ngayon",
+        "relief goods paano makakuha"
+      ],
+      "responses": [
+        "Ang ayuda o relief distribution ay itinatala ng authorized barangay staff bawat household, batay sa resident registry. Walang online na pag-apply o listahan ng ayuda para sa resident account, at hindi kayang kumpirmahin ng chatbot kung kasama kayo o kung may ayuda ngayon. Para sa schedule at eligibility, makipag-ugnayan sa barangay office o abangan ang Announcements. Huwag ipadala sa chat ang personal o household details."
       ]
     }
   ]

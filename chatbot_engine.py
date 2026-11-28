@@ -18,16 +18,13 @@ FALLBACK = (
 )
 
 SYSTEM_OVERVIEW = " ".join("""
-Ang SMART MASIPIT ay isang web-based information system para sa Barangay Masipit.
-Mayroon itong resident registry at household records, resident account registration
-at verification, document requests, at health record management.
-Kasama sa health module ang consultations, blood pressure records, immunization,
-health history, at maternal records.
-Maaaring mag-request ng dokumento online gamit ang approved resident account
-o sa walk-in.
-Ang pag-encode at pag-access sa registry at health records ay para sa authorized
-staff ayon sa kanilang role.
-Hindi lahat ng module ay direktang magagamit ng resident account.
+Ang SMART MASIPIT ay isang web-based information system para sa Barangay
+Masipit. Sakop nito ang resident registry at household records, resident account
+registration at verification, document requests na may pickup time at QR code,
+health record management, announcements, at events calendar. Kasama sa health
+module ang consultations, blood pressure records, immunization, health history,
+at maternal records. Magkakaiba ang access ng residents at authorized staff ayon
+sa kanilang role.
 """.split())
 
 BP_FEATURE_SCOPE = (

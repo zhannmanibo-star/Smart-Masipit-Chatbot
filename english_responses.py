@@ -3,11 +3,12 @@
 
 ENGLISH_RESPONSES = {
     "greeting": (
-        "Hello! I am the SMART MASIPIT Virtual Assistant. "
-        "I can guide you through account registration and verification, "
-        "document requests, walk-in services, the resident registry, "
-        "health modules, and the barangay hall location. "
-        "I cannot view personal records or actual request statuses."
+        "Good day! I am the SMART MASIPIT Virtual Assistant. I can help with "
+        "account registration and verification, document requests and pickup "
+        "times, walk-in services, the resident registry, health records, "
+        "events, announcements, and the barangay hall location. I give guidance "
+        "on using the system; I cannot see personal records or actual request "
+        "status."
     ),
 
     "goodbye": (
@@ -171,17 +172,17 @@ ENGLISH_RESPONSES = {
     ),
 
     "barangay_operating_hours": (
-        "Contact the barangay office to confirm office hours, "
-        "holiday schedules, and service availability. "
-        "I cannot check real-time opening hours."
+        "Contact the barangay office for confirmed office hours and the holiday "
+        "schedule. The pickup times shown on your request follow the office "
+        "days and hours set by the barangay. I cannot see real-time "
+        "information."
     ),
 
     "out_of_scope": (
-        "I cannot determine an answer to that question. "
-        "I can help with using SMART MASIPIT: accounts, document "
-        "requests, walk-in services, the resident registry, "
-        "health modules, and the barangay location. "
-        "Could you clarify your question?"
+        "I am not sure how to answer that. I can help with using SMART MASIPIT: "
+        "accounts, document requests and pickup, walk-in services, the resident "
+        "registry, health modules, events, announcements, and the barangay "
+        "location. Could you clarify your question?"
     ),
 
     "account_identity_verification": (
@@ -207,12 +208,12 @@ ENGLISH_RESPONSES = {
     ),
 
     "account_password_reset": (
-        "On the login page, select Forgot your password and "
-        "enter your registered email address. Open the reset "
-        "email and follow its instructions. Check your Spam "
-        "folder too. If the link has already been used or is "
-        "no longer valid, request a new one. Do not share "
-        "your reset link or password with the chatbot."
+        "On the login page, choose Forgot your password and enter your "
+        "registered email. The system sends a 6-digit code to that email; check "
+        "the Spam folder too. Enter the code and your new password (at least 12 "
+        "characters, with letters and numbers). The code works for 15 minutes; "
+        "you can ask for a new one after a minute, up to 5 codes a day. Never "
+        "give the code or your password to the chatbot."
     ),
 
     "document_walk_in": (
@@ -225,16 +226,13 @@ ENGLISH_RESPONSES = {
     ),
 
     "document_pickup": (
-        "Approved does not yet mean your document is ready "
-        "for pickup. Check for Ready for release and read "
-        "the pickup instructions. An eligible linked resident "
-        "account may receive a notification. If you have no "
-        "online account or did not receive an email, follow "
-        "up with the barangay office. The chatbot cannot "
-        "confirm whether your document is actually ready. "
-        "At the barangay, show the request's QR (Show QR in "
-        "My Document Requests) so staff can find it quickly, "
-        "and bring a valid ID."
+        "Approved does not yet mean the document can be picked up; wait for "
+        "Ready for release. When it is ready, a pickup notice appears on your "
+        "request and is emailed to the eligible account. You can also choose a "
+        "pickup time on the request page. At the barangay office, bring one "
+        "valid ID and show the request's QR code or reference number (Show QR "
+        "in My Document Requests). The chatbot cannot confirm the actual "
+        "status."
     ),
 
     "document_additional_types": (
@@ -275,29 +273,24 @@ ENGLISH_RESPONSES = {
     ),
 
     "system_overview": (
-        "SMART MASIPIT is a web-based information system for "
-        "Barangay Masipit. It covers the resident registry and "
-        "household records, resident account registration and "
-        "verification, document requests, and health record "
-        "management. Health modules include consultations, "
-        "blood pressure records, immunization, health history, "
-        "and maternal records. Residents can request documents "
-        "online using an approved account or through a walk-in "
-        "request encoded by staff. Access depends on the user's "
-        "role; not every module is directly available to "
-        "resident accounts."
+        "SMART MASIPIT is a web-based information system for Barangay Masipit. "
+        "It covers the resident registry and household records, resident "
+        "account registration and verification, document requests with pickup "
+        "times and QR codes, health record management, announcements, and an "
+        "events calendar. The health module includes consultations, blood "
+        "pressure records, immunization, health history, and maternal records. "
+        "Residents and authorized staff have different access according to "
+        "their role."
     ),
 
     "chatbot_capabilities": (
-        "I provide guidance on using SMART MASIPIT, including "
-        "account verification, document requests, walk-in services, "
-        "the resident registry, and health modules. I cannot view "
-        "personal records or actual request statuses, and I cannot "
-        "submit, edit, or approve records and requests. Use the "
-        "appropriate portal form or contact authorized staff "
-        "for transactions. Do not send passwords, valid ID photos, "
-        "selfies, or clinical records here; use the designated "
-        "verification or health workflow."
+        "I can guide you in using SMART MASIPIT: accounts and verification, "
+        "document requests and pickup times, walk-in services, the resident "
+        "registry, health modules, events, and announcements. I cannot see "
+        "personal records or actual request status, and I do not submit, edit "
+        "or approve records and requests. Use the matching page or contact "
+        "authorized staff. Do not send passwords, codes, valid IDs, selfies or "
+        "clinical records here."
     ),
 
     "document_qr_code": (
@@ -346,6 +339,58 @@ ENGLISH_RESPONSES = {
         "Pulapog, and Road II. Choose the sitio where you "
         "currently live. If you moved to another sitio, contact "
         "barangay staff to update your record."
+    ),
+    "document_pickup_time": (
+        "When the request is Ready for release, open it in My Document "
+        "Requests. Under Pickup time, choose a date and time from the open "
+        "slots and press Save pickup time. You can change it with Change pickup "
+        "time or remove it with Remove my pickup time. Slots follow the office "
+        "days and hours set by the barangay; each slot takes a limited number "
+        "of people, and there are no slots on days the office is closed. If no "
+        "time fits, contact the barangay office."
+    ),
+    "account_two_factor": (
+        "Two-factor sign-in is required for SMART MASIPIT staff accounts; "
+        "resident accounts sign in with a password only. Set it up in My "
+        "profile under Two-factor sign-in: scan the QR code with an "
+        "authenticator app (for example Google or Microsoft Authenticator), "
+        "enter the code, and keep the recovery codes safe. When signing in, "
+        "enter the 6-digit code from the app. Tick Remember this device for 30 "
+        "days only on your own device; Forget all devices in My profile undoes "
+        "it. If you lose your phone, use a recovery code; if you have none, "
+        "contact the administrator. Never share codes or recovery codes with "
+        "the chatbot."
+    ),
+    "app_install": (
+        "You can install SMART MASIPIT on your phone or computer like an app; "
+        "there is no separate app in the Play Store or App Store. In Chrome or "
+        "Edge, press Install app (or I-install ang app on the landing page) "
+        "when it appears, or open the browser menu and choose Install app or "
+        "Add to Home screen. On iPhone, open it in Safari, press Share, and "
+        "choose Add to Home Screen. Your account and features stay the same."
+    ),
+    "barangay_events": (
+        "Upcoming public events of Barangay Masipit are on the landing page "
+        "(Mga darating na event) and on the Events page. When signed in, open "
+        "Calendar to see events month by month. Barangay officials post the "
+        "events; some events are for staff only. The chatbot cannot see the "
+        "list itself, so check the Events page or contact the barangay office."
+    ),
+    "barangay_announcements": (
+        "Barangay notices are on the landing page (Mga abiso ng barangay) and "
+        "on the Announcements page. They are grouped by category: General, "
+        "Health, Event, Advisory and Emergency; pinned ones come first. The "
+        "Barangay Secretary, Captain or administrator posts them. The chatbot "
+        "does not read the notices themselves, so check the Announcements page."
+    ),
+    "aid_programs": (
+        "Aid or relief distributions are recorded by authorized barangay staff "
+        "for each household, based on the resident registry. There is no online "
+        "application or aid list for resident accounts, and the chatbot cannot "
+        "confirm whether you are included or whether aid is being given now. "
+        "For schedules and eligibility, contact the barangay office or watch "
+        "the Announcements. Do not send personal or household details in the "
+        "chat."
     ),
 }
 

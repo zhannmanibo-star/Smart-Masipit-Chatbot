@@ -46,4 +46,10 @@ SUGGESTION_LABELS = {
     "account_minimum_age": ("Ilang taon pwede gumawa ng account?", "What is the minimum age to register?"),
     "account_profile_settings": ("Paano palitan ang profile photo o password?", "How do I change my photo or password?"),
     "census_sitio": ("Anong sitio ang pipiliin ko?", "Which sitio should I choose?"),
+    "document_pickup_time": ("Paano pumili ng oras ng pagkuha?", "How do I choose a pickup time?"),
+    "account_two_factor": ("Ano ang two-factor sign-in?", "What is two-factor sign-in?"),
+    "app_install": ("Paano i-install ang app?", "How do I install the app?"),
+    "barangay_events": ("Saan makikita ang mga event?", "Where can I see the events?"),
+    "barangay_announcements": ("Saan makikita ang mga anunsyo?", "Where are the announcements?"),
+    "aid_programs": ("May ayuda ba?", "Is there any aid?"),
 }
